@@ -1,4 +1,4 @@
-# 1 "LCDD2.c"
+# 1 "UART.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "LCDD2.c" 2
+# 1 "UART.c" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2487,7 +2487,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 1 "LCDD2.c" 2
+# 1 "UART.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2586,7 +2586,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 2 "LCDD2.c" 2
+# 2 "UART.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -2671,7 +2671,7 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 3 "LCDD2.c" 2
+# 3 "UART.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
@@ -2806,83 +2806,66 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 4 "LCDD2.c" 2
+# 4 "UART.c" 2
 
 
-# 1 "./LCDD2.h" 1
-# 17 "./LCDD2.h"
-void initLCD(void);
+# 1 "./UART.h" 1
 
 
-void dispCHAR(char b);
 
-void cursorLCD(uint8_t fila, uint8_t columna);
 
-void comandoLCD(uint8_t cmd);
 
-void ClearLCD(void);
+void configUART(void);
 
-void LCDstring(unsigned char* mensaje);
-# 6 "LCDD2.c" 2
-# 20 "LCDD2.c"
-void initLCD(void){
-    RE1 = 0;
-    PORTD = 0X00;
-    _delay((unsigned long)((50)*(8000000/4000.0)));
-    comandoLCD(0X30);
-    _delay((unsigned long)((5)*(8000000/4000.0)));
-    comandoLCD(0X30);
-    _delay((unsigned long)((5)*(8000000/4000.0)));
-    comandoLCD(0X30);
-    comandoLCD(0X38);
-    comandoLCD(0X06);
-    comandoLCD(0X0C);
-    comandoLCD(0X01);
+void send1dato(char dato);
 
+void sendString(unsigned char *mensaje);
+
+void sendhex(uint8_t *valor);
+# 6 "UART.c" 2
+
+
+
+
+
+void configUART(void){
+
+    TRISCbits.TRISC6 = 0;
+    TRISCbits.TRISC7 = 1;
+    SPBRG = 12;
+    TXSTAbits.BRGH = 0;
+    TXSTAbits.TXEN = 1;
+    RCSTAbits.CREN = 1;
+    TXSTAbits.SYNC = 0;
+    RCSTAbits.SPEN = 1;
 }
 
 
 
 
-
-void dispCHAR(char b){
-
-    RE1 = 1;
-    PORTD = b;
-    RE2 = 1;
-    _delay((unsigned long)((40)*(8000000/4000000.0)));
-    RE2 = 0;
-
+void send1dato(char dato){
+    TXREG = dato;
+    while(!TXSTAbits.TRMT);
 }
 
-void cursorLCD(uint8_t fila, uint8_t columna){
-    uint8_t temp;
-    if(fila == 1){
-        temp = 0X80 + columna - 1;
-        comandoLCD(temp);
-    }
-
-    if(fila == 2){
-        temp = 0XC0 + columna -1;
-        comandoLCD(temp);
-    }
-}
-
-void comandoLCD(uint8_t cmd){
-    RE1 = 0;
-    PORTD = cmd;
-    RE2 = 1;
-    _delay((unsigned long)((4)*(8000000/4000.0)));
-    RE2 = 0;
-}
-
-void ClearLCD(void){
-    comandoLCD(0X01);
-}
-
-void LCDstring(unsigned char* mensaje){
+void sendString(unsigned char* mensaje){
     while(*mensaje != 0x00){
-        dispCHAR(*mensaje);
+        send1dato(*mensaje);
         mensaje ++;
     }
+
+}
+
+void sendhex(uint8_t *valor){
+    uint8_t centena;
+    uint8_t decena;
+    uint8_t unidad;
+
+    centena = (*valor/100);
+    decena = (*valor-(centena*100))/10;
+    unidad = (*valor-(centena*100))%10;
+
+    send1dato(centena + 48);
+    send1dato(decena + 48);
+    send1dato(unidad + 48);
 }

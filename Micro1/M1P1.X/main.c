@@ -29,7 +29,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include "DHT11.h"
-//#include "LCDD2.h"
+#include "UART.h"
 #include "I2C.h"
 #define _XTAL_FREQ 8000000 //utilizado para los delays
 
@@ -44,9 +44,8 @@ uint8_t CHECKSUM;
 uint8_t TempENT, TempDEC;
 uint8_t SlaveAddress = 0x50;
 uint16_t temp;
+uint8_t UARTData;
 float digTemp;
-//char temperatura[] = "TEMP = 00.0 C ";
-//char humedadR[] = "     = 00.0 % ";
 unsigned char HumR[2];
 unsigned char TEMPdig[6];
 
@@ -56,14 +55,23 @@ unsigned char TEMPdig[6];
 void floToChar(const float valor, unsigned char *salida);
 void divisiondecimal(uint8_t conteo,uint8_t* un,uint8_t* dec,uint8_t* cent);
 void CONFIG(void);
+
+void __interrupt() interrupcion(void){
+    
+    if(PIR1bits.RCIF){
+        UARTData = RCREG; 
+        PIR1bits.RCIF = 0;
+    }
+}
+
 //******************************************************************************
 //  Funciones principales y de configuracion
 //******************************************************************************
 void main(void) {
     CONFIG();
+    configUART();
     TMR1H = 0;
     TMR1L = 0;
-    //initLCD();
     
     //configurando el LM75BD
     MasterStart_I2C();
@@ -86,7 +94,7 @@ void main(void) {
         temp = (TempENT<<3)|(TempDEC>>5); //arreglar la temperatura
         digTemp = (float)temp*0.125; //conseguir su valor flotante
         floToChar(digTemp,TEMPdig); //convertir el valor a 6 caracteres
-        
+        /*
         MasterStart_I2C();
         MasterSend_I2C(SlaveAddress); //direccion del esclavo
         MasterSend_I2C(TEMPdig[5]); //Centena
@@ -95,7 +103,7 @@ void main(void) {
         MasterSend_I2C(TEMPdig[1]); //Decima
         MasterSend_I2C(TEMPdig[2]); //Centesima
         MasterSend_I2C(TEMPdig[0]); //Milesima
-        MasterStop_I2C();
+        MasterStop_I2C();*/
         
         DHT11_START();
         
@@ -109,23 +117,47 @@ void main(void) {
             if(CHECKSUM == ((Hum1 + dummyHum1 + Temp1 + dummyT1) & 0XFF)){
                 HumR[0] = Hum1/10 + 48;
                 HumR[1] = Hum1%10 + 48;
+                /*
                 MasterStart_I2C();
                 MasterSend_I2C(SlaveAddress);
                 MasterSend_I2C(HumR[0]);
                 MasterSend_I2C(HumR[1]);
-                MasterStop_I2C();
-                /*cursorLCD(1,1);
-                LCDstring(humedadR);
-                cursorLCD(2,1);
-                dispCHAR(TEMPdig[5]+48);
-                dispCHAR(TEMPdig[4]+48);
-                dispCHAR(TEMPdig[3]+48);
-                dispCHAR('.');
-                dispCHAR(TEMPdig[1]+48);
-                dispCHAR(TEMPdig[2]+48);
-                dispCHAR(TEMPdig[0]+48);*/
-                
+                MasterStop_I2C();*/               
             }
+        }
+        
+        switch(UARTData){
+            case 'a':
+                PORTBbits.RB0 = 1;
+                PORTBbits.RB1 = 0;
+                PORTBbits.RB2 = 1;
+                PORTBbits.RB3 = 0;
+                break;
+            case 'b':
+                PORTBbits.RB0 = 0;
+                PORTBbits.RB1 = 1;
+                PORTBbits.RB2 = 0;
+                PORTBbits.RB3 = 1;
+                break;
+            case 'c':
+                PORTBbits.RB0 = 1;
+                PORTBbits.RB1 = 0;
+                PORTBbits.RB2 = 0;
+                PORTBbits.RB3 = 1;
+                break;
+            case 'd':
+                PORTBbits.RB0 = 0;
+                PORTBbits.RB1 = 1;
+                PORTBbits.RB2 = 1;
+                PORTBbits.RB3 = 0;
+                break;
+            case 'e':
+                PORTBbits.RB0 = 0;
+                PORTBbits.RB1 = 0;
+                PORTBbits.RB2 = 0;
+                PORTBbits.RB3 = 0;
+                break;
+        
         }
         
         T1CONbits.TMR1ON = 0;
@@ -148,6 +180,12 @@ void CONFIG(void){
     //Configuracion del oscilador
     OSCCONbits.IRCF = 0b111; //oscilador a 8Mhz
     OSCCONbits.SCS = 0b1;
+    
+    //interrupciones utilizadas
+    INTCONbits.GIE =    1;
+    INTCONbits.PEIE =   1; //Permite INT perifericas
+    PIR1bits.RCIF =     0;
+    PIE1bits.RCIE =     1; //permite interrupciones de recepcion de datos
     
     //Configuracion del timmer1
     T1CON = 0X10; //periodo de 1MHz, ya que fuente es FOSC/4

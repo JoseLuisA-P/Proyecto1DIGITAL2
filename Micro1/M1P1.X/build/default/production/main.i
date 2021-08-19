@@ -2832,6 +2832,20 @@ void DHT11_ReadData(uint8_t* datos);
 void DHT11_START(void);
 # 31 "main.c" 2
 
+# 1 "./UART.h" 1
+
+
+
+
+
+void configUART(void);
+
+void send1dato(char dato);
+
+void sendString(unsigned char *mensaje);
+
+void sendhex(uint8_t *valor);
+# 32 "main.c" 2
 
 # 1 "./I2C.h" 1
 # 10 "./I2C.h"
@@ -2875,9 +2889,8 @@ uint8_t CHECKSUM;
 uint8_t TempENT, TempDEC;
 uint8_t SlaveAddress = 0x50;
 uint16_t temp;
+uint8_t UARTData;
 float digTemp;
-
-
 unsigned char HumR[2];
 unsigned char TEMPdig[6];
 
@@ -2888,13 +2901,22 @@ void floToChar(const float valor, unsigned char *salida);
 void divisiondecimal(uint8_t conteo,uint8_t* un,uint8_t* dec,uint8_t* cent);
 void CONFIG(void);
 
+void __attribute__((picinterrupt(("")))) interrupcion(void){
+
+    if(PIR1bits.RCIF){
+        UARTData = RCREG;
+        PIR1bits.RCIF = 0;
+    }
+}
+
+
 
 
 void main(void) {
     CONFIG();
+    configUART();
     TMR1H = 0;
     TMR1L = 0;
-
 
 
     MasterStart_I2C();
@@ -2917,17 +2939,7 @@ void main(void) {
         temp = (TempENT<<3)|(TempDEC>>5);
         digTemp = (float)temp*0.125;
         floToChar(digTemp,TEMPdig);
-
-        MasterStart_I2C();
-        MasterSend_I2C(SlaveAddress);
-        MasterSend_I2C(TEMPdig[5]);
-        MasterSend_I2C(TEMPdig[4]);
-        MasterSend_I2C(TEMPdig[3]);
-        MasterSend_I2C(TEMPdig[1]);
-        MasterSend_I2C(TEMPdig[2]);
-        MasterSend_I2C(TEMPdig[0]);
-        MasterStop_I2C();
-
+# 108 "main.c"
         DHT11_START();
 
         if(DHT11_ALIVE()){
@@ -2940,13 +2952,47 @@ void main(void) {
             if(CHECKSUM == ((Hum1 + dummyHum1 + Temp1 + dummyT1) & 0XFF)){
                 HumR[0] = Hum1/10 + 48;
                 HumR[1] = Hum1%10 + 48;
-                MasterStart_I2C();
-                MasterSend_I2C(SlaveAddress);
-                MasterSend_I2C(HumR[0]);
-                MasterSend_I2C(HumR[1]);
-                MasterStop_I2C();
-# 128 "main.c"
+
+
+
+
+
+
             }
+        }
+
+        switch(UARTData){
+            case 'a':
+                PORTBbits.RB0 = 1;
+                PORTBbits.RB1 = 0;
+                PORTBbits.RB2 = 1;
+                PORTBbits.RB3 = 0;
+                break;
+            case 'b':
+                PORTBbits.RB0 = 0;
+                PORTBbits.RB1 = 1;
+                PORTBbits.RB2 = 0;
+                PORTBbits.RB3 = 1;
+                break;
+            case 'c':
+                PORTBbits.RB0 = 1;
+                PORTBbits.RB1 = 0;
+                PORTBbits.RB2 = 0;
+                PORTBbits.RB3 = 1;
+                break;
+            case 'd':
+                PORTBbits.RB0 = 0;
+                PORTBbits.RB1 = 1;
+                PORTBbits.RB2 = 1;
+                PORTBbits.RB3 = 0;
+                break;
+            case 'e':
+                PORTBbits.RB0 = 0;
+                PORTBbits.RB1 = 0;
+                PORTBbits.RB2 = 0;
+                PORTBbits.RB3 = 0;
+                break;
+
         }
 
         T1CONbits.TMR1ON = 0;
@@ -2969,6 +3015,12 @@ void CONFIG(void){
 
     OSCCONbits.IRCF = 0b111;
     OSCCONbits.SCS = 0b1;
+
+
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    PIR1bits.RCIF = 0;
+    PIE1bits.RCIE = 1;
 
 
     T1CON = 0X10;
