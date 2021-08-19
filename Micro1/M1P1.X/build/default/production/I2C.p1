@@ -404,8 +404,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;I2C.c: 54:     waitCondition();
 [e ( _waitCondition ..  ]
 "55
-[; ;I2C.c: 55:     SSPCON2bits.ACKDT = 1;
-[e = . . _SSPCON2bits 0 5 -> -> 1 `i `uc ]
+[; ;I2C.c: 55:     SSPCON2bits.ACKDT = 0;
+[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
 "56
 [; ;I2C.c: 56:     SSPCON2bits.ACKEN = 1;
 [e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]

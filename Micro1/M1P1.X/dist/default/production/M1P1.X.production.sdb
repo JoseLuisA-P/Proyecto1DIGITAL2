@@ -47,23 +47,17 @@
 [v _MasterSend_I2C MasterSend_I2C `(v  1 e 1 0 ]
 "49
 [v _MasterReceive_I2C MasterReceive_I2C `(v  1 e 1 0 ]
-"20 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-[v _initLCD initLCD `(v  1 e 1 0 ]
-"40
+"40 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
 [v _dispCHAR dispCHAR `(v  1 e 1 0 ]
-"50
-[v _cursorLCD cursorLCD `(v  1 e 1 0 ]
 "63
 [v _comandoLCD comandoLCD `(v  1 e 1 0 ]
-"75
-[v _LCDstring LCDstring `(v  1 e 1 0 ]
-"60 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+"62 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"134
+"136
 [v _CONFIG CONFIG `(v  1 e 1 0 ]
-"157
+"159
 [v _floToChar floToChar `(v  1 e 1 0 ]
-"176
+"178
 [v _divisiondecimal divisiondecimal `(v  1 e 1 0 ]
 "166 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -77,7 +71,7 @@
 [v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
 "671
 [v _T1CON T1CON `VEuc  1 e 1 @16 ]
-[s S90 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S69 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 TMR1CS 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
@@ -86,7 +80,7 @@
 `uc 1 T1GINV 1 0 :1:7 
 ]
 "700
-[s S98 . 1 `uc 1 . 1 0 :2:0 
+[s S77 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1INSYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
@@ -94,11 +88,11 @@
 `uc 1 . 1 0 :1:6 
 `uc 1 T1GIV 1 0 :1:7 
 ]
-[s S106 . 1 `uc 1 . 1 0 :2:0 
+[s S85 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1SYNC 1 0 :1:2 
 ]
-[u S109 . 1 `S90 1 . 1 0 `S98 1 . 1 0 `S106 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES109  1 e 1 @16 ]
+[u S88 . 1 `S69 1 . 1 0 `S77 1 . 1 0 `S85 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES88  1 e 1 @16 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
@@ -107,7 +101,7 @@
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S276 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S253 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -117,35 +111,35 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S285 . 1 `S276 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES285  1 e 1 @135 ]
+[u S262 . 1 `S253 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES262  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-[s S144 . 1 `uc 1 TRISE0 1 0 :1:0 
+[s S123 . 1 `uc 1 TRISE0 1 0 :1:0 
 `uc 1 TRISE1 1 0 :1:1 
 `uc 1 TRISE2 1 0 :1:2 
 `uc 1 TRISE3 1 0 :1:3 
 ]
 "1677
-[u S149 . 1 `S144 1 . 1 0 ]
-[v _TRISEbits TRISEbits `VES149  1 e 1 @137 ]
-[s S159 . 1 `uc 1 SCS 1 0 :1:0 
+[u S128 . 1 `S123 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES128  1 e 1 @137 ]
+[s S139 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1882
-[s S165 . 1 `uc 1 . 1 0 :4:0 
+[s S145 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S170 . 1 `S159 1 . 1 0 `S165 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES170  1 e 1 @143 ]
+[u S150 . 1 `S139 1 . 1 0 `S145 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES150  1 e 1 @143 ]
 "1979
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S297 . 1 `uc 1 SEN 1 0 :1:0 
+[s S274 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -155,8 +149,8 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1996
-[u S306 . 1 `S297 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES306  1 e 1 @145 ]
+[u S283 . 1 `S274 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES283  1 e 1 @145 ]
 "2048
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2177
@@ -184,55 +178,48 @@
 "44
 [v _TempENT TempENT `uc  1 e 1 0 ]
 [v _TempDEC TempDEC `uc  1 e 1 0 ]
-"45
-[v _temp temp `i  1 e 2 0 ]
 "46
-[v _digTemp digTemp `f  1 e 4 0 ]
+[v _temp temp `ui  1 e 2 0 ]
 "47
-[v _temperatura temperatura `[15]uc  1 e 15 0 ]
-"48
-[v _humedadR humedadR `[15]uc  1 e 15 0 ]
-"49
+[v _digTemp digTemp `f  1 e 4 0 ]
+"50
+[v _HumR HumR `[2]uc  1 e 2 0 ]
+"51
 [v _TEMPdig TEMPdig `[6]uc  1 e 6 0 ]
-"60
+"62
 [v _main main `(v  1 e 1 0 ]
 {
-"132
+"134
 } 0
-"20 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-[v _initLCD initLCD `(v  1 e 1 0 ]
-{
-"34
-} 0
-"157 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+"159
 [v _floToChar floToChar `(v  1 e 1 0 ]
 {
-"160
+"162
 [v floToChar@temp temp `f  1 a 4 46 ]
-"161
+"163
 [v floToChar@digdecimal digdecimal `[2]uc  1 a 2 52 ]
-"158
+"160
 [v floToChar@entero entero `uc  1 a 1 51 ]
-"159
+"161
 [v floToChar@decimal decimal `uc  1 a 1 50 ]
-"157
+"159
 [v floToChar@valor valor `DCf  1 p 4 37 ]
 [v floToChar@salida salida `*.4uc  1 p 1 41 ]
-"174
-} 0
 "176
+} 0
+"178
 [v _divisiondecimal divisiondecimal `(v  1 e 1 0 ]
 {
 [v divisiondecimal@conteo conteo `uc  1 a 1 wreg ]
-"177
+"179
 [v divisiondecimal@div div `uc  1 a 1 13 ]
-"176
+"178
 [v divisiondecimal@conteo conteo `uc  1 a 1 wreg ]
 [v divisiondecimal@un un `*.4uc  1 p 1 9 ]
 [v divisiondecimal@dec dec `*.4uc  1 p 1 10 ]
 [v divisiondecimal@cent cent `*.4uc  1 p 1 11 ]
 [v divisiondecimal@conteo conteo `uc  1 a 1 12 ]
-"194
+"196
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
@@ -311,17 +298,17 @@
 "8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S684 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S661 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S689 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S692 . 4 `l 1 i 4 0 `d 1 f 4 0 `S684 1 fAsBytes 4 0 `S689 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S692  1 a 4 20 ]
+[s S666 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S669 . 4 `l 1 i 4 0 `d 1 f 4 0 `S661 1 fAsBytes 4 0 `S666 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S669  1 a 4 20 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 14 ]
-[s S761 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S738 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S764 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S761 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S764  1 a 2 24 ]
+[u S741 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S738 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S741  1 a 2 24 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 19 ]
 "11
@@ -346,27 +333,6 @@
 [v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
 [v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
 "60
-} 0
-"50 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-[v _cursorLCD cursorLCD `(v  1 e 1 0 ]
-{
-[v cursorLCD@fila fila `uc  1 a 1 wreg ]
-"51
-[v cursorLCD@temp temp `uc  1 a 1 6 ]
-"50
-[v cursorLCD@fila fila `uc  1 a 1 wreg ]
-[v cursorLCD@columna columna `uc  1 p 1 3 ]
-"52
-[v cursorLCD@fila fila `uc  1 a 1 5 ]
-"61
-} 0
-"63
-[v _comandoLCD comandoLCD `(v  1 e 1 0 ]
-{
-[v comandoLCD@cmd cmd `uc  1 a 1 wreg ]
-[v comandoLCD@cmd cmd `uc  1 a 1 wreg ]
-[v comandoLCD@cmd cmd `uc  1 a 1 2 ]
-"69
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -415,21 +381,6 @@
 {
 "27
 } 0
-"75 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-[v _LCDstring LCDstring `(v  1 e 1 0 ]
-{
-[v LCDstring@mensaje mensaje `*.26uc  1 p 2 2 ]
-"80
-} 0
-"40
-[v _dispCHAR dispCHAR `(v  1 e 1 0 ]
-{
-[v dispCHAR@b b `uc  1 a 1 wreg ]
-[v dispCHAR@b b `uc  1 a 1 wreg ]
-"42
-[v dispCHAR@b b `uc  1 a 1 1 ]
-"48
-} 0
 "11 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
 [v _DHT11_START DHT11_START `(v  1 e 1 0 ]
 {
@@ -452,10 +403,10 @@
 {
 "43
 } 0
-"134 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+"136 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
 [v _CONFIG CONFIG `(v  1 e 1 0 ]
 {
-"155
+"157
 } 0
 "13 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
 [v _MasterInit_I2C MasterInit_I2C `(v  1 e 1 0 ]

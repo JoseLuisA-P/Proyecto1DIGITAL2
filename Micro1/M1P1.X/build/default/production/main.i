@@ -2832,21 +2832,6 @@ void DHT11_ReadData(uint8_t* datos);
 void DHT11_START(void);
 # 31 "main.c" 2
 
-# 1 "./LCDD2.h" 1
-# 17 "./LCDD2.h"
-void initLCD(void);
-
-
-void dispCHAR(char b);
-
-void cursorLCD(uint8_t fila, uint8_t columna);
-
-void comandoLCD(uint8_t cmd);
-
-void ClearLCD(void);
-
-void LCDstring(unsigned char* mensaje);
-# 32 "main.c" 2
 
 # 1 "./I2C.h" 1
 # 10 "./I2C.h"
@@ -2888,10 +2873,12 @@ uint8_t Hum1;
 uint8_t dummyHum1;
 uint8_t CHECKSUM;
 uint8_t TempENT, TempDEC;
-int temp;
+uint8_t SlaveAddress = 0x50;
+uint16_t temp;
 float digTemp;
-char temperatura[] = "TEMP = 00.0 C ";
-char humedadR[] = "RH   = 00.0 % ";
+
+
+unsigned char HumR[2];
 unsigned char TEMPdig[6];
 
 
@@ -2907,13 +2894,13 @@ void main(void) {
     CONFIG();
     TMR1H = 0;
     TMR1L = 0;
-    initLCD();
+
 
 
     MasterStart_I2C();
     MasterSend_I2C(0X90);
     MasterSend_I2C(0X01);
-    MasterSend_I2C(0x02);
+    MasterSend_I2C(0X00);
     MasterStop_I2C();
 
     while(1){
@@ -2929,8 +2916,17 @@ void main(void) {
 
         temp = (TempENT<<3)|(TempDEC>>5);
         digTemp = (float)temp*0.125;
-        PORTB = TempENT;
         floToChar(digTemp,TEMPdig);
+
+        MasterStart_I2C();
+        MasterSend_I2C(SlaveAddress);
+        MasterSend_I2C(TEMPdig[5]);
+        MasterSend_I2C(TEMPdig[4]);
+        MasterSend_I2C(TEMPdig[3]);
+        MasterSend_I2C(TEMPdig[1]);
+        MasterSend_I2C(TEMPdig[2]);
+        MasterSend_I2C(TEMPdig[0]);
+        MasterStop_I2C();
 
         DHT11_START();
 
@@ -2942,35 +2938,16 @@ void main(void) {
             DHT11_ReadData(&CHECKSUM);
 
             if(CHECKSUM == ((Hum1 + dummyHum1 + Temp1 + dummyT1) & 0XFF)){
-                temperatura[7] = Temp1/10 + 48;
-                temperatura[8] = Temp1%10 + 48;
-                humedadR[7] = Hum1/10 + 48;
-                humedadR[8] = Hum1%10 + 48;
-                cursorLCD(1,1);
-                LCDstring(temperatura);
-                cursorLCD(2,1);
-                dispCHAR(TEMPdig[5]+48);
-                dispCHAR(TEMPdig[4]+48);
-                dispCHAR(TEMPdig[3]+48);
-                dispCHAR('.');
-                dispCHAR(TEMPdig[1]+48);
-                dispCHAR(TEMPdig[2]+48);
-                dispCHAR(TEMPdig[0]+48);
-
-            }
-            else{
-                cursorLCD(1,1);
-                LCDstring("ERROR");
-                cursorLCD(2,1);
-                LCDstring("ERROR");
+                HumR[0] = Hum1/10 + 48;
+                HumR[1] = Hum1%10 + 48;
+                MasterStart_I2C();
+                MasterSend_I2C(SlaveAddress);
+                MasterSend_I2C(HumR[0]);
+                MasterSend_I2C(HumR[1]);
+                MasterStop_I2C();
+# 128 "main.c"
             }
         }
-        else{
-                cursorLCD(1,1);
-                LCDstring("ERROR");
-                cursorLCD(2,1);
-                LCDstring("ERROR");
-            }
 
         T1CONbits.TMR1ON = 0;
         _delay((unsigned long)((10)*(8000000/4000.0)));

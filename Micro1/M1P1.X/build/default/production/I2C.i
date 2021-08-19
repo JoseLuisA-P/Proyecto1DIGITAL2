@@ -2710,7 +2710,7 @@ void MasterReceive_I2C(uint8_t *valor){
     waitCondition();
     *valor = SSPBUF;
     waitCondition();
-    SSPCON2bits.ACKDT = 1;
+    SSPCON2bits.ACKDT = 0;
     SSPCON2bits.ACKEN = 1;
 
 }

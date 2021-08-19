@@ -29,7 +29,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include "DHT11.h"
-#include "LCDD2.h"
+//#include "LCDD2.h"
 #include "I2C.h"
 #define _XTAL_FREQ 8000000 //utilizado para los delays
 
@@ -42,10 +42,12 @@ uint8_t Hum1;
 uint8_t dummyHum1;
 uint8_t CHECKSUM;
 uint8_t TempENT, TempDEC;
-int temp;
+uint8_t SlaveAddress = 0x50;
+uint16_t temp;
 float digTemp;
-char temperatura[] = "TEMP = 00.0 C ";
-char humedadR[] = "RH   = 00.0 % ";
+//char temperatura[] = "TEMP = 00.0 C ";
+//char humedadR[] = "     = 00.0 % ";
+unsigned char HumR[2];
 unsigned char TEMPdig[6];
 
 //******************************************************************************
@@ -61,19 +63,19 @@ void main(void) {
     CONFIG();
     TMR1H = 0;
     TMR1L = 0;
-    initLCD();
+    //initLCD();
     
     //configurando el LM75BD
     MasterStart_I2C();
     MasterSend_I2C(0X90); //direccion del sensor
     MasterSend_I2C(0X01); //registro de configuracion
-    MasterSend_I2C(0x02); //Configuracion de interrupcion
+    MasterSend_I2C(0X00); //Configuracion de interrupcion
     MasterStop_I2C();   //se detiene la comunicacion
     
     while(1){
         //lectura del LM75DB
         MasterStart_I2C();
-        MasterSend_I2C(0X90); //DIRECCION DEL SENSORE
+        MasterSend_I2C(0X90); //DIRECCION DEL SENSOR
         MasterSend_I2C(0X00); //indica que leeremos temperatura
         MasterRepeatS_I2C();
         MasterSend_I2C(0X91); //direccion pero de lectura
@@ -81,10 +83,19 @@ void main(void) {
         MasterReceive_I2C(&TempDEC); //esta es la parte decimal
         MasterStop_I2C();
         
-        temp = (TempENT<<3)|(TempDEC>>5);
-        digTemp = (float)temp*0.125;
-        PORTB = TempENT;
-        floToChar(digTemp,TEMPdig);
+        temp = (TempENT<<3)|(TempDEC>>5); //arreglar la temperatura
+        digTemp = (float)temp*0.125; //conseguir su valor flotante
+        floToChar(digTemp,TEMPdig); //convertir el valor a 6 caracteres
+        
+        MasterStart_I2C();
+        MasterSend_I2C(SlaveAddress); //direccion del esclavo
+        MasterSend_I2C(TEMPdig[5]); //Centena
+        MasterSend_I2C(TEMPdig[4]); //Decena
+        MasterSend_I2C(TEMPdig[3]); //Unidad
+        MasterSend_I2C(TEMPdig[1]); //Decima
+        MasterSend_I2C(TEMPdig[2]); //Centesima
+        MasterSend_I2C(TEMPdig[0]); //Milesima
+        MasterStop_I2C();
         
         DHT11_START();
         
@@ -96,12 +107,15 @@ void main(void) {
             DHT11_ReadData(&CHECKSUM);
             
             if(CHECKSUM == ((Hum1 + dummyHum1 + Temp1 + dummyT1) & 0XFF)){
-                temperatura[7] = Temp1/10 + 48;
-                temperatura[8] = Temp1%10 + 48;
-                humedadR[7] = Hum1/10 + 48;
-                humedadR[8] = Hum1%10 + 48;
-                cursorLCD(1,1);
-                LCDstring(temperatura);
+                HumR[0] = Hum1/10 + 48;
+                HumR[1] = Hum1%10 + 48;
+                MasterStart_I2C();
+                MasterSend_I2C(SlaveAddress);
+                MasterSend_I2C(HumR[0]);
+                MasterSend_I2C(HumR[1]);
+                MasterStop_I2C();
+                /*cursorLCD(1,1);
+                LCDstring(humedadR);
                 cursorLCD(2,1);
                 dispCHAR(TEMPdig[5]+48);
                 dispCHAR(TEMPdig[4]+48);
@@ -109,22 +123,10 @@ void main(void) {
                 dispCHAR('.');
                 dispCHAR(TEMPdig[1]+48);
                 dispCHAR(TEMPdig[2]+48);
-                dispCHAR(TEMPdig[0]+48);
-                //LCDstring(humedadR);
-            }
-            else{
-                cursorLCD(1,1);
-                LCDstring("ERROR");
-                cursorLCD(2,1);
-                LCDstring("ERROR");
+                dispCHAR(TEMPdig[0]+48);*/
+                
             }
         }
-        else{
-                cursorLCD(1,1);
-                LCDstring("ERROR");
-                cursorLCD(2,1);
-                LCDstring("ERROR");
-            }
         
         T1CONbits.TMR1ON = 0;
         __delay_ms(10);

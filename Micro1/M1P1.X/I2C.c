@@ -52,7 +52,7 @@ void MasterReceive_I2C(uint8_t *valor){
     waitCondition(); //espera a que el dato se termine de colocar en el buffer
     *valor = SSPBUF; //copia el valor a la variable especificada
     waitCondition();
-    SSPCON2bits.ACKDT = 1; //indica que se recibio el dato
+    SSPCON2bits.ACKDT = 0; //indica que se recibio el dato
     SSPCON2bits.ACKEN = 1; //comienza el acknowledge
     
 }
