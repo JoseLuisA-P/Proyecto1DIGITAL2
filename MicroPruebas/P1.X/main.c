@@ -29,7 +29,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include "I2C.h"
-#include "LCDD2.h"
+#include "UART.h"
 #define _XTAL_FREQ 8000000 //utilizado para los delays
 
 //******************************************************************************
@@ -45,6 +45,12 @@ void config(void);
 //  Rutina de interrupcion
 //******************************************************************************
 void __interrupt() interrupcion(void){
+    
+    if(PIR1bits.RCIF){
+        DATA = RCREG; 
+        PIR1bits.RCIF = 0;
+    }
+    
     if(PIR1bits.SSPIF){
     
         SSPCONbits.CKP = 0; //mantiene el clock en 0
@@ -61,34 +67,6 @@ void __interrupt() interrupcion(void){
             SSPCONbits.CKP = 1;//Habilita el clock de nuevo
             while(!SSPSTATbits.BF);//espera a que se llene el buffer
             RDATA = SSPBUF;
-            switch(contador){
-                case 0:
-                    TEMPdig[5] = RDATA;
-                    break;
-                case 1:
-                    TEMPdig[4] = RDATA;
-                    break;
-                case 2:
-                    TEMPdig[3] = RDATA;
-                    break;
-                case 3:
-                    TEMPdig[2] = RDATA;
-                    break;
-                case 4:
-                    TEMPdig[1] = RDATA;
-                    break;
-                case 5:
-                    TEMPdig[0] = RDATA;
-                    break;
-                case 6:
-                    HumR[0] = RDATA;
-                    break;
-                case 7:
-                    HumR[1] = RDATA;
-                    break;
-            }
-            contador++;
-            if(contador >= 8)contador = 0;
             __delay_ms(1);
         }
         
@@ -101,11 +79,9 @@ void __interrupt() interrupcion(void){
             while(SSPSTATbits.BF); //espera a que lo envie
         }
         
-        
         PIR1bits.SSPIF = 0; 
     
     }
-    
 }
 
 //******************************************************************************
@@ -113,19 +89,10 @@ void __interrupt() interrupcion(void){
 //******************************************************************************
 void main(void) {
     config();
-    initLCD();
+    configUART();
+    
     while(1){
-        cursorLCD(1,1);
-        dispCHAR(TEMPdig[5]+48);
-        dispCHAR(TEMPdig[4]+48);
-        dispCHAR(TEMPdig[3]+48);
-        dispCHAR('.');
-        dispCHAR(TEMPdig[2]+48);
-        dispCHAR(TEMPdig[1]+48);
-        dispCHAR(TEMPdig[0]+48);
-        cursorLCD(2,1);
-        dispCHAR(HumR[0]);
-        dispCHAR(HumR[1]);
+        
 
     }
 }
@@ -139,6 +106,7 @@ void config(void){
     TRISA =     0X01;
     TRISB =     0X00;
     TRISD =     0X00;
+    TRISE =     0X00;
     PORTA =     0X00;
     PORTB =     0X00;
     PORTD =     0X00;
@@ -147,12 +115,9 @@ void config(void){
     OSCCONbits.IRCF = 0b111; //oscilador a 8Mhz
     OSCCONbits.SCS = 0b1;
     
-    contador = 0;
     
     INTCONbits.GIE = 1; //Interrupciones usadas por el I2C y ADC
     INTCONbits.PEIE = 1;
-    PIR1bits.ADIF = 0;
-    PIE1bits.ADIE = 1;
     PIR1bits.SSPIF = 0;
     PIE1bits.SSPIE = 1;
     

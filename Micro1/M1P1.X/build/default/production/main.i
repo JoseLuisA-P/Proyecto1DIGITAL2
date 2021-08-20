@@ -2876,6 +2876,22 @@ void MasterSend_I2C(uint8_t dato);
 void MasterReceive_I2C(uint8_t *valor);
 # 33 "main.c" 2
 
+# 1 "./LCDD2.h" 1
+# 17 "./LCDD2.h"
+void initLCD(void);
+
+
+void dispCHAR(char b);
+
+void cursorLCD(uint8_t fila, uint8_t columna);
+
+void comandoLCD(uint8_t cmd);
+
+void ClearLCD(void);
+
+void LCDstring(unsigned char* mensaje);
+# 34 "main.c" 2
+
 
 
 
@@ -2887,7 +2903,7 @@ uint8_t Hum1;
 uint8_t dummyHum1;
 uint8_t CHECKSUM;
 uint8_t TempENT, TempDEC;
-uint8_t SlaveAddress = 0x20;
+uint8_t slaveAddress = 0x20;
 uint16_t temp;
 uint8_t UARTData;
 float digTemp;
@@ -2903,10 +2919,6 @@ void CONFIG(void);
 
 void __attribute__((picinterrupt(("")))) interrupcion(void){
 
-    if(PIR1bits.RCIF){
-        UARTData = RCREG;
-        PIR1bits.RCIF = 0;
-    }
 }
 
 
@@ -2914,7 +2926,7 @@ void __attribute__((picinterrupt(("")))) interrupcion(void){
 
 void main(void) {
     CONFIG();
-    configUART();
+    initLCD();
     TMR1H = 0;
     TMR1L = 0;
 
@@ -2940,21 +2952,27 @@ void main(void) {
         digTemp = (float)temp*0.125;
         floToChar(digTemp,TEMPdig);
 
-        DHT11_START();
+        MasterStart_I2C();
+        MasterSend_I2C(0X21);
+        MasterReceive_I2C(&UARTData);
+        MasterStop_I2C();
 
-        if(DHT11_ALIVE()){
-            DHT11_ReadData(&Hum1);
-            DHT11_ReadData(&dummyHum1);
-            DHT11_ReadData(&Temp1);
-            DHT11_ReadData(&dummyT1);
-            DHT11_ReadData(&CHECKSUM);
-
-            if(CHECKSUM == ((Hum1 + dummyHum1 + Temp1 + dummyT1) & 0XFF)){
-                HumR[0] = Hum1/10 + 48;
-                HumR[1] = Hum1%10 + 48;
-# 122 "main.c"
-            }
-        }
+        cursorLCD(1,1);
+        LCDstring("Temp: ");
+        dispCHAR(TEMPdig[5]+48);
+        dispCHAR(TEMPdig[4]+48);
+        dispCHAR(TEMPdig[3]+48);
+        dispCHAR('.');
+        dispCHAR(TEMPdig[2]+48);
+        dispCHAR(TEMPdig[1]+48);
+        dispCHAR(TEMPdig[0]+48);
+        dispCHAR(223);
+        dispCHAR('C');
+        cursorLCD(2,1);
+        LCDstring("HUM R: ");
+        dispCHAR(HumR[0]);
+        dispCHAR(HumR[1]);
+        dispCHAR('%');
 
         switch(UARTData){
             case 'a':
@@ -2988,6 +3006,21 @@ void main(void) {
                 PORTBbits.RB3 = 0;
                 break;
 
+        }
+
+        DHT11_START();
+
+        if(DHT11_ALIVE()){
+            DHT11_ReadData(&Hum1);
+            DHT11_ReadData(&dummyHum1);
+            DHT11_ReadData(&Temp1);
+            DHT11_ReadData(&dummyT1);
+            DHT11_ReadData(&CHECKSUM);
+
+            if(CHECKSUM == ((Hum1 + dummyHum1 + Temp1 + dummyT1) & 0XFF)){
+                HumR[0] = Hum1/10 + 48;
+                HumR[1] = Hum1%10 + 48;
+            }
         }
 
         T1CONbits.TMR1ON = 0;

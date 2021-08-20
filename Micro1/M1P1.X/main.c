@@ -31,6 +31,7 @@
 #include "DHT11.h"
 #include "UART.h"
 #include "I2C.h"
+#include "LCDD2.h"
 #define _XTAL_FREQ 8000000 //utilizado para los delays
 
 //******************************************************************************
@@ -42,7 +43,7 @@ uint8_t Hum1;
 uint8_t dummyHum1;
 uint8_t CHECKSUM;
 uint8_t TempENT, TempDEC;
-uint8_t SlaveAddress = 0x20;
+uint8_t slaveAddress = 0x20;
 uint16_t temp;
 uint8_t UARTData;
 float digTemp;
@@ -57,11 +58,7 @@ void divisiondecimal(uint8_t conteo,uint8_t* un,uint8_t* dec,uint8_t* cent);
 void CONFIG(void);
 
 void __interrupt() interrupcion(void){
-    
-    if(PIR1bits.RCIF){
-        UARTData = RCREG; 
-        PIR1bits.RCIF = 0;
-    }
+
 }
 
 //******************************************************************************
@@ -69,7 +66,7 @@ void __interrupt() interrupcion(void){
 //******************************************************************************
 void main(void) {
     CONFIG();
-    configUART();
+    initLCD();
     TMR1H = 0;
     TMR1L = 0;
     
@@ -95,32 +92,27 @@ void main(void) {
         digTemp = (float)temp*0.125; //conseguir su valor flotante
         floToChar(digTemp,TEMPdig); //convertir el valor a 6 caracteres
         
-        DHT11_START();
+        MasterStart_I2C();
+        MasterSend_I2C(0X21);
+        MasterReceive_I2C(&UARTData);
+        MasterStop_I2C();
         
-        if(DHT11_ALIVE()){
-            DHT11_ReadData(&Hum1);
-            DHT11_ReadData(&dummyHum1);
-            DHT11_ReadData(&Temp1);
-            DHT11_ReadData(&dummyT1);
-            DHT11_ReadData(&CHECKSUM);
-            
-            if(CHECKSUM == ((Hum1 + dummyHum1 + Temp1 + dummyT1) & 0XFF)){
-                HumR[0] = Hum1/10 + 48;
-                HumR[1] = Hum1%10 + 48;
-                /*
-                MasterStart_I2C();
-                MasterSend_I2C(SlaveAddress);
-                MasterSend_I2C(TEMPdig[5]); //Centena
-                MasterSend_I2C(TEMPdig[4]); //Decena
-                MasterSend_I2C(TEMPdig[3]); //Unidad
-                MasterSend_I2C(TEMPdig[1]); //Decima
-                MasterSend_I2C(TEMPdig[2]); //Centesima
-                MasterSend_I2C(TEMPdig[0]); //Milesima
-                MasterSend_I2C(HumR[0]); //Decena humedad
-                MasterSend_I2C(HumR[1]); //unidad humedad
-                MasterStop_I2C();*/               
-            }
-        }
+        cursorLCD(1,1);
+        LCDstring("Temp: ");
+        dispCHAR(TEMPdig[5]+48);
+        dispCHAR(TEMPdig[4]+48);
+        dispCHAR(TEMPdig[3]+48);
+        dispCHAR('.');
+        dispCHAR(TEMPdig[2]+48);
+        dispCHAR(TEMPdig[1]+48);
+        dispCHAR(TEMPdig[0]+48);
+        dispCHAR(223);
+        dispCHAR('C');
+        cursorLCD(2,1);
+        LCDstring("HUM R: ");
+        dispCHAR(HumR[0]);
+        dispCHAR(HumR[1]);
+        dispCHAR('%');
         
         switch(UARTData){
             case 'a':
@@ -154,6 +146,21 @@ void main(void) {
                 PORTBbits.RB3 = 0;
                 break;
         
+        }
+        
+        DHT11_START();
+        
+        if(DHT11_ALIVE()){
+            DHT11_ReadData(&Hum1);
+            DHT11_ReadData(&dummyHum1);
+            DHT11_ReadData(&Temp1);
+            DHT11_ReadData(&dummyT1);
+            DHT11_ReadData(&CHECKSUM);
+            
+            if(CHECKSUM == ((Hum1 + dummyHum1 + Temp1 + dummyT1) & 0XFF)){
+                HumR[0] = Hum1/10 + 48;
+                HumR[1] = Hum1%10 + 48;                   
+            }
         }
         
         T1CONbits.TMR1ON = 0;

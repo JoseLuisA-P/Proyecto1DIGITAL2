@@ -17,27 +17,27 @@
 [v _waitCondition waitCondition `(v  1 e 1 0 ]
 "58
 [v _SlaveInit_I2C SlaveInit_I2C `(v  1 e 1 0 ]
-"20 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\MicroPruebas\P1.X\LCDD2.c
-[v _initLCD initLCD `(v  1 e 1 0 ]
-"40
+"40 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\MicroPruebas\P1.X\LCDD2.c
 [v _dispCHAR dispCHAR `(v  1 e 1 0 ]
-"50
-[v _cursorLCD cursorLCD `(v  1 e 1 0 ]
 "63
 [v _comandoLCD comandoLCD `(v  1 e 1 0 ]
 "47 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\MicroPruebas\P1.X\main.c
 [v _interrupcion interrupcion `II(v  1 e 1 0 ]
-"114
+"90
 [v _main main `(v  1 e 1 0 ]
-"136
+"103
 [v _config config `(v  1 e 1 0 ]
+"11 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\MicroPruebas\P1.X\UART.c
+[v _configUART configUART `(v  1 e 1 0 ]
+"26
+[v _send1dato send1dato `(v  1 e 1 0 ]
 "166 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S216 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S207 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -47,13 +47,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "482
-[s S225 . 1 `uc 1 . 1 0 :2:0 
+[s S216 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S230 . 1 `S216 1 . 1 0 `S225 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES230  1 e 1 @11 ]
+[u S221 . 1 `S207 1 . 1 0 `S216 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES221  1 e 1 @11 ]
 [s S22 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -69,25 +69,51 @@
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-[s S41 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S42 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "870
-[s S47 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S48 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S52 . 1 `S41 1 . 1 0 `S47 1 . 1 0 ]
-[v _SSPCONbits SSPCONbits `VES52  1 e 1 @20 ]
+[u S53 . 1 `S42 1 . 1 0 `S48 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES53  1 e 1 @20 ]
+[s S472 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"1068
+[s S481 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S485 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S488 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S491 . 1 `S472 1 . 1 0 `S481 1 . 1 0 `S485 1 . 1 0 `S488 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES491  1 e 1 @24 ]
+"1133
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1140
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S337 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S328 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -97,11 +123,13 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S346 . 1 `S337 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES346  1 e 1 @135 ]
+[u S337 . 1 `S328 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES337  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-[s S248 . 1 `uc 1 TMR1IE 1 0 :1:0 
+"1664
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+[s S239 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -110,25 +138,25 @@
 `uc 1 ADIE 1 0 :1:6 
 ]
 "1718
-[u S256 . 1 `S248 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES256  1 e 1 @140 ]
-[s S190 . 1 `uc 1 SCS 1 0 :1:0 
+[u S247 . 1 `S239 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES247  1 e 1 @140 ]
+[s S181 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1882
-[s S196 . 1 `uc 1 . 1 0 :4:0 
+[s S187 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S201 . 1 `S190 1 . 1 0 `S196 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES201  1 e 1 @143 ]
+[u S192 . 1 `S181 1 . 1 0 `S187 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES192  1 e 1 @143 ]
 "1979
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S358 . 1 `uc 1 SEN 1 0 :1:0 
+[s S349 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -138,13 +166,13 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1996
-[u S367 . 1 `S358 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES367  1 e 1 @145 ]
+[u S358 . 1 `S349 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES358  1 e 1 @145 ]
 "2048
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
-[s S68 . 1 `uc 1 BF 1 0 :1:0 
+[s S69 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -154,39 +182,60 @@
 `uc 1 SMP 1 0 :1:7 
 ]
 "2231
-[s S77 . 1 `uc 1 . 1 0 :2:0 
+[s S78 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S82 . 1 `uc 1 . 1 0 :2:0 
+[s S83 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DATA 1 0 :1:5 
 ]
-[s S88 . 1 `uc 1 . 1 0 :2:0 
+[s S89 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S93 . 1 `uc 1 . 1 0 :2:0 
+[s S94 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S98 . 1 `uc 1 . 1 0 :2:0 
+[s S99 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S103 . 1 `uc 1 . 1 0 :2:0 
+[s S104 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[u S108 . 1 `S68 1 . 1 0 `S77 1 . 1 0 `S82 1 . 1 0 `S88 1 . 1 0 `S93 1 . 1 0 `S98 1 . 1 0 `S103 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES108  1 e 1 @148 ]
+[u S109 . 1 `S69 1 . 1 0 `S78 1 . 1 0 `S83 1 . 1 0 `S89 1 . 1 0 `S94 1 . 1 0 `S99 1 . 1 0 `S104 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES109  1 e 1 @148 ]
+[s S435 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2582
+[s S444 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S448 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S451 . 1 `S435 1 . 1 0 `S444 1 . 1 0 `S448 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES451  1 e 1 @152 ]
+"2642
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
@@ -200,67 +249,31 @@
 "39
 [v _RDATA RDATA `uc  1 e 1 0 ]
 [v _DATA DATA `uc  1 e 1 0 ]
-"40
-[v _contador contador `uc  1 e 1 0 ]
-"41
-[v _HumR HumR `[2]uc  1 e 2 0 ]
-"42
-[v _TEMPdig TEMPdig `[6]uc  1 e 6 0 ]
-"114
+"90
 [v _main main `(v  1 e 1 0 ]
 {
-"131
+"98
 } 0
-"20 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\MicroPruebas\P1.X\LCDD2.c
-[v _initLCD initLCD `(v  1 e 1 0 ]
+"11 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\MicroPruebas\P1.X\UART.c
+[v _configUART configUART `(v  1 e 1 0 ]
 {
-"34
+"21
 } 0
-"40
-[v _dispCHAR dispCHAR `(v  1 e 1 0 ]
-{
-[v dispCHAR@b b `uc  1 a 1 wreg ]
-[v dispCHAR@b b `uc  1 a 1 wreg ]
-"42
-[v dispCHAR@b b `uc  1 a 1 1 ]
-"48
-} 0
-"50
-[v _cursorLCD cursorLCD `(v  1 e 1 0 ]
-{
-[v cursorLCD@fila fila `uc  1 a 1 wreg ]
-"51
-[v cursorLCD@temp temp `uc  1 a 1 6 ]
-"50
-[v cursorLCD@fila fila `uc  1 a 1 wreg ]
-[v cursorLCD@columna columna `uc  1 p 1 3 ]
-"52
-[v cursorLCD@fila fila `uc  1 a 1 5 ]
-"61
-} 0
-"63
-[v _comandoLCD comandoLCD `(v  1 e 1 0 ]
-{
-[v comandoLCD@cmd cmd `uc  1 a 1 wreg ]
-[v comandoLCD@cmd cmd `uc  1 a 1 wreg ]
-[v comandoLCD@cmd cmd `uc  1 a 1 2 ]
-"69
-} 0
-"136 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\MicroPruebas\P1.X\main.c
+"103 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\MicroPruebas\P1.X\main.c
 [v _config config `(v  1 e 1 0 ]
 {
-"160
+"125
 } 0
 "58 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\MicroPruebas\P1.X\I2C.c
 [v _SlaveInit_I2C SlaveInit_I2C `(v  1 e 1 0 ]
 {
 [v SlaveInit_I2C@address address `uc  1 a 1 wreg ]
 [v SlaveInit_I2C@address address `uc  1 a 1 wreg ]
-[v SlaveInit_I2C@address address `uc  1 a 1 0 ]
+[v SlaveInit_I2C@address address `uc  1 a 1 4 ]
 "66
 } 0
 "47 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\MicroPruebas\P1.X\main.c
 [v _interrupcion interrupcion `II(v  1 e 1 0 ]
 {
-"109
+"85
 } 0

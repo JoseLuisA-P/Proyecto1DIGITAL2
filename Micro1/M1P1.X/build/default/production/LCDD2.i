@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "LCDD2.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,24 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 12 "main.c"
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = ON
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
+# 1 "LCDD2.c" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2504,7 +2487,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 27 "main.c" 2
+# 1 "LCDD2.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2603,7 +2586,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 28 "main.c" 2
+# 2 "LCDD2.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -2688,7 +2671,7 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 29 "main.c" 2
+# 3 "LCDD2.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
@@ -2823,140 +2806,83 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 30 "main.c" 2
-
-# 1 "./I2C.h" 1
-# 10 "./I2C.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 10 "./I2C.h" 2
-# 20 "./I2C.h"
-void MasterInit_I2C(unsigned long frec);
-
-void SlaveInit_I2C(uint8_t address);
+# 4 "LCDD2.c" 2
 
 
-
-void waitCondition(void);
-
-
-
+# 1 "./LCDD2.h" 1
+# 17 "./LCDD2.h"
+void initLCD(void);
 
 
+void dispCHAR(char b);
 
-void MasterStart_I2C(void);
+void cursorLCD(uint8_t fila, uint8_t columna);
 
-void MasterStop_I2C(void);
+void comandoLCD(uint8_t cmd);
 
-void MasterSend_I2C(uint8_t dato);
+void ClearLCD(void);
 
-void MasterReceive_I2C(uint8_t *valor);
-# 31 "main.c" 2
-
-# 1 "./UART.h" 1
-
-
-
-
-
-void configUART(void);
-
-void send1dato(char dato);
-
-void sendString(unsigned char *mensaje);
-
-void sendhex(uint8_t *valor);
-# 32 "main.c" 2
-
-
-
-
-
-
-uint8_t clean;
-uint8_t RDATA ,DATA;
-uint8_t contador;
-unsigned char HumR[2];
-unsigned char TEMPdig[6];
-void config(void);
-
-
-
-void __attribute__((picinterrupt(("")))) interrupcion(void){
-
-    if(PIR1bits.RCIF){
-        DATA = RCREG;
-        PIR1bits.RCIF = 0;
-    }
-
-    if(PIR1bits.SSPIF){
-
-        SSPCONbits.CKP = 0;
-
-        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
-            clean = SSPBUF;
-            SSPCONbits.SSPOV = 0;
-            SSPCONbits.WCOL = 0;
-            SSPCONbits.CKP = 1;
-        }
-
-        if(!SSPSTATbits.R && !SSPSTATbits.D){
-            clean = SSPBUF;
-            SSPCONbits.CKP = 1;
-            while(!SSPSTATbits.BF);
-            RDATA = SSPBUF;
-            _delay((unsigned long)((1)*(8000000/4000.0)));
-        }
-
-        else if(SSPSTATbits.R && !SSPSTATbits.D){
-            clean = SSPBUF;
-            SSPSTATbits.BF = 0;
-            SSPBUF = DATA;
-            SSPCONbits.CKP = 1;
-            _delay((unsigned long)((1)*(8000000/4000.0)));
-            while(SSPSTATbits.BF);
-        }
-
-        PIR1bits.SSPIF = 0;
-
-    }
-}
-
-
-
-
-void main(void) {
-    config();
-    configUART();
-
-    while(1){
-
-
-    }
-}
-
-
-
-
-void config(void){
-    ANSEL = 0X00;
-    ANSELH = 0X00;
-    TRISA = 0X01;
-    TRISB = 0X00;
-    TRISD = 0X00;
-    TRISE = 0X00;
-    PORTA = 0X00;
-    PORTB = 0X00;
+void LCDstring(unsigned char* mensaje);
+# 6 "LCDD2.c" 2
+# 20 "LCDD2.c"
+void initLCD(void){
+    RE1 = 0;
     PORTD = 0X00;
+    _delay((unsigned long)((50)*(8000000/4000.0)));
+    comandoLCD(0X30);
+    _delay((unsigned long)((5)*(8000000/4000.0)));
+    comandoLCD(0X30);
+    _delay((unsigned long)((5)*(8000000/4000.0)));
+    comandoLCD(0X30);
+    comandoLCD(0X38);
+    comandoLCD(0X06);
+    comandoLCD(0X0C);
+    comandoLCD(0X01);
+
+}
 
 
-    OSCCONbits.IRCF = 0b111;
-    OSCCONbits.SCS = 0b1;
 
 
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    PIR1bits.SSPIF = 0;
-    PIE1bits.SSPIE = 1;
 
-    SlaveInit_I2C(0X20);
+void dispCHAR(char b){
+
+    RE1 = 1;
+    PORTD = b;
+    RE2 = 1;
+    _delay((unsigned long)((40)*(8000000/4000000.0)));
+    RE2 = 0;
+
+}
+
+void cursorLCD(uint8_t fila, uint8_t columna){
+    uint8_t temp;
+    if(fila == 1){
+        temp = 0X80 + columna - 1;
+        comandoLCD(temp);
+    }
+
+    if(fila == 2){
+        temp = 0XC0 + columna -1;
+        comandoLCD(temp);
+    }
+}
+
+void comandoLCD(uint8_t cmd){
+    RE1 = 0;
+    PORTD = cmd;
+    RE2 = 1;
+    _delay((unsigned long)((4)*(8000000/4000.0)));
+    RE2 = 0;
+}
+
+void ClearLCD(void){
+    comandoLCD(0X01);
+}
+
+void LCDstring(unsigned char* mensaje){
+    while(*mensaje != 0x00){
+        dispCHAR(*mensaje);
+        mensaje ++;
+    }
 }
