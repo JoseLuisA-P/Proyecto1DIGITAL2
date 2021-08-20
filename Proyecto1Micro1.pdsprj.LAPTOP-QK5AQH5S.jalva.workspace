@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff8007000000000000e80d00001c040000</PLACEMENT>
+  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffff0000000000000000680600001c040000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
@@ -81,7 +81,7 @@
    <POPUP w="296" x="2118" flags="00000008" y="289" h="105" pid="1" iid="6">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="450" x="896" flags="00000022" y="147" h="250" pid="0" iid="3">
+   <POPUP w="450" x="896" flags="00008023" y="147" h="250" pid="0" iid="3">
     <PROPERTIES>
      <ITEM name="AutoEcho">1</ITEM>
      <ITEM name="HexMode">0</ITEM>
