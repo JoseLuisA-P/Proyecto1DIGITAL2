@@ -35,17 +35,3 @@ void sendString(unsigned char* mensaje){ // \r se utiliza para el salto de linea
     }//como apunta a la direccion de inicio de todo el string, con cada
      //iteracion cambia al siguiente caracter del string
 }
-
-void sendhex(uint8_t *valor){
-    uint8_t centena;
-    uint8_t decena;
-    uint8_t unidad;
-    
-    centena = (*valor/100);
-    decena = (*valor-(centena*100))/10;
-    unidad = (*valor-(centena*100))%10;
-    
-    send1dato(centena + 48);//envia cada valor con el arreglo para el 
-    send1dato(decena + 48);//ASCII
-    send1dato(unidad + 48);
-}

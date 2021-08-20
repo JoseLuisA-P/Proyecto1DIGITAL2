@@ -2887,7 +2887,7 @@ uint8_t Hum1;
 uint8_t dummyHum1;
 uint8_t CHECKSUM;
 uint8_t TempENT, TempDEC;
-uint8_t SlaveAddress = 0x50;
+uint8_t SlaveAddress = 0x20;
 uint16_t temp;
 uint8_t UARTData;
 float digTemp;
@@ -2939,7 +2939,7 @@ void main(void) {
         temp = (TempENT<<3)|(TempDEC>>5);
         digTemp = (float)temp*0.125;
         floToChar(digTemp,TEMPdig);
-# 108 "main.c"
+
         DHT11_START();
 
         if(DHT11_ALIVE()){
@@ -2952,12 +2952,7 @@ void main(void) {
             if(CHECKSUM == ((Hum1 + dummyHum1 + Temp1 + dummyT1) & 0XFF)){
                 HumR[0] = Hum1/10 + 48;
                 HumR[1] = Hum1%10 + 48;
-
-
-
-
-
-
+# 122 "main.c"
             }
         }
 
@@ -3033,7 +3028,7 @@ void floToChar(const float valor, unsigned char *salida){
     uint8_t entero;
     uint8_t decimal;
     float temp;
-    unsigned char digdecimal[2];
+    unsigned char digdecimal[3];
 
     entero = valor;
     temp = valor - (float)entero;

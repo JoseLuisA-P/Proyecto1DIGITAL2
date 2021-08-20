@@ -2855,17 +2855,3 @@ void sendString(unsigned char* mensaje){
     }
 
 }
-
-void sendhex(uint8_t *valor){
-    uint8_t centena;
-    uint8_t decena;
-    uint8_t unidad;
-
-    centena = (*valor/100);
-    decena = (*valor-(centena*100))/10;
-    unidad = (*valor-(centena*100))%10;
-
-    send1dato(centena + 48);
-    send1dato(decena + 48);
-    send1dato(unidad + 48);
-}
