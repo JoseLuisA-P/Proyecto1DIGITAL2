@@ -2919,6 +2919,11 @@ void CONFIG(void);
 
 void __attribute__((picinterrupt(("")))) interrupcion(void){
 
+    if(PIR1bits.RCIF){
+        UARTData = RCREG;
+        PIR1bits.RCIF = 0;
+    }
+
 }
 
 
@@ -2952,19 +2957,14 @@ void main(void) {
         digTemp = (float)temp*0.125;
         floToChar(digTemp,TEMPdig);
 
-        MasterStart_I2C();
-        MasterSend_I2C(0X21);
-        MasterReceive_I2C(&UARTData);
-        MasterStop_I2C();
-
         cursorLCD(1,1);
         LCDstring("Temp: ");
         dispCHAR(TEMPdig[5]+48);
         dispCHAR(TEMPdig[4]+48);
         dispCHAR(TEMPdig[3]+48);
         dispCHAR('.');
-        dispCHAR(TEMPdig[2]+48);
         dispCHAR(TEMPdig[1]+48);
+        dispCHAR(TEMPdig[2]+48);
         dispCHAR(TEMPdig[0]+48);
         dispCHAR(223);
         dispCHAR('C');
@@ -3040,6 +3040,8 @@ void CONFIG(void){
     PORTB = 0X00;
     PORTD = 0X00;
 
+    configUART();
+
 
     OSCCONbits.IRCF = 0b111;
     OSCCONbits.SCS = 0b1;
@@ -3059,7 +3061,7 @@ void CONFIG(void){
 
 void floToChar(const float valor, unsigned char *salida){
     uint8_t entero;
-    uint8_t decimal;
+    uint16_t decimal;
     float temp;
     unsigned char digdecimal[3];
 

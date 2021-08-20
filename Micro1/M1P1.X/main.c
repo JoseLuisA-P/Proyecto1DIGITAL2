@@ -58,7 +58,12 @@ void divisiondecimal(uint8_t conteo,uint8_t* un,uint8_t* dec,uint8_t* cent);
 void CONFIG(void);
 
 void __interrupt() interrupcion(void){
-
+    
+    if(PIR1bits.RCIF){
+        UARTData = RCREG; 
+        PIR1bits.RCIF = 0;
+    }
+    
 }
 
 //******************************************************************************
@@ -92,19 +97,14 @@ void main(void) {
         digTemp = (float)temp*0.125; //conseguir su valor flotante
         floToChar(digTemp,TEMPdig); //convertir el valor a 6 caracteres
         
-        MasterStart_I2C();
-        MasterSend_I2C(0X21);
-        MasterReceive_I2C(&UARTData);
-        MasterStop_I2C();
-        
         cursorLCD(1,1);
         LCDstring("Temp: ");
         dispCHAR(TEMPdig[5]+48);
         dispCHAR(TEMPdig[4]+48);
         dispCHAR(TEMPdig[3]+48);
         dispCHAR('.');
-        dispCHAR(TEMPdig[2]+48);
         dispCHAR(TEMPdig[1]+48);
+        dispCHAR(TEMPdig[2]+48);
         dispCHAR(TEMPdig[0]+48);
         dispCHAR(223);
         dispCHAR('C');
@@ -180,6 +180,8 @@ void CONFIG(void){
     PORTB =     0X00;
     PORTD =     0X00;
     
+    configUART();
+    
     //Configuracion del oscilador
     OSCCONbits.IRCF = 0b111; //oscilador a 8Mhz
     OSCCONbits.SCS = 0b1;
@@ -199,7 +201,7 @@ void CONFIG(void){
 
 void floToChar(const float valor, unsigned char *salida){
     uint8_t entero;
-    uint8_t decimal;
+    uint16_t decimal;
     float temp;
     unsigned char digdecimal[3];
     
