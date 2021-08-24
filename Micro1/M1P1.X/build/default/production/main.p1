@@ -37,7 +37,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35
 [; ;./I2C.h: 35: void MasterStop_I2C(void);
 [v _MasterStop_I2C `(v ~T0 @X0 0 ef ]
-"37
+[v F1256 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
+[v __delay `JF1256 ~T0 @X0 0 e ]
+[p i __delay ]
+"37 ./I2C.h
 [; ;./I2C.h: 37: void MasterRepeatS_I2C(void);
 [v _MasterRepeatS_I2C `(v ~T0 @X0 0 ef ]
 "41
@@ -94,10 +98,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "700
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 700: extern volatile T1CONbits_t T1CONbits __attribute__((address(0x010)));
 [v _T1CONbits `VS22 ~T0 @X0 0 e@16 ]
-[v F1256 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
-[v __delay `JF1256 ~T0 @X0 0 e ]
-[p i __delay ]
+"8 ./UART.h
+[; ;./UART.h: 8: void send1dato(char dato);
+[v _send1dato `(v ~T0 @X0 0 ef1`uc ]
 "3387 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
@@ -543,6 +546,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "83
 [; ;main.c: 83:     MasterStop_I2C();
 [e ( _MasterStop_I2C ..  ]
+"84
+[; ;main.c: 84:     _delay((unsigned long)((5000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "85
 [; ;main.c: 85:     while(1){
 [e :U 147 ]
@@ -777,151 +783,172 @@ Version 4.0 HI-TECH Software Intermediate Code
 "166
 [; ;main.c: 166:         T1CONbits.TMR1ON = 0;
 [e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"167
-[; ;main.c: 167:         _delay((unsigned long)((10)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "168
-[; ;main.c: 168:     }
+[; ;main.c: 168:         send1dato(TEMPdig[5]+48);
+[e ( _send1dato (1 -> + -> *U + &U _TEMPdig * -> -> -> 5 `i `ui `ux -> -> # *U &U _TEMPdig `ui `ux `i -> 48 `i `uc ]
+"169
+[; ;main.c: 169:         send1dato(TEMPdig[4]+48);
+[e ( _send1dato (1 -> + -> *U + &U _TEMPdig * -> -> -> 4 `i `ui `ux -> -> # *U &U _TEMPdig `ui `ux `i -> 48 `i `uc ]
+"170
+[; ;main.c: 170:         send1dato(TEMPdig[3]+48);
+[e ( _send1dato (1 -> + -> *U + &U _TEMPdig * -> -> -> 3 `i `ui `ux -> -> # *U &U _TEMPdig `ui `ux `i -> 48 `i `uc ]
+"171
+[; ;main.c: 171:         send1dato(';');
+[e ( _send1dato (1 -> -> 59 `ui `uc ]
+"172
+[; ;main.c: 172:         send1dato(HumR[0]);
+[e ( _send1dato (1 -> *U + &U _HumR * -> -> -> 0 `i `ui `ux -> -> # *U &U _HumR `ui `ux `uc ]
+"173
+[; ;main.c: 173:         send1dato(HumR[1]);
+[e ( _send1dato (1 -> *U + &U _HumR * -> -> -> 1 `i `ui `ux -> -> # *U &U _HumR `ui `ux `uc ]
+"174
+[; ;main.c: 174:         send1dato('\n');
+[e ( _send1dato (1 -> -> 10 `ui `uc ]
+"175
+[; ;main.c: 175:         _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"176
+[; ;main.c: 176:     }
 }
 [e :U 146 ]
 [e $U 147  ]
 [e :U 148 ]
-"169
-[; ;main.c: 169: }
+"177
+[; ;main.c: 177: }
 [e :UE 145 ]
 }
-"171
-[; ;main.c: 171: void CONFIG(void){
+"179
+[; ;main.c: 179: void CONFIG(void){
 [v _CONFIG `(v ~T0 @X0 1 ef ]
 {
 [e :U _CONFIG ]
 [f ]
-"172
-[; ;main.c: 172:     ANSEL = 0X00;
-[e = _ANSEL -> -> 0 `i `uc ]
-"173
-[; ;main.c: 173:     ANSELH = 0X00;
-[e = _ANSELH -> -> 0 `i `uc ]
-"174
-[; ;main.c: 174:     TRISA = 0X00;
-[e = _TRISA -> -> 0 `i `uc ]
-"175
-[; ;main.c: 175:     TRISB = 0X00;
-[e = _TRISB -> -> 0 `i `uc ]
-"176
-[; ;main.c: 176:     TRISD = 0X00;
-[e = _TRISD -> -> 0 `i `uc ]
-"177
-[; ;main.c: 177:     TRISEbits.TRISE1 = 0;
-[e = . . _TRISEbits 0 1 -> -> 0 `i `uc ]
-"178
-[; ;main.c: 178:     TRISEbits.TRISE2 = 0;
-[e = . . _TRISEbits 0 2 -> -> 0 `i `uc ]
-"179
-[; ;main.c: 179:     PORTA = 0X00;
-[e = _PORTA -> -> 0 `i `uc ]
 "180
-[; ;main.c: 180:     PORTB = 0X00;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 180:     ANSEL = 0X00;
+[e = _ANSEL -> -> 0 `i `uc ]
 "181
-[; ;main.c: 181:     PORTD = 0X00;
-[e = _PORTD -> -> 0 `i `uc ]
+[; ;main.c: 181:     ANSELH = 0X00;
+[e = _ANSELH -> -> 0 `i `uc ]
+"182
+[; ;main.c: 182:     TRISA = 0X00;
+[e = _TRISA -> -> 0 `i `uc ]
 "183
-[; ;main.c: 183:     configUART();
-[e ( _configUART ..  ]
+[; ;main.c: 183:     TRISB = 0X00;
+[e = _TRISB -> -> 0 `i `uc ]
+"184
+[; ;main.c: 184:     TRISD = 0X00;
+[e = _TRISD -> -> 0 `i `uc ]
+"185
+[; ;main.c: 185:     TRISEbits.TRISE1 = 0;
+[e = . . _TRISEbits 0 1 -> -> 0 `i `uc ]
 "186
-[; ;main.c: 186:     OSCCONbits.IRCF = 0b111;
-[e = . . _OSCCONbits 0 4 -> -> 7 `i `uc ]
+[; ;main.c: 186:     TRISEbits.TRISE2 = 0;
+[e = . . _TRISEbits 0 2 -> -> 0 `i `uc ]
 "187
-[; ;main.c: 187:     OSCCONbits.SCS = 0b1;
-[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
-"190
-[; ;main.c: 190:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 187:     PORTA = 0X00;
+[e = _PORTA -> -> 0 `i `uc ]
+"188
+[; ;main.c: 188:     PORTB = 0X00;
+[e = _PORTB -> -> 0 `i `uc ]
+"189
+[; ;main.c: 189:     PORTD = 0X00;
+[e = _PORTD -> -> 0 `i `uc ]
 "191
-[; ;main.c: 191:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"192
-[; ;main.c: 192:     PIR1bits.RCIF = 0;
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-"193
-[; ;main.c: 193:     PIE1bits.RCIE = 1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-"196
-[; ;main.c: 196:     T1CON = 0X10;
-[e = _T1CON -> -> 16 `i `uc ]
-"197
-[; ;main.c: 197:     TMR1H = 0;
-[e = _TMR1H -> -> 0 `i `uc ]
+[; ;main.c: 191:     configUART();
+[e ( _configUART ..  ]
+"194
+[; ;main.c: 194:     OSCCONbits.IRCF = 0b111;
+[e = . . _OSCCONbits 0 4 -> -> 7 `i `uc ]
+"195
+[; ;main.c: 195:     OSCCONbits.SCS = 0b1;
+[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
 "198
-[; ;main.c: 198:     TMR1L = 0;
-[e = _TMR1L -> -> 0 `i `uc ]
+[; ;main.c: 198:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "199
-[; ;main.c: 199:     MasterInit_I2C(100000);
-[e ( _MasterInit_I2C (1 -> -> 100000 `l `ul ]
+[; ;main.c: 199:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
 "200
-[; ;main.c: 200: }
+[; ;main.c: 200:     PIR1bits.RCIF = 0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"201
+[; ;main.c: 201:     PIE1bits.RCIE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"204
+[; ;main.c: 204:     T1CON = 0X10;
+[e = _T1CON -> -> 16 `i `uc ]
+"205
+[; ;main.c: 205:     TMR1H = 0;
+[e = _TMR1H -> -> 0 `i `uc ]
+"206
+[; ;main.c: 206:     TMR1L = 0;
+[e = _TMR1L -> -> 0 `i `uc ]
+"207
+[; ;main.c: 207:     MasterInit_I2C(100000);
+[e ( _MasterInit_I2C (1 -> -> 100000 `l `ul ]
+"208
+[; ;main.c: 208: }
 [e :UE 158 ]
 }
-"202
-[; ;main.c: 202: void floToChar(const float valor, unsigned char *salida){
+"210
+[; ;main.c: 210: void floToChar(const float valor, unsigned char *salida){
 [v _floToChar `(v ~T0 @X0 1 ef2`Cf`*uc ]
 {
 [e :U _floToChar ]
 [v _valor `Cf ~T0 @X0 1 r1 ]
 [v _salida `*uc ~T0 @X0 1 r2 ]
 [f ]
-"203
-[; ;main.c: 203:     uint8_t entero;
-[v _entero `uc ~T0 @X0 1 a ]
-"204
-[; ;main.c: 204:     uint16_t decimal;
-[v _decimal `ui ~T0 @X0 1 a ]
-"205
-[; ;main.c: 205:     float temp;
-[v _temp `f ~T0 @X0 1 a ]
-"206
-[; ;main.c: 206:     unsigned char digdecimal[3];
-[v _digdecimal `uc ~T0 @X0 -> 3 `i a ]
-"208
-[; ;main.c: 208:     entero = valor;
-[e = _entero -> _valor `uc ]
-"209
-[; ;main.c: 209:     temp = valor - (float)entero;
-[e = _temp - _valor -> _entero `f ]
-"210
-[; ;main.c: 210:     decimal = (temp*100);
-[e = _decimal -> * _temp -> -> 100 `i `f `ui ]
 "211
-[; ;main.c: 211:     divisiondecimal(entero,&digdecimal[0],&digdecimal[1],&digdecimal[2]);
-[e ( _divisiondecimal (4 , , , _entero &U *U + &U _digdecimal * -> -> -> 0 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux &U *U + &U _digdecimal * -> -> -> 1 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux &U *U + &U _digdecimal * -> -> -> 2 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+[; ;main.c: 211:     uint8_t entero;
+[v _entero `uc ~T0 @X0 1 a ]
 "212
-[; ;main.c: 212:     salida[3] = digdecimal[0];
-[e = *U + _salida * -> -> 3 `i `x -> -> # *U _salida `i `x *U + &U _digdecimal * -> -> -> 0 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+[; ;main.c: 212:     uint16_t decimal;
+[v _decimal `ui ~T0 @X0 1 a ]
 "213
-[; ;main.c: 213:     salida[4] = digdecimal[1];
-[e = *U + _salida * -> -> 4 `i `x -> -> # *U _salida `i `x *U + &U _digdecimal * -> -> -> 1 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+[; ;main.c: 213:     float temp;
+[v _temp `f ~T0 @X0 1 a ]
 "214
-[; ;main.c: 214:     salida[5] = digdecimal[2];
-[e = *U + _salida * -> -> 5 `i `x -> -> # *U _salida `i `x *U + &U _digdecimal * -> -> -> 2 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
-"215
-[; ;main.c: 215:     divisiondecimal(decimal,&digdecimal[0],&digdecimal[1],&digdecimal[2]);
-[e ( _divisiondecimal (4 , , , -> _decimal `uc &U *U + &U _digdecimal * -> -> -> 0 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux &U *U + &U _digdecimal * -> -> -> 1 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux &U *U + &U _digdecimal * -> -> -> 2 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+[; ;main.c: 214:     unsigned char digdecimal[3];
+[v _digdecimal `uc ~T0 @X0 -> 3 `i a ]
 "216
-[; ;main.c: 216:     salida[2] = digdecimal[0];
-[e = *U + _salida * -> -> 2 `i `x -> -> # *U _salida `i `x *U + &U _digdecimal * -> -> -> 0 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+[; ;main.c: 216:     entero = valor;
+[e = _entero -> _valor `uc ]
 "217
-[; ;main.c: 217:     salida[1] = digdecimal[1];
-[e = *U + _salida * -> -> 1 `i `x -> -> # *U _salida `i `x *U + &U _digdecimal * -> -> -> 1 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+[; ;main.c: 217:     temp = valor - (float)entero;
+[e = _temp - _valor -> _entero `f ]
 "218
-[; ;main.c: 218:     salida[0] = digdecimal[2];
-[e = *U + _salida * -> -> 0 `i `x -> -> # *U _salida `i `x *U + &U _digdecimal * -> -> -> 2 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+[; ;main.c: 218:     decimal = (temp*100);
+[e = _decimal -> * _temp -> -> 100 `i `f `ui ]
 "219
-[; ;main.c: 219: }
+[; ;main.c: 219:     divisiondecimal(entero,&digdecimal[0],&digdecimal[1],&digdecimal[2]);
+[e ( _divisiondecimal (4 , , , _entero &U *U + &U _digdecimal * -> -> -> 0 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux &U *U + &U _digdecimal * -> -> -> 1 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux &U *U + &U _digdecimal * -> -> -> 2 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+"220
+[; ;main.c: 220:     salida[3] = digdecimal[0];
+[e = *U + _salida * -> -> 3 `i `x -> -> # *U _salida `i `x *U + &U _digdecimal * -> -> -> 0 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+"221
+[; ;main.c: 221:     salida[4] = digdecimal[1];
+[e = *U + _salida * -> -> 4 `i `x -> -> # *U _salida `i `x *U + &U _digdecimal * -> -> -> 1 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+"222
+[; ;main.c: 222:     salida[5] = digdecimal[2];
+[e = *U + _salida * -> -> 5 `i `x -> -> # *U _salida `i `x *U + &U _digdecimal * -> -> -> 2 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+"223
+[; ;main.c: 223:     divisiondecimal(decimal,&digdecimal[0],&digdecimal[1],&digdecimal[2]);
+[e ( _divisiondecimal (4 , , , -> _decimal `uc &U *U + &U _digdecimal * -> -> -> 0 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux &U *U + &U _digdecimal * -> -> -> 1 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux &U *U + &U _digdecimal * -> -> -> 2 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+"224
+[; ;main.c: 224:     salida[2] = digdecimal[0];
+[e = *U + _salida * -> -> 2 `i `x -> -> # *U _salida `i `x *U + &U _digdecimal * -> -> -> 0 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+"225
+[; ;main.c: 225:     salida[1] = digdecimal[1];
+[e = *U + _salida * -> -> 1 `i `x -> -> # *U _salida `i `x *U + &U _digdecimal * -> -> -> 1 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+"226
+[; ;main.c: 226:     salida[0] = digdecimal[2];
+[e = *U + _salida * -> -> 0 `i `x -> -> # *U _salida `i `x *U + &U _digdecimal * -> -> -> 2 `i `ui `ux -> -> # *U &U _digdecimal `ui `ux ]
+"227
+[; ;main.c: 227: }
 [e :UE 159 ]
 }
-"221
-[; ;main.c: 221: void divisiondecimal(uint8_t conteo,uint8_t* un,uint8_t* dec,uint8_t* cent){
+"229
+[; ;main.c: 229: void divisiondecimal(uint8_t conteo,uint8_t* un,uint8_t* dec,uint8_t* cent){
 [v _divisiondecimal `(v ~T0 @X0 1 ef4`uc`*uc`*uc`*uc ]
 {
 [e :U _divisiondecimal ]
@@ -930,62 +957,62 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _dec `*uc ~T0 @X0 1 r3 ]
 [v _cent `*uc ~T0 @X0 1 r4 ]
 [f ]
-"222
-[; ;main.c: 222:     uint8_t div = conteo;
+"230
+[; ;main.c: 230:     uint8_t div = conteo;
 [v _div `uc ~T0 @X0 1 a ]
 [e = _div _conteo ]
-"223
-[; ;main.c: 223:     *un = 0;
+"231
+[; ;main.c: 231:     *un = 0;
 [e = *U _un -> -> 0 `i `uc ]
-"224
-[; ;main.c: 224:     *dec = 0;
+"232
+[; ;main.c: 232:     *dec = 0;
 [e = *U _dec -> -> 0 `i `uc ]
-"225
-[; ;main.c: 225:     *cent = 0;
+"233
+[; ;main.c: 233:     *cent = 0;
 [e = *U _cent -> -> 0 `i `uc ]
-"228
-[; ;main.c: 228:     while(div >= 100){
+"236
+[; ;main.c: 236:     while(div >= 100){
 [e $U 161  ]
 [e :U 162 ]
 {
-"229
-[; ;main.c: 229:     *cent = div/100;
+"237
+[; ;main.c: 237:     *cent = div/100;
 [e = *U _cent -> / -> _div `i -> 100 `i `uc ]
-"230
-[; ;main.c: 230:     div = div - (*cent)*(100);
+"238
+[; ;main.c: 238:     div = div - (*cent)*(100);
 [e = _div -> - -> _div `i * -> *U _cent `i -> 100 `i `uc ]
-"231
-[; ;main.c: 231:     }
+"239
+[; ;main.c: 239:     }
 }
 [e :U 161 ]
-"228
-[; ;main.c: 228:     while(div >= 100){
+"236
+[; ;main.c: 236:     while(div >= 100){
 [e $ >= -> _div `i -> 100 `i 162  ]
 [e :U 163 ]
-"233
-[; ;main.c: 233:     while (div >= 10){
+"241
+[; ;main.c: 241:     while (div >= 10){
 [e $U 164  ]
 [e :U 165 ]
 {
-"234
-[; ;main.c: 234:     *dec = div/10;
+"242
+[; ;main.c: 242:     *dec = div/10;
 [e = *U _dec -> / -> _div `i -> 10 `i `uc ]
-"235
-[; ;main.c: 235:     div = div - (*dec)*(10);
+"243
+[; ;main.c: 243:     div = div - (*dec)*(10);
 [e = _div -> - -> _div `i * -> *U _dec `i -> 10 `i `uc ]
-"236
-[; ;main.c: 236:     }
+"244
+[; ;main.c: 244:     }
 }
 [e :U 164 ]
-"233
-[; ;main.c: 233:     while (div >= 10){
+"241
+[; ;main.c: 241:     while (div >= 10){
 [e $ >= -> _div `i -> 10 `i 165  ]
 [e :U 166 ]
-"238
-[; ;main.c: 238:     *un = div;
+"246
+[; ;main.c: 246:     *un = div;
 [e = *U _un _div ]
-"239
-[; ;main.c: 239: }
+"247
+[; ;main.c: 247: }
 [e :UE 160 ]
 }
 [a 1C 84 101 109 112 58 32 0 ]

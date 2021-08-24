@@ -3,7 +3,7 @@
  * Autor: Jose Luis Alvarez (19392)
  *
  * Creado: 15 de Agosto de 2021
- * Modificado: 15 de Agosto de 2021
+ * Modificado: 22 de Agosto de 2021
  */
 
 //******************************************************************************
@@ -81,7 +81,7 @@ void main(void) {
     MasterSend_I2C(0X01); //registro de configuracion
     MasterSend_I2C(0X00); //Configuracion de interrupcion
     MasterStop_I2C();   //se detiene la comunicacion
-    
+    __delay_ms(5000);
     while(1){
         //lectura del LM75DB
         MasterStart_I2C();
@@ -164,7 +164,15 @@ void main(void) {
         }
         
         T1CONbits.TMR1ON = 0;
-        __delay_ms(10);
+        
+        send1dato(TEMPdig[5]+48);
+        send1dato(TEMPdig[4]+48);
+        send1dato(TEMPdig[3]+48);
+        send1dato(';');
+        send1dato(HumR[0]);
+        send1dato(HumR[1]);
+        send1dato('\n');
+        __delay_ms(100);
     }
 }
 

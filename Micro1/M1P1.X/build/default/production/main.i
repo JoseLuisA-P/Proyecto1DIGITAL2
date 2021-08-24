@@ -2941,7 +2941,7 @@ void main(void) {
     MasterSend_I2C(0X01);
     MasterSend_I2C(0X00);
     MasterStop_I2C();
-
+    _delay((unsigned long)((5000)*(8000000/4000.0)));
     while(1){
 
         MasterStart_I2C();
@@ -3024,7 +3024,15 @@ void main(void) {
         }
 
         T1CONbits.TMR1ON = 0;
-        _delay((unsigned long)((10)*(8000000/4000.0)));
+
+        send1dato(TEMPdig[5]+48);
+        send1dato(TEMPdig[4]+48);
+        send1dato(TEMPdig[3]+48);
+        send1dato(';');
+        send1dato(HumR[0]);
+        send1dato(HumR[1]);
+        send1dato('\n');
+        _delay((unsigned long)((100)*(8000000/4000.0)));
     }
 }
 
