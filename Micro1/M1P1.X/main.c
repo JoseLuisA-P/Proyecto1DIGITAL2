@@ -165,10 +165,11 @@ void main(void) {
         
         T1CONbits.TMR1ON = 0;
         
+        send1dato('\n');
         send1dato(TEMPdig[5]+48);
         send1dato(TEMPdig[4]+48);
         send1dato(TEMPdig[3]+48);
-        send1dato(';');
+        send1dato('\n');
         send1dato(HumR[0]);
         send1dato(HumR[1]);
         send1dato('\n');

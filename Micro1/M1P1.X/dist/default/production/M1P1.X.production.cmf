@@ -13,39 +13,39 @@
 %PSECTS
 $dist/default/production\M1P1.X.production.o
 cinit CODE 0 F F 24 2
-text1 CODE 0 94D 94D C 2
+text1 CODE 0 947 947 C 2
 text2 CODE 0 7A6 7A6 4A 2
 text3 CODE 0 624 624 C6 2
-text4 CODE 0 CFC CFC 7D 2
-text5 CODE 0 99E 99E 15 2
-text6 CODE 0 C17 C17 69 2
+text4 CODE 0 CF6 CF6 7D 2
+text5 CODE 0 998 998 15 2
+text6 CODE 0 C11 C11 69 2
 text7 CODE 0 6EA 6EA BC 2
-text8 CODE 0 C80 C80 7C 2
-text9 CODE 0 A0E A0E 24 2
+text8 CODE 0 C7A C7A 7C 2
+text9 CODE 0 A08 A08 24 2
 text10 CODE 0 394 394 290 2
 text11 CODE 0 33 33 361 2
-text12 CODE 0 A59 A59 29 2
-text13 CODE 0 A32 A32 27 2
-text14 CODE 0 98A 98A 14 2
-text15 CODE 0 B54 B54 5B 2
-text16 CODE 0 939 939 9 2
-text17 CODE 0 930 930 9 2
-text18 CODE 0 942 942 B 2
-text19 CODE 0 927 927 9 2
-text20 CODE 0 9ED 9ED 21 2
-text21 CODE 0 959 959 D 2
-text22 CODE 0 9CE 9CE 1F 2
+text12 CODE 0 A53 A53 29 2
+text13 CODE 0 A2C A2C 27 2
+text14 CODE 0 984 984 14 2
+text15 CODE 0 B4E B4E 5B 2
+text16 CODE 0 933 933 9 2
+text17 CODE 0 92A 92A 9 2
+text18 CODE 0 93C 93C B 2
+text19 CODE 0 921 921 9 2
+text20 CODE 0 9E7 9E7 21 2
+text21 CODE 0 953 953 D 2
+text22 CODE 0 9C8 9C8 1F 2
 text23 CODE 0 7F0 7F0 10 2
-text24 CODE 0 9B3 9B3 1B 2
-text25 CODE 0 AAE AAE 35 2
-text26 CODE 0 A82 A82 2C 2
-text27 CODE 0 AE3 AE3 36 2
-text28 CODE 0 978 978 12 2
-text29 CODE 0 B19 B19 3B 2
-text30 CODE 0 BAF BAF 68 2
-text31 CODE 0 966 966 12 2
+text24 CODE 0 9AD 9AD 1B 2
+text25 CODE 0 AA8 AA8 35 2
+text26 CODE 0 A7C A7C 2C 2
+text27 CODE 0 ADD ADD 36 2
+text28 CODE 0 972 972 12 2
+text29 CODE 0 B13 B13 3B 2
+text30 CODE 0 BA9 BA9 68 2
+text31 CODE 0 960 960 12 2
 idataCOMMON CODE 0 3 3 1 2
-maintext CODE 0 D79 D79 287 2
+maintext CODE 0 D73 D73 28D 2
 cstackCOMMON COMMON 1 70 70 8 1
 cstackBANK0 BANK0 1 20 20 42 1
 cstackBANK1 BANK1 1 AC AC A 1
@@ -56,7 +56,7 @@ strings STRING 0 800 800 15 2
 dataCOMMON COMMON 1 7A 7A 1 1
 bssCOMMON COMMON 1 78 78 2 1
 config CONFIG 4 2007 2007 2 2
-$C:\Users\jalva\AppData\Local\Temp\s3po.o
+$C:\Users\jalva\AppData\Local\Temp\seg4.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -74,13 +74,13 @@ BANK0 6A-6F 1
 BANK1 B6-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 815-926 2
+CONST 815-920 2
 CONST 1000-1FFF 2
-ENTRY 815-926 2
+ENTRY 815-920 2
 ENTRY 1000-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 815-926 2
+CODE 815-920 2
 CODE 1000-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -88,9 +88,9 @@ SFR2 100-10F 1
 SFR3 180-18F 1
 COMMON 7B-7D 1
 EEDATA 2100-21FF 2
-STRCODE 815-926 2
+STRCODE 815-920 2
 STRCODE 1000-1FFF 2
-STRING 815-926 2
+STRING 815-920 2
 STRING 1000-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -106,132 +106,132 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\M1P1.X.production.o
-F cinit CODE >1215:C:\Users\jalva\AppData\Local\Temp\s3po.s
-F cinit CODE >1218:C:\Users\jalva\AppData\Local\Temp\s3po.s
-F cinit CODE >1277:C:\Users\jalva\AppData\Local\Temp\s3po.s
-14 cinit CODE >1278:C:\Users\jalva\AppData\Local\Temp\s3po.s
-15 cinit CODE >1282:C:\Users\jalva\AppData\Local\Temp\s3po.s
-16 cinit CODE >1283:C:\Users\jalva\AppData\Local\Temp\s3po.s
-17 cinit CODE >1284:C:\Users\jalva\AppData\Local\Temp\s3po.s
-18 cinit CODE >1285:C:\Users\jalva\AppData\Local\Temp\s3po.s
-19 cinit CODE >1286:C:\Users\jalva\AppData\Local\Temp\s3po.s
-1A cinit CODE >1287:C:\Users\jalva\AppData\Local\Temp\s3po.s
-1B cinit CODE >1288:C:\Users\jalva\AppData\Local\Temp\s3po.s
-1C cinit CODE >1289:C:\Users\jalva\AppData\Local\Temp\s3po.s
-1D cinit CODE >1290:C:\Users\jalva\AppData\Local\Temp\s3po.s
-1E cinit CODE >1291:C:\Users\jalva\AppData\Local\Temp\s3po.s
-1F cinit CODE >1292:C:\Users\jalva\AppData\Local\Temp\s3po.s
-20 cinit CODE >1293:C:\Users\jalva\AppData\Local\Temp\s3po.s
-21 cinit CODE >1294:C:\Users\jalva\AppData\Local\Temp\s3po.s
-22 cinit CODE >1295:C:\Users\jalva\AppData\Local\Temp\s3po.s
-23 cinit CODE >1298:C:\Users\jalva\AppData\Local\Temp\s3po.s
-24 cinit CODE >1299:C:\Users\jalva\AppData\Local\Temp\s3po.s
-25 cinit CODE >1300:C:\Users\jalva\AppData\Local\Temp\s3po.s
-26 cinit CODE >1301:C:\Users\jalva\AppData\Local\Temp\s3po.s
-27 cinit CODE >1302:C:\Users\jalva\AppData\Local\Temp\s3po.s
-28 cinit CODE >1303:C:\Users\jalva\AppData\Local\Temp\s3po.s
-29 cinit CODE >1304:C:\Users\jalva\AppData\Local\Temp\s3po.s
-2A cinit CODE >1305:C:\Users\jalva\AppData\Local\Temp\s3po.s
-2B cinit CODE >1306:C:\Users\jalva\AppData\Local\Temp\s3po.s
-2C cinit CODE >1307:C:\Users\jalva\AppData\Local\Temp\s3po.s
-2D cinit CODE >1310:C:\Users\jalva\AppData\Local\Temp\s3po.s
-2E cinit CODE >1311:C:\Users\jalva\AppData\Local\Temp\s3po.s
-2F cinit CODE >1317:C:\Users\jalva\AppData\Local\Temp\s3po.s
-2F cinit CODE >1319:C:\Users\jalva\AppData\Local\Temp\s3po.s
-30 cinit CODE >1320:C:\Users\jalva\AppData\Local\Temp\s3po.s
+F cinit CODE >1215:C:\Users\jalva\AppData\Local\Temp\seg4.s
+F cinit CODE >1218:C:\Users\jalva\AppData\Local\Temp\seg4.s
+F cinit CODE >1277:C:\Users\jalva\AppData\Local\Temp\seg4.s
+14 cinit CODE >1278:C:\Users\jalva\AppData\Local\Temp\seg4.s
+15 cinit CODE >1282:C:\Users\jalva\AppData\Local\Temp\seg4.s
+16 cinit CODE >1283:C:\Users\jalva\AppData\Local\Temp\seg4.s
+17 cinit CODE >1284:C:\Users\jalva\AppData\Local\Temp\seg4.s
+18 cinit CODE >1285:C:\Users\jalva\AppData\Local\Temp\seg4.s
+19 cinit CODE >1286:C:\Users\jalva\AppData\Local\Temp\seg4.s
+1A cinit CODE >1287:C:\Users\jalva\AppData\Local\Temp\seg4.s
+1B cinit CODE >1288:C:\Users\jalva\AppData\Local\Temp\seg4.s
+1C cinit CODE >1289:C:\Users\jalva\AppData\Local\Temp\seg4.s
+1D cinit CODE >1290:C:\Users\jalva\AppData\Local\Temp\seg4.s
+1E cinit CODE >1291:C:\Users\jalva\AppData\Local\Temp\seg4.s
+1F cinit CODE >1292:C:\Users\jalva\AppData\Local\Temp\seg4.s
+20 cinit CODE >1293:C:\Users\jalva\AppData\Local\Temp\seg4.s
+21 cinit CODE >1294:C:\Users\jalva\AppData\Local\Temp\seg4.s
+22 cinit CODE >1295:C:\Users\jalva\AppData\Local\Temp\seg4.s
+23 cinit CODE >1298:C:\Users\jalva\AppData\Local\Temp\seg4.s
+24 cinit CODE >1299:C:\Users\jalva\AppData\Local\Temp\seg4.s
+25 cinit CODE >1300:C:\Users\jalva\AppData\Local\Temp\seg4.s
+26 cinit CODE >1301:C:\Users\jalva\AppData\Local\Temp\seg4.s
+27 cinit CODE >1302:C:\Users\jalva\AppData\Local\Temp\seg4.s
+28 cinit CODE >1303:C:\Users\jalva\AppData\Local\Temp\seg4.s
+29 cinit CODE >1304:C:\Users\jalva\AppData\Local\Temp\seg4.s
+2A cinit CODE >1305:C:\Users\jalva\AppData\Local\Temp\seg4.s
+2B cinit CODE >1306:C:\Users\jalva\AppData\Local\Temp\seg4.s
+2C cinit CODE >1307:C:\Users\jalva\AppData\Local\Temp\seg4.s
+2D cinit CODE >1310:C:\Users\jalva\AppData\Local\Temp\seg4.s
+2E cinit CODE >1311:C:\Users\jalva\AppData\Local\Temp\seg4.s
+2F cinit CODE >1317:C:\Users\jalva\AppData\Local\Temp\seg4.s
+2F cinit CODE >1319:C:\Users\jalva\AppData\Local\Temp\seg4.s
+30 cinit CODE >1320:C:\Users\jalva\AppData\Local\Temp\seg4.s
 4 intentry CODE >60:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-966 text31 CODE >60:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-966 text31 CODE >62:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-96C text31 CODE >63:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-970 text31 CODE >64:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-971 text31 CODE >67:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-BAF text30 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-BAF text30 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-BB9 text30 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-BC1 text30 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-BC3 text30 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-BC4 text30 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-BCD text30 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-BD1 text30 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-BD5 text30 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-BDE text30 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-BF0 text30 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-BFE text30 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-BFF text30 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-C08 text30 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-C0E text30 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-C16 text30 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-B19 text29 CODE >13:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-B19 text29 CODE >14:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-B1D text29 CODE >15:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-B20 text29 CODE >16:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-B22 text29 CODE >17:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-B51 text29 CODE >19:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-B52 text29 CODE >20:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-B53 text29 CODE >21:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-978 text28 CODE >11:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-978 text28 CODE >13:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-97B text28 CODE >14:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-97C text28 CODE >15:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-97E text28 CODE >16:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-97F text28 CODE >17:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-980 text28 CODE >18:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-983 text28 CODE >19:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-986 text28 CODE >20:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-989 text28 CODE >21:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-AE3 text27 CODE >179:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AE3 text27 CODE >180:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AE6 text27 CODE >181:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AE7 text27 CODE >182:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AEA text27 CODE >183:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AEB text27 CODE >184:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AEC text27 CODE >185:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AED text27 CODE >186:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AEE text27 CODE >187:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AF1 text27 CODE >188:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AF2 text27 CODE >189:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AF3 text27 CODE >191:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AF8 text27 CODE >194:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AFC text27 CODE >195:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AFD text27 CODE >198:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AFE text27 CODE >199:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-AFF text27 CODE >200:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-B02 text27 CODE >201:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-B05 text27 CODE >204:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-B09 text27 CODE >205:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-B0A text27 CODE >206:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-B0B text27 CODE >207:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-B18 text27 CODE >208:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-A82 text26 CODE >24:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-A82 text26 CODE >29:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-A85 text26 CODE >30:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-A86 text26 CODE >31:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-A87 text26 CODE >32:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-A91 text26 CODE >34:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-A99 text26 CODE >36:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-A9A text26 CODE >37:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-A9B text26 CODE >38:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-AA5 text26 CODE >40:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-AAC text26 CODE >41:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-AAD text26 CODE >43:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-AAE text25 CODE >45:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-AAF text25 CODE >47:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-AB3 text25 CODE >48:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-AB4 text25 CODE >49:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-ABA text25 CODE >50:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-ABB text25 CODE >51:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-ABC text25 CODE >52:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-AC0 text25 CODE >53:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-AD8 text25 CODE >56:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-AE2 text25 CODE >58:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-9B3 text24 CODE >11:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-9B3 text24 CODE >15:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-9B6 text24 CODE >16:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-9B9 text24 CODE >17:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-9C2 text24 CODE >18:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-9C5 text24 CODE >19:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-9CA text24 CODE >20:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
-9CD text24 CODE >22:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+960 text31 CODE >60:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+960 text31 CODE >62:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+966 text31 CODE >63:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+96A text31 CODE >64:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+96B text31 CODE >67:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+BA9 text30 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+BA9 text30 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+BB3 text30 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+BBB text30 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+BBD text30 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+BBE text30 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+BC7 text30 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+BCB text30 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+BCF text30 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+BD8 text30 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+BEA text30 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+BF8 text30 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+BF9 text30 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+C02 text30 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+C08 text30 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+C10 text30 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+B13 text29 CODE >13:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+B13 text29 CODE >14:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+B17 text29 CODE >15:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+B1A text29 CODE >16:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+B1C text29 CODE >17:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+B4B text29 CODE >19:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+B4C text29 CODE >20:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+B4D text29 CODE >21:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+972 text28 CODE >11:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+972 text28 CODE >13:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+975 text28 CODE >14:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+976 text28 CODE >15:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+978 text28 CODE >16:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+979 text28 CODE >17:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+97A text28 CODE >18:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+97D text28 CODE >19:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+980 text28 CODE >20:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+983 text28 CODE >21:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+ADD text27 CODE >180:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+ADD text27 CODE >181:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AE0 text27 CODE >182:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AE1 text27 CODE >183:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AE4 text27 CODE >184:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AE5 text27 CODE >185:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AE6 text27 CODE >186:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AE7 text27 CODE >187:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AE8 text27 CODE >188:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AEB text27 CODE >189:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AEC text27 CODE >190:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AED text27 CODE >192:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AF2 text27 CODE >195:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AF6 text27 CODE >196:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AF7 text27 CODE >199:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AF8 text27 CODE >200:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AF9 text27 CODE >201:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AFC text27 CODE >202:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+AFF text27 CODE >205:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+B03 text27 CODE >206:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+B04 text27 CODE >207:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+B05 text27 CODE >208:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+B12 text27 CODE >209:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+A7C text26 CODE >24:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+A7C text26 CODE >29:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+A7F text26 CODE >30:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+A80 text26 CODE >31:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+A81 text26 CODE >32:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+A8B text26 CODE >34:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+A93 text26 CODE >36:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+A94 text26 CODE >37:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+A95 text26 CODE >38:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+A9F text26 CODE >40:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+AA6 text26 CODE >41:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+AA7 text26 CODE >43:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+AA8 text25 CODE >45:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+AA9 text25 CODE >47:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+AAD text25 CODE >48:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+AAE text25 CODE >49:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+AB4 text25 CODE >50:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+AB5 text25 CODE >51:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+AB6 text25 CODE >52:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+ABA text25 CODE >53:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+AD2 text25 CODE >56:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+ADC text25 CODE >58:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+9AD text24 CODE >11:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+9AD text24 CODE >15:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+9B0 text24 CODE >16:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+9B3 text24 CODE >17:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+9BC text24 CODE >18:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+9BF text24 CODE >19:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+9C4 text24 CODE >20:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
+9C7 text24 CODE >22:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\DHT11.c
 7F0 text23 CODE >40:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
 7F1 text23 CODE >42:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
 7F4 text23 CODE >43:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
@@ -239,87 +239,87 @@ AE2 text25 CODE >58:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProy
 7F7 text23 CODE >45:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
 7FC text23 CODE >46:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
 7FF text23 CODE >48:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-9CE text22 CODE >75:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-9CF text22 CODE >76:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-9D0 text22 CODE >77:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-9DC text22 CODE >78:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-9E0 text22 CODE >76:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-9EC text22 CODE >80:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-959 text21 CODE >23:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-959 text21 CODE >24:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-965 text21 CODE >27:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-9ED text20 CODE >49:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-9EE text20 CODE >50:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-9F3 text20 CODE >51:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-9F6 text20 CODE >52:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-9FB text20 CODE >53:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-A04 text20 CODE >54:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-A09 text20 CODE >55:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-A0C text20 CODE >56:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-A0D text20 CODE >58:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-927 text19 CODE >39:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-927 text19 CODE >40:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-92C text19 CODE >41:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-92F text19 CODE >42:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-942 text18 CODE >44:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-943 text18 CODE >45:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-948 text18 CODE >46:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-94C text18 CODE >47:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-930 text17 CODE >29:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-930 text17 CODE >30:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-935 text17 CODE >31:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-938 text17 CODE >32:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-939 text16 CODE >34:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-939 text16 CODE >35:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-93E text16 CODE >36:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-941 text16 CODE >37:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
-B54 text15 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B54 text15 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B57 text15 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B5B text15 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B60 text15 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B62 text15 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B66 text15 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B6B text15 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B71 text15 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B73 text15 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B74 text15 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B7B text15 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B7F text15 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B83 text15 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B8D text15 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B93 text15 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-B9A text15 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-BA0 text15 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-BA5 text15 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-BAA text15 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-BAE text15 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-98A text14 CODE >63:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-98B text14 CODE >64:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-98E text14 CODE >65:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-990 text14 CODE >66:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-991 text14 CODE >67:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-99A text14 CODE >68:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-99D text14 CODE >69:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-A32 text13 CODE >50:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-A35 text13 CODE >52:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-A3A text13 CODE >53:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-A3F text13 CODE >54:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-A45 text13 CODE >57:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-A4D text13 CODE >58:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-A52 text13 CODE >59:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-A58 text13 CODE >61:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-A59 text12 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
-A5C text12 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
-A5E text12 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
-A65 text12 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
-A69 text12 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
-A6F text12 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
-A6F text12 CODE >54:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
-A76 text12 CODE >55:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
-A78 text12 CODE >56:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
-A7D text12 CODE >59:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
-A81 text12 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+9C8 text22 CODE >75:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+9C9 text22 CODE >76:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+9CA text22 CODE >77:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+9D6 text22 CODE >78:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+9DA text22 CODE >76:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+9E6 text22 CODE >80:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+953 text21 CODE >23:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+953 text21 CODE >24:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+95F text21 CODE >27:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+9E7 text20 CODE >49:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+9E8 text20 CODE >50:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+9ED text20 CODE >51:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+9F0 text20 CODE >52:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+9F5 text20 CODE >53:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+9FE text20 CODE >54:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+A03 text20 CODE >55:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+A06 text20 CODE >56:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+A07 text20 CODE >58:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+921 text19 CODE >39:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+921 text19 CODE >40:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+926 text19 CODE >41:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+929 text19 CODE >42:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+93C text18 CODE >44:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+93D text18 CODE >45:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+942 text18 CODE >46:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+946 text18 CODE >47:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+92A text17 CODE >29:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+92A text17 CODE >30:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+92F text17 CODE >31:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+932 text17 CODE >32:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+933 text16 CODE >34:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+933 text16 CODE >35:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+938 text16 CODE >36:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+93B text16 CODE >37:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\I2C.c
+B4E text15 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B4E text15 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B51 text15 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B55 text15 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B5A text15 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B5C text15 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B60 text15 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B65 text15 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B6B text15 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B6D text15 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B6E text15 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B75 text15 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B79 text15 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B7D text15 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B87 text15 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B8D text15 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B94 text15 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B9A text15 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+B9F text15 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+BA4 text15 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+BA8 text15 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+984 text14 CODE >63:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+985 text14 CODE >64:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+988 text14 CODE >65:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+98A text14 CODE >66:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+98B text14 CODE >67:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+994 text14 CODE >68:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+997 text14 CODE >69:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+A2C text13 CODE >50:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+A2F text13 CODE >52:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+A34 text13 CODE >53:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+A39 text13 CODE >54:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+A3F text13 CODE >57:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+A47 text13 CODE >58:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+A4C text13 CODE >59:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+A52 text13 CODE >61:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
+A53 text12 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+A56 text12 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+A58 text12 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+A5F text12 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+A63 text12 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+A69 text12 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+A69 text12 CODE >54:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+A70 text12 CODE >55:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+A72 text12 CODE >56:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+A77 text12 CODE >59:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+A7B text12 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
 33 text11 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcmul.c
 33 text11 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcmul.c
 3A text11 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcmul.c
@@ -527,29 +527,29 @@ F6 text11 CODE >124:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\
 622 text10 CODE >234:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
 623 text10 CODE >235:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
 623 text10 CODE >237:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
-A0E text9 CODE >242:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
-A0E text9 CODE >248:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
-A12 text9 CODE >249:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
-A31 text9 CODE >250:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
-C80 text8 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-C80 text8 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-C8D text8 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-C96 text8 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CAB text8 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CAC text8 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CB4 text8 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CB6 text8 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CBA text8 CODE >54:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CC2 text8 CODE >57:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CCB text8 CODE >58:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CD4 text8 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CDB text8 CODE >63:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CE4 text8 CODE >64:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CE6 text8 CODE >62:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CE6 text8 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CEB text8 CODE >67:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CF0 text8 CODE >68:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-CFB text8 CODE >70:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+A08 text9 CODE >242:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+A08 text9 CODE >248:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+A0C text9 CODE >249:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+A2B text9 CODE >250:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+C7A text8 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+C7A text8 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+C87 text8 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+C90 text8 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CA5 text8 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CA6 text8 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CAE text8 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CB0 text8 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CB4 text8 CODE >54:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CBC text8 CODE >57:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CC5 text8 CODE >58:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CCE text8 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CD5 text8 CODE >63:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CDE text8 CODE >64:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CE0 text8 CODE >62:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CE0 text8 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CE5 text8 CODE >67:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CEA text8 CODE >68:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+CF5 text8 CODE >70:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
 6EA text7 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
 6ED text7 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
 6F6 text7 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
@@ -579,67 +579,67 @@ CFB text8 CODE >70:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\f
 79C text7 CODE >42:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
 79D text7 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
 7A5 text7 CODE >44:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-C17 text6 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C17 text6 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C1A text6 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C1E text6 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C23 text6 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C25 text6 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C29 text6 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C2E text6 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C32 text6 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C34 text6 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C3A text6 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C3C text6 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C3D text6 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C44 text6 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C48 text6 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C4C text6 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C53 text6 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C5D text6 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C63 text6 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C64 text6 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C6B text6 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C71 text6 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C76 text6 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C7B text6 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-C7F text6 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-99E text5 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
-99F text5 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
-9A0 text5 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
-9A4 text5 CODE >44:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
-9A8 text5 CODE >45:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
-9AA text5 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
-9AC text5 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
-9B1 text5 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
-9B2 text5 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
-CFC text4 CODE >229:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-CFF text4 CODE >230:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D03 text4 CODE >231:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D07 text4 CODE >232:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D0A text4 CODE >233:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D0D text4 CODE >236:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D0E text4 CODE >237:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D27 text4 CODE >238:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D39 text4 CODE >236:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D40 text4 CODE >242:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D59 text4 CODE >243:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D6B text4 CODE >241:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D71 text4 CODE >246:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D78 text4 CODE >247:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-624 text3 CODE >210:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-624 text3 CODE >216:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-639 text3 CODE >217:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-66D text3 CODE >218:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-697 text3 CODE >219:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-6A9 text3 CODE >220:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-6B3 text3 CODE >221:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-6BA text3 CODE >222:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-6C1 text3 CODE >223:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-6D3 text3 CODE >224:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-6DD text3 CODE >225:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-6E3 text3 CODE >226:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-6E9 text3 CODE >227:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+C11 text6 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C11 text6 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C14 text6 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C18 text6 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C1D text6 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C1F text6 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C23 text6 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C28 text6 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C2C text6 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C2E text6 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C34 text6 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C36 text6 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C37 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C3E text6 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C42 text6 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C46 text6 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C4D text6 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C57 text6 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C5D text6 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C5E text6 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C65 text6 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C6B text6 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C70 text6 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C75 text6 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+C79 text6 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+998 text5 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+999 text5 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+99A text5 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+99E text5 CODE >44:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+9A2 text5 CODE >45:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+9A4 text5 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+9A6 text5 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+9AB text5 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+9AC text5 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
+CF6 text4 CODE >230:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+CF9 text4 CODE >231:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+CFD text4 CODE >232:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D01 text4 CODE >233:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D04 text4 CODE >234:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D07 text4 CODE >237:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D08 text4 CODE >238:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D21 text4 CODE >239:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D33 text4 CODE >237:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D3A text4 CODE >243:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D53 text4 CODE >244:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D65 text4 CODE >242:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D6B text4 CODE >247:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D72 text4 CODE >248:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+624 text3 CODE >211:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+624 text3 CODE >217:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+639 text3 CODE >218:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+66D text3 CODE >219:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+697 text3 CODE >220:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+6A9 text3 CODE >221:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+6B3 text3 CODE >222:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+6BA text3 CODE >223:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+6C1 text3 CODE >224:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+6D3 text3 CODE >225:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+6DD text3 CODE >226:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+6E3 text3 CODE >227:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+6E9 text3 CODE >228:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
 7A6 text2 CODE >20:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
 7A6 text2 CODE >21:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
 7A9 text2 CODE >22:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
@@ -654,99 +654,100 @@ D78 text4 CODE >247:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProy
 7E3 text2 CODE >31:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
 7E9 text2 CODE >32:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
 7EF text2 CODE >34:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\LCDD2.c
-94D text1 CODE >26:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-94E text1 CODE >27:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-952 text1 CODE >28:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-958 text1 CODE >29:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
-D79 maintext CODE >72:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D79 maintext CODE >73:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D7E maintext CODE >74:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D83 maintext CODE >75:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D86 maintext CODE >76:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D87 maintext CODE >79:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D8C maintext CODE >80:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D92 maintext CODE >81:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D98 maintext CODE >82:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-D9E maintext CODE >83:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-DA3 maintext CODE >84:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-DB1 maintext CODE >87:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-DB6 maintext CODE >88:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-DBC maintext CODE >89:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-DC2 maintext CODE >90:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-DC7 maintext CODE >91:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-DCD maintext CODE >92:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-DD3 maintext CODE >93:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-DD9 maintext CODE >94:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-DDE maintext CODE >96:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-E03 maintext CODE >97:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-E42 maintext CODE >98:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-E65 maintext CODE >100:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-E6D maintext CODE >101:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-E73 maintext CODE >102:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-E7C maintext CODE >103:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-E85 maintext CODE >104:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-E8E maintext CODE >105:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-E94 maintext CODE >106:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-E9D maintext CODE >107:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EA6 maintext CODE >108:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EAF maintext CODE >109:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EB5 maintext CODE >110:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EBB maintext CODE >111:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EC3 maintext CODE >112:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EC9 maintext CODE >113:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-ECF maintext CODE >114:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-ED5 maintext CODE >115:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EDB maintext CODE >117:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EDC maintext CODE >118:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EDC maintext CODE >119:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EDF maintext CODE >120:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EE0 maintext CODE >121:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EE1 maintext CODE >122:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EE2 maintext CODE >123:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EE3 maintext CODE >124:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EE3 maintext CODE >125:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EE6 maintext CODE >126:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EE7 maintext CODE >127:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EE8 maintext CODE >128:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EE9 maintext CODE >129:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EEA maintext CODE >130:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EEA maintext CODE >131:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EED maintext CODE >132:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EEE maintext CODE >133:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EEF maintext CODE >134:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EF0 maintext CODE >135:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EF1 maintext CODE >136:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EF1 maintext CODE >137:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EF4 maintext CODE >138:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EF5 maintext CODE >139:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EF6 maintext CODE >140:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EF7 maintext CODE >141:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EF8 maintext CODE >142:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EF8 maintext CODE >143:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EFB maintext CODE >144:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EFC maintext CODE >145:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EFD maintext CODE >146:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EFE maintext CODE >147:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-EFF maintext CODE >149:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-F1C maintext CODE >151:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-F21 maintext CODE >153:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-F2B maintext CODE >154:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-F31 maintext CODE >155:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-F37 maintext CODE >156:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-F3D maintext CODE >157:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-F43 maintext CODE >158:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-F49 maintext CODE >160:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-F81 maintext CODE >161:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-F9C maintext CODE >162:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-FB7 maintext CODE >166:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-FBA maintext CODE >168:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-FC3 maintext CODE >169:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-FCC maintext CODE >170:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-FD5 maintext CODE >171:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-FDB maintext CODE >172:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-FE1 maintext CODE >173:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-FE7 maintext CODE >174:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
-FED maintext CODE >175:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+947 text1 CODE >26:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+948 text1 CODE >27:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+94C text1 CODE >28:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+952 text1 CODE >29:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
+D73 maintext CODE >72:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D73 maintext CODE >73:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D78 maintext CODE >74:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D7D maintext CODE >75:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D80 maintext CODE >76:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D81 maintext CODE >79:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D86 maintext CODE >80:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D8C maintext CODE >81:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D92 maintext CODE >82:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D98 maintext CODE >83:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+D9D maintext CODE >84:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+DAB maintext CODE >87:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+DB0 maintext CODE >88:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+DB6 maintext CODE >89:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+DBC maintext CODE >90:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+DC1 maintext CODE >91:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+DC7 maintext CODE >92:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+DCD maintext CODE >93:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+DD3 maintext CODE >94:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+DD8 maintext CODE >96:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+DFD maintext CODE >97:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+E3C maintext CODE >98:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+E5F maintext CODE >100:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+E67 maintext CODE >101:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+E6D maintext CODE >102:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+E76 maintext CODE >103:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+E7F maintext CODE >104:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+E88 maintext CODE >105:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+E8E maintext CODE >106:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+E97 maintext CODE >107:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EA0 maintext CODE >108:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EA9 maintext CODE >109:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EAF maintext CODE >110:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EB5 maintext CODE >111:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EBD maintext CODE >112:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EC3 maintext CODE >113:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EC9 maintext CODE >114:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+ECF maintext CODE >115:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+ED5 maintext CODE >117:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+ED6 maintext CODE >118:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+ED6 maintext CODE >119:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+ED9 maintext CODE >120:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EDA maintext CODE >121:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EDB maintext CODE >122:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EDC maintext CODE >123:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EDD maintext CODE >124:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EDD maintext CODE >125:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EE0 maintext CODE >126:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EE1 maintext CODE >127:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EE2 maintext CODE >128:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EE3 maintext CODE >129:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EE4 maintext CODE >130:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EE4 maintext CODE >131:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EE7 maintext CODE >132:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EE8 maintext CODE >133:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EE9 maintext CODE >134:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EEA maintext CODE >135:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EEB maintext CODE >136:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EEB maintext CODE >137:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EEE maintext CODE >138:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EEF maintext CODE >139:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EF0 maintext CODE >140:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EF1 maintext CODE >141:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EF2 maintext CODE >142:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EF2 maintext CODE >143:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EF5 maintext CODE >144:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EF6 maintext CODE >145:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EF7 maintext CODE >146:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EF8 maintext CODE >147:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+EF9 maintext CODE >149:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+F16 maintext CODE >151:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+F1B maintext CODE >153:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+F25 maintext CODE >154:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+F2B maintext CODE >155:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+F31 maintext CODE >156:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+F37 maintext CODE >157:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+F3D maintext CODE >158:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+F43 maintext CODE >160:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+F7B maintext CODE >161:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+F96 maintext CODE >162:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+FB1 maintext CODE >166:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+FB4 maintext CODE >168:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+FBA maintext CODE >169:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+FC3 maintext CODE >170:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+FCC maintext CODE >171:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+FD5 maintext CODE >172:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+FDB maintext CODE >173:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+FE1 maintext CODE >174:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+FE7 maintext CODE >175:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+FED maintext CODE >176:D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -767,8 +768,8 @@ __Hspace_1 B6 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
-__end_of_MasterStart_I2C 1272 0 CODE 0 text17 dist/default/production\M1P1.X.production.o
-__end_of_cursorLCD 14B2 0 CODE 0 text13 dist/default/production\M1P1.X.production.o
+__end_of_MasterStart_I2C 1266 0 CODE 0 text17 dist/default/production\M1P1.X.production.o
+__end_of_cursorLCD 14A6 0 CODE 0 text13 dist/default/production\M1P1.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _T1CONbits 10 0 ABS 0 - dist/default/production\M1P1.X.production.o
 __size_of_cursorLCD 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
@@ -776,13 +777,13 @@ __size_of_MasterStop_I2C 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _Hum1 67 0 BANK0 1 bssBANK0 dist/default/production\M1P1.X.production.o
 _HumR 78 0 COMMON 1 bssCOMMON dist/default/production\M1P1.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\jalva\AppData\Local\Temp\s3po.o
-_main 1AF2 0 CODE 0 maintext dist/default/production\M1P1.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\jalva\AppData\Local\Temp\seg4.o
+_main 1AE6 0 CODE 0 maintext dist/default/production\M1P1.X.production.o
 _temp A4 0 BANK1 1 bssBANK1 dist/default/production\M1P1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\M1P1.X.production.o
 divisiondecimal@dec 25 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 divisiondecimal@div 2B 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
-start 18 0 CODE 0 init C:\Users\jalva\AppData\Local\Temp\s3po.o
+start 18 0 CODE 0 init C:\Users\jalva\AppData\Local\Temp\seg4.o
 ___flmul@aexp 3C 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 ___flmul@bexp 3D 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 ___flmul@prod 3E 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
@@ -797,10 +798,10 @@ __size_of___flsub 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 __size_of___fltol 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
-_MasterReceive_I2C 13DA 0 CODE 0 text20 dist/default/production\M1P1.X.production.o
+_MasterReceive_I2C 13CE 0 CODE 0 text20 dist/default/production\M1P1.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
-__end_of_MasterSend_I2C 129A 0 CODE 0 text18 dist/default/production\M1P1.X.production.o
-_cursorLCD 1464 0 CODE 0 text13 dist/default/production\M1P1.X.production.o
+__end_of_MasterSend_I2C 128E 0 CODE 0 text18 dist/default/production\M1P1.X.production.o
+_cursorLCD 1458 0 CODE 0 text13 dist/default/production\M1P1.X.production.o
 __size_of_configUART 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 MasterSend_I2C@dato 73 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
 LCDstring@mensaje 76 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
@@ -808,18 +809,18 @@ __Hpowerup 0 0 CODE 0 powerup -
 _dispCHAR FE0 0 CODE 0 text23 dist/default/production\M1P1.X.production.o
 ___awmod@sign 21 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 __HdataCOMMON 0 0 ABS 0 dataCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\jalva\AppData\Local\Temp\s3po.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\jalva\AppData\Local\Temp\s3po.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\jalva\AppData\Local\Temp\s3po.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\jalva\AppData\Local\Temp\s3po.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\jalva\AppData\Local\Temp\s3po.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\jalva\AppData\Local\Temp\s3po.o
-_DHT11_ALIVE 1504 0 CODE 0 text26 dist/default/production\M1P1.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\jalva\AppData\Local\Temp\seg4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\jalva\AppData\Local\Temp\seg4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\jalva\AppData\Local\Temp\seg4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\jalva\AppData\Local\Temp\seg4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\jalva\AppData\Local\Temp\seg4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\jalva\AppData\Local\Temp\seg4.o
+_DHT11_ALIVE 14F8 0 CODE 0 text26 dist/default/production\M1P1.X.production.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
-_DHT11_START 1366 0 CODE 0 text24 dist/default/production\M1P1.X.production.o
+_DHT11_START 135A 0 CODE 0 text24 dist/default/production\M1P1.X.production.o
 ___bmul@multiplicand 73 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
 __end_of_dispCHAR 1000 0 CODE 0 text23 dist/default/production\M1P1.X.production.o
-_MasterStart_I2C 1260 0 CODE 0 text17 dist/default/production\M1P1.X.production.o
+_MasterStart_I2C 1254 0 CODE 0 text17 dist/default/production\M1P1.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\M1P1.X.production.o
 __size_of_MasterRepeatS_I2C 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\M1P1.X.production.o
@@ -828,35 +829,35 @@ __Hfunctab 0 0 ENTRY 0 functab -
 ___awdiv@sign 21 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 __pidataCOMMON 6 0 CODE 0 idataCOMMON dist/default/production\M1P1.X.production.o
-__end_of_send1dato 12B2 0 CODE 0 text1 dist/default/production\M1P1.X.production.o
+__end_of_send1dato 12A6 0 CODE 0 text1 dist/default/production\M1P1.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\M1P1.X.production.o
-__end_of__Umul8_16 1504 0 CODE 0 text12 dist/default/production\M1P1.X.production.o
+__end_of__Umul8_16 14F8 0 CODE 0 text12 dist/default/production\M1P1.X.production.o
 ___awdiv@dividend 75 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
 __size_of_send1dato 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 __size_of__Umul8_16 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 __LdataCOMMON 0 0 ABS 0 dataCOMMON -
 _digTemp A0 0 BANK1 1 bssBANK1 dist/default/production\M1P1.X.production.o
 __size_of_initLCD 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
-_CONFIG 15C6 0 CODE 0 text27 dist/default/production\M1P1.X.production.o
-__end_of___bmul 1366 0 CODE 0 text5 dist/default/production\M1P1.X.production.o
-__end_of_waitCondition 12CC 0 CODE 0 text21 dist/default/production\M1P1.X.production.o
+_CONFIG 15BA 0 CODE 0 text27 dist/default/production\M1P1.X.production.o
+__end_of___bmul 135A 0 CODE 0 text5 dist/default/production\M1P1.X.production.o
+__end_of_waitCondition 12C0 0 CODE 0 text21 dist/default/production\M1P1.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 ___bmul@multiplier 76 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
 ___awdiv@divisor 73 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
-_send1dato 129A 0 CODE 0 text1 dist/default/production\M1P1.X.production.o
-__end_of___awdiv 1900 0 CODE 0 text6 dist/default/production\M1P1.X.production.o
-__end_of___awmod 175E 0 CODE 0 text15 dist/default/production\M1P1.X.production.o
-__Umul8_16 14B2 0 CODE 0 text12 dist/default/production\M1P1.X.production.o
+_send1dato 128E 0 CODE 0 text1 dist/default/production\M1P1.X.production.o
+__end_of___awdiv 18F4 0 CODE 0 text6 dist/default/production\M1P1.X.production.o
+__end_of___awmod 1752 0 CODE 0 text15 dist/default/production\M1P1.X.production.o
+__Umul8_16 14A6 0 CODE 0 text12 dist/default/production\M1P1.X.production.o
 __end_of___fladd C48 0 CODE 0 text10 dist/default/production\M1P1.X.production.o
 __end_of___flmul 728 0 CODE 0 text11 dist/default/production\M1P1.X.production.o
-__end_of___flsub 1464 0 CODE 0 text9 dist/default/production\M1P1.X.production.o
-__end_of___fltol 19F8 0 CODE 0 text8 dist/default/production\M1P1.X.production.o
+__end_of___flsub 1458 0 CODE 0 text9 dist/default/production\M1P1.X.production.o
+__end_of___fltol 19EC 0 CODE 0 text8 dist/default/production\M1P1.X.production.o
 floToChar@decimal 5C 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
-__end_of___lldiv 182E 0 CODE 0 text30 dist/default/production\M1P1.X.production.o
+__end_of___lldiv 1822 0 CODE 0 text30 dist/default/production\M1P1.X.production.o
 __Umul8_16@multiplicand 73 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
-_comandoLCD 1314 0 CODE 0 text14 dist/default/production\M1P1.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\jalva\AppData\Local\Temp\s3po.o
-___stacklo 0 0 ABS 0 - C:\Users\jalva\AppData\Local\Temp\s3po.o
+_comandoLCD 1308 0 CODE 0 text14 dist/default/production\M1P1.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\jalva\AppData\Local\Temp\seg4.o
+___stacklo 0 0 ABS 0 - C:\Users\jalva\AppData\Local\Temp\seg4.o
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
 ___fladd@a 24 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 ___fladd@b 20 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
@@ -883,17 +884,17 @@ _SSPCON 14 0 ABS 0 - dist/default/production\M1P1.X.production.o
 _TempDEC 63 0 BANK0 1 bssBANK0 dist/default/production\M1P1.X.production.o
 _TempENT 64 0 BANK0 1 bssBANK0 dist/default/production\M1P1.X.production.o
 MasterInit_I2C@frec 2D 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
-__end_of_MasterRepeatS_I2C 1260 0 CODE 0 text19 dist/default/production\M1P1.X.production.o
+__end_of_MasterRepeatS_I2C 1254 0 CODE 0 text19 dist/default/production\M1P1.X.production.o
 divisiondecimal@un 24 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 __end_of_initLCD FE0 0 CODE 0 text2 dist/default/production\M1P1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\jalva\AppData\Local\Temp\s3po.o
-__end_of_comandoLCD 133C 0 CODE 0 text14 dist/default/production\M1P1.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\jalva\AppData\Local\Temp\seg4.o
+__end_of_comandoLCD 1330 0 CODE 0 text14 dist/default/production\M1P1.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 66 0 CODE 0 cinit -
-_MasterInit_I2C 1632 0 CODE 0 text29 dist/default/production\M1P1.X.production.o
+_MasterInit_I2C 1626 0 CODE 0 text29 dist/default/production\M1P1.X.production.o
 __Hstack 0 0 STACK 2 stack -
 __stringbase 100A 0 STRING 0 strings dist/default/production\M1P1.X.production.o
 __size_of___xxtofl 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
@@ -929,7 +930,7 @@ __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
-___bmul 133C 0 CODE 0 text5 dist/default/production\M1P1.X.production.o
+___bmul 1330 0 CODE 0 text5 dist/default/production\M1P1.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __LcstackBANK1 0 0 ABS 0 cstackBANK1 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
@@ -942,70 +943,70 @@ __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 cursorLCD@fila 20 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 cursorLCD@temp 21 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
-_MasterStop_I2C 1272 0 CODE 0 text16 dist/default/production\M1P1.X.production.o
-__end_of_divisiondecimal 1AF2 0 CODE 0 text4 dist/default/production\M1P1.X.production.o
+_MasterStop_I2C 1266 0 CODE 0 text16 dist/default/production\M1P1.X.production.o
+__end_of_divisiondecimal 1AE6 0 CODE 0 text4 dist/default/production\M1P1.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\M1P1.X.production.o
 __size_of_MasterSend_I2C 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
-__end_of_MasterInit_I2C 16A8 0 CODE 0 text29 dist/default/production\M1P1.X.production.o
+__end_of_MasterInit_I2C 169C 0 CODE 0 text29 dist/default/production\M1P1.X.production.o
 __HidataCOMMON 0 0 ABS 0 idataCOMMON -
-__end_of_DHT11_ALIVE 155C 0 CODE 0 text26 dist/default/production\M1P1.X.production.o
+__end_of_DHT11_ALIVE 1550 0 CODE 0 text26 dist/default/production\M1P1.X.production.o
 floToChar@entero 5E 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
-__end_of_DHT11_START 139C 0 CODE 0 text24 dist/default/production\M1P1.X.production.o
+__end_of_DHT11_START 1390 0 CODE 0 text24 dist/default/production\M1P1.X.production.o
 ___xxtofl DD4 0 CODE 0 text7 dist/default/production\M1P1.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 ___lldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 __stringtab 1000 0 STRING 0 strings dist/default/production\M1P1.X.production.o
-_MasterRepeatS_I2C 124E 0 CODE 0 text19 dist/default/production\M1P1.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\jalva\AppData\Local\Temp\s3po.o
+_MasterRepeatS_I2C 1242 0 CODE 0 text19 dist/default/production\M1P1.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\jalva\AppData\Local\Temp\seg4.o
 floToChar@temp 58 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 __end_of___xxtofl F4C 0 CODE 0 text7 dist/default/production\M1P1.X.production.o
 __size_of___bmul 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
 ___awmod@counter 20 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
-__end_of_LCDstring 13DA 0 CODE 0 text22 dist/default/production\M1P1.X.production.o
+__end_of_LCDstring 13CE 0 CODE 0 text22 dist/default/production\M1P1.X.production.o
 _RCSTAbits 18 0 ABS 0 - dist/default/production\M1P1.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\M1P1.X.production.o
 __size_of_LCDstring 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 ___fladd@signs 73 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
 __ptext10 728 0 CODE 0 text10 dist/default/production\M1P1.X.production.o
 __ptext11 66 0 CODE 0 text11 dist/default/production\M1P1.X.production.o
-__ptext12 14B2 0 CODE 0 text12 dist/default/production\M1P1.X.production.o
-__ptext13 1464 0 CODE 0 text13 dist/default/production\M1P1.X.production.o
-__ptext14 1314 0 CODE 0 text14 dist/default/production\M1P1.X.production.o
-__ptext15 16A8 0 CODE 0 text15 dist/default/production\M1P1.X.production.o
-__ptext16 1272 0 CODE 0 text16 dist/default/production\M1P1.X.production.o
-__ptext17 1260 0 CODE 0 text17 dist/default/production\M1P1.X.production.o
-__ptext18 1284 0 CODE 0 text18 dist/default/production\M1P1.X.production.o
-__ptext19 124E 0 CODE 0 text19 dist/default/production\M1P1.X.production.o
-__ptext20 13DA 0 CODE 0 text20 dist/default/production\M1P1.X.production.o
-__ptext21 12B2 0 CODE 0 text21 dist/default/production\M1P1.X.production.o
-__ptext22 139C 0 CODE 0 text22 dist/default/production\M1P1.X.production.o
+__ptext12 14A6 0 CODE 0 text12 dist/default/production\M1P1.X.production.o
+__ptext13 1458 0 CODE 0 text13 dist/default/production\M1P1.X.production.o
+__ptext14 1308 0 CODE 0 text14 dist/default/production\M1P1.X.production.o
+__ptext15 169C 0 CODE 0 text15 dist/default/production\M1P1.X.production.o
+__ptext16 1266 0 CODE 0 text16 dist/default/production\M1P1.X.production.o
+__ptext17 1254 0 CODE 0 text17 dist/default/production\M1P1.X.production.o
+__ptext18 1278 0 CODE 0 text18 dist/default/production\M1P1.X.production.o
+__ptext19 1242 0 CODE 0 text19 dist/default/production\M1P1.X.production.o
+__ptext20 13CE 0 CODE 0 text20 dist/default/production\M1P1.X.production.o
+__ptext21 12A6 0 CODE 0 text21 dist/default/production\M1P1.X.production.o
+__ptext22 1390 0 CODE 0 text22 dist/default/production\M1P1.X.production.o
 __ptext23 FE0 0 CODE 0 text23 dist/default/production\M1P1.X.production.o
-__ptext24 1366 0 CODE 0 text24 dist/default/production\M1P1.X.production.o
-__ptext25 155C 0 CODE 0 text25 dist/default/production\M1P1.X.production.o
-__ptext26 1504 0 CODE 0 text26 dist/default/production\M1P1.X.production.o
-__ptext27 15C6 0 CODE 0 text27 dist/default/production\M1P1.X.production.o
-__ptext28 12F0 0 CODE 0 text28 dist/default/production\M1P1.X.production.o
-__ptext29 1632 0 CODE 0 text29 dist/default/production\M1P1.X.production.o
-__ptext30 175E 0 CODE 0 text30 dist/default/production\M1P1.X.production.o
-__ptext31 12CC 0 CODE 0 text31 dist/default/production\M1P1.X.production.o
-__end_of_MasterStop_I2C 1284 0 CODE 0 text16 dist/default/production\M1P1.X.production.o
-___awdiv 182E 0 CODE 0 text6 dist/default/production\M1P1.X.production.o
-___awmod 16A8 0 CODE 0 text15 dist/default/production\M1P1.X.production.o
+__ptext24 135A 0 CODE 0 text24 dist/default/production\M1P1.X.production.o
+__ptext25 1550 0 CODE 0 text25 dist/default/production\M1P1.X.production.o
+__ptext26 14F8 0 CODE 0 text26 dist/default/production\M1P1.X.production.o
+__ptext27 15BA 0 CODE 0 text27 dist/default/production\M1P1.X.production.o
+__ptext28 12E4 0 CODE 0 text28 dist/default/production\M1P1.X.production.o
+__ptext29 1626 0 CODE 0 text29 dist/default/production\M1P1.X.production.o
+__ptext30 1752 0 CODE 0 text30 dist/default/production\M1P1.X.production.o
+__ptext31 12C0 0 CODE 0 text31 dist/default/production\M1P1.X.production.o
+__end_of_MasterStop_I2C 1278 0 CODE 0 text16 dist/default/production\M1P1.X.production.o
+___awdiv 1822 0 CODE 0 text6 dist/default/production\M1P1.X.production.o
+___awmod 169C 0 CODE 0 text15 dist/default/production\M1P1.X.production.o
 ___fladd 728 0 CODE 0 text10 dist/default/production\M1P1.X.production.o
 ___flmul 66 0 CODE 0 text11 dist/default/production\M1P1.X.production.o
-___flsub 141C 0 CODE 0 text9 dist/default/production\M1P1.X.production.o
-___fltol 1900 0 CODE 0 text8 dist/default/production\M1P1.X.production.o
-___lldiv 175E 0 CODE 0 text30 dist/default/production\M1P1.X.production.o
-__pmaintext 1AF2 0 CODE 0 maintext dist/default/production\M1P1.X.production.o
-_divisiondecimal 19F8 0 CODE 0 text4 dist/default/production\M1P1.X.production.o
+___flsub 1410 0 CODE 0 text9 dist/default/production\M1P1.X.production.o
+___fltol 18F4 0 CODE 0 text8 dist/default/production\M1P1.X.production.o
+___lldiv 1752 0 CODE 0 text30 dist/default/production\M1P1.X.production.o
+__pmaintext 1AE6 0 CODE 0 maintext dist/default/production\M1P1.X.production.o
+_divisiondecimal 19EC 0 CODE 0 text4 dist/default/production\M1P1.X.production.o
 __Umul8_16@multiplier 24 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_interrupcion 12CC 0 CODE 0 text31 dist/default/production\M1P1.X.production.o
-_LCDstring 139C 0 CODE 0 text22 dist/default/production\M1P1.X.production.o
-_configUART 12F0 0 CODE 0 text28 dist/default/production\M1P1.X.production.o
+_interrupcion 12C0 0 CODE 0 text31 dist/default/production\M1P1.X.production.o
+_LCDstring 1390 0 CODE 0 text22 dist/default/production\M1P1.X.production.o
+_configUART 12E4 0 CODE 0 text28 dist/default/production\M1P1.X.production.o
 floToChar@salida 53 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 __size_of_MasterReceive_I2C 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 ___fladd@grs 76 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
@@ -1045,21 +1046,21 @@ __HbssBANK1 0 0 ABS 0 bssBANK1 -
 _initLCD F4C 0 CODE 0 text2 dist/default/production\M1P1.X.production.o
 ___awmod@dividend 75 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\M1P1.X.production.o
-__ptext1 129A 0 CODE 0 text1 dist/default/production\M1P1.X.production.o
+__ptext1 128E 0 CODE 0 text1 dist/default/production\M1P1.X.production.o
 __ptext2 F4C 0 CODE 0 text2 dist/default/production\M1P1.X.production.o
 __ptext3 C48 0 CODE 0 text3 dist/default/production\M1P1.X.production.o
-__ptext4 19F8 0 CODE 0 text4 dist/default/production\M1P1.X.production.o
-__ptext5 133C 0 CODE 0 text5 dist/default/production\M1P1.X.production.o
-__ptext6 182E 0 CODE 0 text6 dist/default/production\M1P1.X.production.o
+__ptext4 19EC 0 CODE 0 text4 dist/default/production\M1P1.X.production.o
+__ptext5 1330 0 CODE 0 text5 dist/default/production\M1P1.X.production.o
+__ptext6 1822 0 CODE 0 text6 dist/default/production\M1P1.X.production.o
 __ptext7 DD4 0 CODE 0 text7 dist/default/production\M1P1.X.production.o
-__ptext8 1900 0 CODE 0 text8 dist/default/production\M1P1.X.production.o
-__ptext9 141C 0 CODE 0 text9 dist/default/production\M1P1.X.production.o
+__ptext8 18F4 0 CODE 0 text8 dist/default/production\M1P1.X.production.o
+__ptext9 1410 0 CODE 0 text9 dist/default/production\M1P1.X.production.o
 ?__Umul8_16 73 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
-__end_of_configUART 1314 0 CODE 0 text28 dist/default/production\M1P1.X.production.o
-__end_of_interrupcion 12F0 0 CODE 0 text31 dist/default/production\M1P1.X.production.o
+__end_of_configUART 1308 0 CODE 0 text28 dist/default/production\M1P1.X.production.o
+__end_of_interrupcion 12E4 0 CODE 0 text31 dist/default/production\M1P1.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 ?___xxtofl 73 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
-_DHT11_ReadData 155C 0 CODE 0 text25 dist/default/production\M1P1.X.production.o
+_DHT11_ReadData 1550 0 CODE 0 text25 dist/default/production\M1P1.X.production.o
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __size_of_DHT11_ALIVE 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 ___fladd@aexp 74 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
@@ -1080,7 +1081,7 @@ ___lldiv@quotient 28 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.produc
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
 _TXSTAbits 98 0 ABS 0 - dist/default/production\M1P1.X.production.o
 DHT11_ReadData@i 75 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
-__end_of_MasterReceive_I2C 141C 0 CODE 0 text20 dist/default/production\M1P1.X.production.o
+__end_of_MasterReceive_I2C 1410 0 CODE 0 text20 dist/default/production\M1P1.X.production.o
 _SSPCON2 91 0 ABS 0 - dist/default/production\M1P1.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\M1P1.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
@@ -1088,7 +1089,7 @@ __end_of_main 2000 0 CODE 0 maintext dist/default/production\M1P1.X.production.o
 __end_of_floToChar DD4 0 CODE 0 text3 dist/default/production\M1P1.X.production.o
 comandoLCD@cmd 75 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\M1P1.X.production.o
-__end_of_DHT11_ReadData 15C6 0 CODE 0 text25 dist/default/production\M1P1.X.production.o
+__end_of_DHT11_ReadData 15BA 0 CODE 0 text25 dist/default/production\M1P1.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\M1P1.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\M1P1.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\M1P1.X.production.o
@@ -1108,18 +1109,18 @@ __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\M1P1.X.production.o
 _UARTData 62 0 BANK0 1 bssBANK0 dist/default/production\M1P1.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\M1P1.X.production.o
-_waitCondition 12B2 0 CODE 0 text21 dist/default/production\M1P1.X.production.o
+_waitCondition 12A6 0 CODE 0 text21 dist/default/production\M1P1.X.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\M1P1.X.production.o
 ___bmul@product 75 0 COMMON 1 cstackCOMMON dist/default/production\M1P1.X.production.o
 ___xxtofl@sign 24 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
 __size_of_MasterInit_I2C 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
-__end_of_CONFIG 1632 0 CODE 0 text27 dist/default/production\M1P1.X.production.o
+__end_of_CONFIG 1626 0 CODE 0 text27 dist/default/production\M1P1.X.production.o
 __pbssBANK0 62 0 BANK0 1 bssBANK0 dist/default/production\M1P1.X.production.o
 __pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production\M1P1.X.production.o
 __pdataCOMMON 7A 0 COMMON 1 dataCOMMON dist/default/production\M1P1.X.production.o
 _floToChar C48 0 CODE 0 text3 dist/default/production\M1P1.X.production.o
 __pstrings 1000 0 STRING 0 strings dist/default/production\M1P1.X.production.o
-_MasterSend_I2C 1284 0 CODE 0 text18 dist/default/production\M1P1.X.production.o
+_MasterSend_I2C 1278 0 CODE 0 text18 dist/default/production\M1P1.X.production.o
 __size_of_dispCHAR 0 0 ABS 0 - dist/default/production\M1P1.X.production.o
 _dummyHum1 66 0 BANK0 1 bssBANK0 dist/default/production\M1P1.X.production.o
 divisiondecimal@cent 26 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.production.o
@@ -1148,32 +1149,32 @@ divisiondecimal@cent 26 0 BANK0 1 cstackBANK0 dist/default/production\M1P1.X.pro
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text1 0 94D 129A C 2
-text4 0 CFC 19F8 7D 2
-text5 0 99E 133C 15 2
-text6 0 C17 182E 69 2
-text8 0 C80 1900 7C 2
-text9 0 A0E 141C 24 2
-text12 0 A59 14B2 29 2
-text13 0 A32 1464 27 2
-text14 0 98A 1314 14 2
-text15 0 B54 16A8 5B 2
-text16 0 939 1272 9 2
-text17 0 930 1260 9 2
-text18 0 942 1284 B 2
-text19 0 927 124E 9 2
-text20 0 9ED 13DA 21 2
-text21 0 959 12B2 D 2
-text22 0 9CE 139C 1F 2
-text24 0 9B3 1366 1B 2
-text25 0 AAE 155C 35 2
-text26 0 A82 1504 2C 2
-text27 0 AE3 15C6 36 2
-text28 0 978 12F0 12 2
-text29 0 B19 1632 3B 2
-text30 0 BAF 175E 68 2
-text31 0 966 12CC 12 2
-maintext 0 D79 1AF2 287 2
+text1 0 947 128E C 2
+text4 0 CF6 19EC 7D 2
+text5 0 998 1330 15 2
+text6 0 C11 1822 69 2
+text8 0 C7A 18F4 7C 2
+text9 0 A08 1410 24 2
+text12 0 A53 14A6 29 2
+text13 0 A2C 1458 27 2
+text14 0 984 1308 14 2
+text15 0 B4E 169C 5B 2
+text16 0 933 1266 9 2
+text17 0 92A 1254 9 2
+text18 0 93C 1278 B 2
+text19 0 921 1242 9 2
+text20 0 9E7 13CE 21 2
+text21 0 953 12A6 D 2
+text22 0 9C8 1390 1F 2
+text24 0 9AD 135A 1B 2
+text25 0 AA8 1550 35 2
+text26 0 A7C 14F8 2C 2
+text27 0 ADD 15BA 36 2
+text28 0 972 12E4 12 2
+text29 0 B13 1626 3B 2
+text30 0 BA9 1752 68 2
+text31 0 960 12C0 12 2
+maintext 0 D73 1AE6 28D 2
 cstackCOMMON 1 70 70 B 1
 cstackBANK0 1 20 20 4A 1
 intentry 0 4 8 7FC 2

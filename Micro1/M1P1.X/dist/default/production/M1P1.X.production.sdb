@@ -61,11 +61,11 @@
 [v _interrupcion interrupcion `II(v  1 e 1 0 ]
 "72
 [v _main main `(v  1 e 1 0 ]
-"179
+"180
 [v _CONFIG CONFIG `(v  1 e 1 0 ]
-"210
+"211
 [v _floToChar floToChar `(v  1 e 1 0 ]
-"229
+"230
 [v _divisiondecimal divisiondecimal `(v  1 e 1 0 ]
 "11 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
 [v _configUART configUART `(v  1 e 1 0 ]
@@ -301,7 +301,7 @@
 "72
 [v _main main `(v  1 e 1 0 ]
 {
-"177
+"178
 } 0
 "26 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
 [v _send1dato send1dato `(v  1 e 1 0 ]
@@ -316,35 +316,35 @@
 {
 "34
 } 0
-"210 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+"211 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
 [v _floToChar floToChar `(v  1 e 1 0 ]
 {
-"213
-[v floToChar@temp temp `f  1 a 4 56 ]
 "214
+[v floToChar@temp temp `f  1 a 4 56 ]
+"215
 [v floToChar@digdecimal digdecimal `[3]uc  1 a 3 63 ]
-"212
+"213
 [v floToChar@decimal decimal `ui  1 a 2 60 ]
-"211
+"212
 [v floToChar@entero entero `uc  1 a 1 62 ]
-"210
+"211
 [v floToChar@valor valor `DCf  1 p 4 47 ]
 [v floToChar@salida salida `*.4uc  1 p 1 51 ]
-"227
+"228
 } 0
-"229
+"230
 [v _divisiondecimal divisiondecimal `(v  1 e 1 0 ]
 {
 [v divisiondecimal@conteo conteo `uc  1 a 1 wreg ]
-"230
+"231
 [v divisiondecimal@div div `uc  1 a 1 11 ]
-"229
+"230
 [v divisiondecimal@conteo conteo `uc  1 a 1 wreg ]
 [v divisiondecimal@un un `*.4uc  1 p 1 4 ]
 [v divisiondecimal@dec dec `*.4uc  1 p 1 5 ]
 [v divisiondecimal@cent cent `*.4uc  1 p 1 6 ]
 [v divisiondecimal@conteo conteo `uc  1 a 1 10 ]
-"247
+"248
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
@@ -566,10 +566,10 @@
 {
 "43
 } 0
-"179 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
+"180 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\main.c
 [v _CONFIG CONFIG `(v  1 e 1 0 ]
 {
-"208
+"209
 } 0
 "11 D:\UVG\UVG\UVG6toSemestre\Digital2\Proyecto1Rover\CodigoProyecto1\Proyecto1DIGITAL2\Micro1\M1P1.X\UART.c
 [v _configUART configUART `(v  1 e 1 0 ]

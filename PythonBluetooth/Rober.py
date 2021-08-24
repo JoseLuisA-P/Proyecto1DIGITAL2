@@ -3,22 +3,17 @@ import bluetooth
 import serial
 import schedule
 import time
+import socket
 
-serEnable = False #habilitar la comunicacion serial
-P = ["",""] #array para guardar los valores
-puerto = serial.Serial()
-#Baudrate igual que el del PIC
-puerto.baudrate=9600
-puerto.timeout=3#tiempo de espera para recibir un dato cualquiera
-#Puerto usado para el serial
-puerto.port='COM9'
-puerto.open()
-print('Puerto activado con exito')
+P = ["",""]
+decoData = ""
 
-hostMACAddress = "98:D3:31:FB:53:F2"
+clientMACAddress = "98:D3:31:FB:53:F2"
 port = 1
+portH = 8
+size = 1024
 s = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-s.connect((hostMACAddress,port))
+s.connect((clientMACAddress,port))
 
 def sendAvanzar():
 	s.send(bytes('a','UTF-8'))
@@ -49,13 +44,23 @@ derecha.place(x=150,y=60)
 retroceder.place(x=100,y=110)
 
 def valoresLectura():
-	with puerto:
-		for i in range(2):
-			P[i]=puerto.readline().strip()
-	print(P[0])
-	print(P[1])
 
-schedule.every(5).seconds.do(valoresLectura)
+	try:
+		while True:
+			data = s.recv(size)
+			if len(data) != 0: break
+		#print("received [%s]" % data)
+		if data != (b'\n') and data != (b'\n0'):
+			global decoData 
+			decoData = data.decode("utf-8")
+	except:
+		print("error")
+
+def sendData():
+	print(decoData)
+
+schedule.every(0.05).seconds.do(valoresLectura)
+schedule.every(5).seconds.do(sendData)
 
 while True:
 	schedule.run_pending()
