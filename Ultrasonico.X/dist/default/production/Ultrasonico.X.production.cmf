@@ -1,0 +1,477 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\Ultrasonico.X.production.o
+cinit CODE 0 7F6 7F6 A 2
+text1 CODE 0 41B 41B 25 2
+text2 CODE 0 490 490 53 2
+text3 CODE 0 55F 55F BA 2
+text4 CODE 0 4E3 4E3 7C 2
+text5 CODE 0 619 619 1DD 2
+maintext CODE 0 440 440 50 2
+cstackCOMMON COMMON 1 70 70 E 1
+cstackBANK0 BANK0 1 20 20 2B 1
+bssBANK0 BANK0 1 4B 4B 4 1
+config CONFIG 4 2007 2007 2 2
+$C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+end_init CODE 0 0 0 3 2
+config CONFIG 4 2007 2007 2 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 4F-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 4F-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 3-41A 2
+CONST 800-1FFF 2
+ENTRY 3-41A 2
+ENTRY 800-1FFF 2
+IDLOC 2000-2003 2
+STACK 110-16F 1
+CODE 3-41A 2
+CODE 800-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+EEDATA 2100-21FF 2
+STRCODE 3-41A 2
+STRCODE 800-1FFF 2
+STRING 3-41A 2
+STRING 800-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\Ultrasonico.X.production.o
+7F6 cinit CODE >461:C:\Users\PERSON~1\AppData\Local\Temp\se80.s
+7F6 cinit CODE >464:C:\Users\PERSON~1\AppData\Local\Temp\se80.s
+7F6 cinit CODE >481:C:\Users\PERSON~1\AppData\Local\Temp\se80.s
+7F7 cinit CODE >482:C:\Users\PERSON~1\AppData\Local\Temp\se80.s
+7F8 cinit CODE >483:C:\Users\PERSON~1\AppData\Local\Temp\se80.s
+7F9 cinit CODE >484:C:\Users\PERSON~1\AppData\Local\Temp\se80.s
+7FA cinit CODE >485:C:\Users\PERSON~1\AppData\Local\Temp\se80.s
+7FB cinit CODE >486:C:\Users\PERSON~1\AppData\Local\Temp\se80.s
+7FC cinit CODE >492:C:\Users\PERSON~1\AppData\Local\Temp\se80.s
+7FC cinit CODE >494:C:\Users\PERSON~1\AppData\Local\Temp\se80.s
+7FD cinit CODE >495:C:\Users\PERSON~1\AppData\Local\Temp\se80.s
+619 text5 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+619 text5 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+620 text5 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+626 text5 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+62A text5 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+62B text5 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+630 text5 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+635 text5 CODE >37:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+63D text5 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+63E text5 CODE >42:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+63F text5 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+640 text5 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+648 text5 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+64D text5 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+653 text5 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+657 text5 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+658 text5 CODE >56:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+65D text5 CODE >58:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+662 text5 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+66A text5 CODE >63:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+66B text5 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+66C text5 CODE >66:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+66D text5 CODE >69:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+675 text5 CODE >70:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+675 text5 CODE >75:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+67D text5 CODE >76:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+685 text5 CODE >77:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+689 text5 CODE >78:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+68D text5 CODE >79:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+696 text5 CODE >83:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+69B text5 CODE >84:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+69B text5 CODE >85:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6A4 text5 CODE >89:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6B6 text5 CODE >92:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6BE text5 CODE >93:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6C6 text5 CODE >94:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6CE text5 CODE >96:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6CF text5 CODE >97:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6D0 text5 CODE >100:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6D5 text5 CODE >101:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6DE text5 CODE >102:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6E7 text5 CODE >103:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6EB text5 CODE >104:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6EC text5 CODE >106:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6F5 text5 CODE >112:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+707 text5 CODE >115:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+708 text5 CODE >116:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+716 text5 CODE >118:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+71A text5 CODE >97:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+720 text5 CODE >122:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+728 text5 CODE >123:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+72A text5 CODE >128:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+733 text5 CODE >129:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+737 text5 CODE >130:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+738 text5 CODE >132:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+741 text5 CODE >133:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+747 text5 CODE >127:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+74B text5 CODE >139:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+74C text5 CODE >140:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+750 text5 CODE >141:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+764 text5 CODE >142:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+766 text5 CODE >143:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+767 text5 CODE >144:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+767 text5 CODE >145:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+76C text5 CODE >150:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+771 text5 CODE >151:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+77F text5 CODE >152:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+783 text5 CODE >153:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+79C text5 CODE >154:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7A2 text5 CODE >159:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7AF text5 CODE >160:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7B5 text5 CODE >161:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7BD text5 CODE >165:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7CC text5 CODE >166:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7D0 text5 CODE >167:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7D8 text5 CODE >169:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7D9 text5 CODE >170:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7D9 text5 CODE >173:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7DF text5 CODE >175:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7E3 text5 CODE >176:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7E4 text5 CODE >177:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7E5 text5 CODE >180:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7E9 text5 CODE >181:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7E9 text5 CODE >182:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7F0 text5 CODE >183:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7F5 text5 CODE >185:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+4E3 text4 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+4E3 text4 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+4F0 text4 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+4F9 text4 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+50E text4 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+50F text4 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+517 text4 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+519 text4 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+51D text4 CODE >54:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+525 text4 CODE >57:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+52E text4 CODE >58:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+537 text4 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+53E text4 CODE >63:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+547 text4 CODE >64:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+549 text4 CODE >62:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+549 text4 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+54E text4 CODE >67:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+553 text4 CODE >68:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+55E text4 CODE >70:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+55F text3 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+560 text3 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+569 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+578 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+579 text3 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+581 text3 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+581 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+589 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+592 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+596 text3 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+597 text3 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+59B text3 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5A4 text3 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5AB text3 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5AF text3 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5BD text3 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5C6 text3 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5C6 text3 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5CD text3 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5CF text3 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5D8 text3 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5E2 text3 CODE >37:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5E6 text3 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5EE text3 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5F0 text3 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+606 text3 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+60F text3 CODE >42:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+610 text3 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+618 text3 CODE >44:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+490 text2 CODE >127:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+490 text2 CODE >128:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+493 text2 CODE >129:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+495 text2 CODE >130:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+496 text2 CODE >131:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+49D text2 CODE >132:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+4A0 text2 CODE >133:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+4A4 text2 CODE >134:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+4A5 text2 CODE >135:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+4A9 text2 CODE >136:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+4AA text2 CODE >137:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+4E2 text2 CODE >139:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+41B text1 CODE >65:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+41B text1 CODE >67:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+41E text1 CODE >68:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+41F text1 CODE >71:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+422 text1 CODE >72:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+423 text1 CODE >73:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+424 text1 CODE >74:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+425 text1 CODE >75:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+426 text1 CODE >77:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+429 text1 CODE >78:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+42A text1 CODE >79:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+42B text1 CODE >80:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+42C text1 CODE >81:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+42D text1 CODE >84:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+430 text1 CODE >85:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+431 text1 CODE >86:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+432 text1 CODE >87:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+433 text1 CODE >90:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+434 text1 CODE >91:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+435 text1 CODE >94:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+439 text1 CODE >95:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+43D text1 CODE >96:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+43E text1 CODE >97:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+43F text1 CODE >98:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+440 maintext CODE >103:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+440 maintext CODE >104:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+445 maintext CODE >106:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+454 maintext CODE >107:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+462 maintext CODE >108:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+466 maintext CODE >110:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+46C maintext CODE >111:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+46D maintext CODE >112:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+46E maintext CODE >113:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+478 maintext CODE >114:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+478 maintext CODE >115:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+480 maintext CODE >116:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+481 maintext CODE >117:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+482 maintext CODE >118:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Ultrasonico.X\Ultrasonico.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+__Hspace_0 800 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 4010 0 ABS 0 - -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+_T1CONbits 10 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+_TMR1 E 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+_dist 4D 0 BANK0 1 bssBANK0 dist/default/production\Ultrasonico.X.production.o
+_main 880 0 CODE 0 maintext dist/default/production\Ultrasonico.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+start 0 0 CODE 0 init C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+__size_of___fldiv 0 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+__size_of___fltol 0 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+__size_of_main 0 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+__Hpowerup 0 0 CODE 0 powerup -
+intlevel0 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+_OSCCONbits 8F 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+_ANSELH 189 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+___fldiv@aexp 39 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+___fldiv@bexp 38 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+___fldiv@sign 31 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+__end_of___fldiv FEC 0 CODE 0 text5 dist/default/production\Ultrasonico.X.production.o
+__end_of___fltol ABE 0 CODE 0 text4 dist/default/production\Ultrasonico.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+___stacklo 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+___fldiv@a 20 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+___fldiv@b 24 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+__size_of_setup 0 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+start_initialization FEC 0 CODE 0 cinit dist/default/production\Ultrasonico.X.production.o
+_TRISBbits 86 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+_TRISCbits 87 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+__end_of_C_distancia 9C6 0 CODE 0 text2 dist/default/production\Ultrasonico.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 1000 0 CODE 0 cinit -
+__Hstack 0 0 STACK 2 stack -
+__size_of___xxtofl 0 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+__Hmaintext 0 0 ABS 0 maintext -
+___xxtofl@arg 7A 0 COMMON 1 cstackCOMMON dist/default/production\Ultrasonico.X.production.o
+___xxtofl@exp 79 0 COMMON 1 cstackCOMMON dist/default/production\Ultrasonico.X.production.o
+___xxtofl@val 70 0 COMMON 1 cstackCOMMON dist/default/production\Ultrasonico.X.production.o
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4012 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit FEC 0 CODE 0 cinit -
+__Lstack 0 0 STACK 2 stack -
+_PORTBbits 6 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+_PORTCbits 7 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+_INTCONbits B 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 800 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+___xxtofl ABE 0 CODE 0 text3 dist/default/production\Ultrasonico.X.production.o
+__Lintentry 0 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\PERSON~1\AppData\Local\Temp\se80.o
+__end_of___xxtofl C32 0 CODE 0 text3 dist/default/production\Ultrasonico.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+?_C_distancia 45 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+___fldiv C32 0 CODE 0 text5 dist/default/production\Ultrasonico.X.production.o
+___fltol 9C6 0 CODE 0 text4 dist/default/production\Ultrasonico.X.production.o
+__pmaintext 880 0 CODE 0 maintext dist/default/production\Ultrasonico.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+___fldiv@grs 34 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+___fldiv@rem 2D 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+__size_of_C_distancia 0 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+___fldiv@new_exp 32 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__Lend_init 0 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+___fltol@exp1 44 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+end_of_initialization FF8 0 CODE 0 cinit dist/default/production\Ultrasonico.X.production.o
+__Hintentry 0 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+?___fldiv 20 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+?___fltol 3A 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__ptext1 836 0 CODE 0 text1 dist/default/production\Ultrasonico.X.production.o
+__ptext2 920 0 CODE 0 text2 dist/default/production\Ultrasonico.X.production.o
+__ptext3 ABE 0 CODE 0 text3 dist/default/production\Ultrasonico.X.production.o
+__ptext4 9C6 0 CODE 0 text4 dist/default/production\Ultrasonico.X.production.o
+__ptext5 C32 0 CODE 0 text5 dist/default/production\Ultrasonico.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+?___xxtofl 70 0 COMMON 1 cstackCOMMON dist/default/production\Ultrasonico.X.production.o
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+___fltol@sign1 43 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec -
+___fltol@f1 3A 0 BANK0 1 cstackBANK0 dist/default/production\Ultrasonico.X.production.o
+__end_of__initialization FF8 0 CODE 0 cinit dist/default/production\Ultrasonico.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Ultrasonico.X.production.o
+__Hend_init 6 0 CODE 0 end_init -
+__end_of_main 920 0 CODE 0 maintext dist/default/production\Ultrasonico.X.production.o
+_ANSEL 188 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+_PORTA 5 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+_PORTB 6 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+_PORTC 7 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+_PORTD 8 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+_PORTE 9 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+_TRISD 88 0 ABS 0 - dist/default/production\Ultrasonico.X.production.o
+__end_of_setup 880 0 CODE 0 text1 dist/default/production\Ultrasonico.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_setup 836 0 CODE 0 text1 dist/default/production\Ultrasonico.X.production.o
+__initialization FEC 0 CODE 0 cinit dist/default/production\Ultrasonico.X.production.o
+___xxtofl@sign 78 0 COMMON 1 cstackCOMMON dist/default/production\Ultrasonico.X.production.o
+__pbssBANK0 4B 0 BANK0 1 bssBANK0 dist/default/production\Ultrasonico.X.production.o
+_C_distancia 920 0 CODE 0 text2 dist/default/production\Ultrasonico.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7F6 FEC A 2
+text1 0 41B 836 25 2
+text2 0 490 920 53 2
+text3 0 55F ABE BA 2
+text4 0 4E3 9C6 7C 2
+text5 0 619 C32 1DD 2
+maintext 0 440 880 50 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 2F 1
+reset_vec 0 0 0 3 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
