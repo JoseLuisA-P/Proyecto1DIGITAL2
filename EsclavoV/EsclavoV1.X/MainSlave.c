@@ -46,7 +46,7 @@
 //******************************************************************************
 #define _XTAL_FREQ 8000000         // Frecuencia del oscilador
 #define pinTrig RC2;               // Definir las variables como nombres de los 
-#define pinEcho RC3;               // pines 
+#define pinEcho RC1;               // pines 
 
 //******************************************************************************
 //                           V A R I A B L E S
@@ -97,8 +97,6 @@ void __interrupt() isr(void){
     }
 }
 
-
-
 //******************************************************************************
 //                      C O N F I G U R A C I Ó N
 //******************************************************************************
@@ -109,7 +107,7 @@ void setup(void){
     ANSELH = 0x00;                 // Puerto B digital
     
     TRISCbits.TRISC2 = 0;          // Puertos como otputs
-    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC1 = 1;
     TRISBbits.TRISB1 = 0;          // Puertos como otputs
     TRISBbits.TRISB2 = 0;
     TRISD = 0X00;
@@ -150,16 +148,16 @@ void main(void){
         C_distancia(dist);
         //PORTD = dist;
         
-//        if(dist <= 4){ 
-//            PORTBbits.RB1 = 1; 
-//            PORTBbits.RB2 = 0;
-//            __delay_ms(1);
-//        }
-//        if(dist >= 5){ 
-//            PORTBbits.RB1 = 0;  
-//            PORTBbits.RB2 = 1;
-//            __delay_ms(1);
-//        }
+        if(dist <= 4){             // Si el objeto se encuentra a menos de 4cm
+            PORTBbits.RB1 = 1;     // Encender RB1 y apagar RB2
+            PORTBbits.RB2 = 0;
+            __delay_ms(1);
+        }
+        if(dist >= 5){             // Si el objeto se encuentra a más de 5cm
+            PORTBbits.RB1 = 0;     // Encender RB2 y apagar RB1
+            PORTBbits.RB2 = 1;
+            __delay_ms(1);
+        }
     }
 }
         

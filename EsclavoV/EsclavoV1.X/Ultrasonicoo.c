@@ -22,7 +22,7 @@
 //******************************************************************************
 #define _XTAL_FREQ 8000000         // Frecuencia del oscilador
 #define pinTrig RC2;               // Definir las variables como nombres de los 
-#define pinEcho RC3;               // pines 
+#define pinEcho RC1;               // pines 
 
 //******************************************************************************
 //                           V A R I A B L E S
@@ -39,23 +39,23 @@ int C_distancia(void){
     PORTCbits.RC2 = 1;            // Enviar señal al sensor (TRIGGER)
     __delay_us(10);               // Esperar los 10us que debe el sensor
     PORTCbits.RC2 = 0;            // Apagar la señal (TRIGGER)
-    while(PORTCbits.RC3 == 0){};  // Esperar el pulso del sensor (ECHO)
+    while(PORTCbits.RC1 == 0){};  // Esperar el pulso del sensor (ECHO)
     T1CONbits.TMR1ON = 1;         // Encender el modulo del timer
-    while(PORTCbits.RC3 == 1){};  // Esperar a que el pulso termine (ECHO)
+    while(PORTCbits.RC1 == 1){};  // Esperar a que el pulso termine (ECHO)
     T1CONbits.TMR1ON = 0;         // Apagar el timer
     dist = TMR1/58.82;            // Función para obtener dist. en cm
     return dist;
 }  
 
-int casos(void){
-    if(dist <= 4){ 
-        PORTBbits.RB1 = 1; 
-        PORTBbits.RB2 = 0;
-        __delay_ms(1);
-        }
-    if(dist >= 5){ 
-        PORTBbits.RB1 = 0;  
-        PORTBbits.RB2 = 1;
-        __delay_ms(1);
-        }
-}
+//int casos(void){
+//    if(dist <= 4){ 
+//        PORTBbits.RB1 = 1; 
+//        PORTBbits.RB2 = 0;
+//        __delay_ms(1);
+//        }
+//    if(dist >= 5){ 
+//        PORTBbits.RB1 = 0;  
+//        PORTBbits.RB2 = 1;
+//        __delay_ms(1);
+//        }
+//}

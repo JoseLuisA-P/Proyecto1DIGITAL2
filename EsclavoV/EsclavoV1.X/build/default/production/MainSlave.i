@@ -2887,7 +2887,7 @@ void I2C_Slave_Init(uint8_t address);
 
 # 1 "./Ultrasonicoo.h" 1
 # 36 "./Ultrasonicoo.h"
-void Ultrasonicoo(dist);
+void Ultrasonicoo(unsigned char dist);
 # 21 "MainSlave.c" 2
 
 
@@ -2961,8 +2961,6 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 
 
-
-
 void setup(void){
 
 
@@ -2970,7 +2968,7 @@ void setup(void){
     ANSELH = 0x00;
 
     TRISCbits.TRISC2 = 0;
-    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC1 = 1;
     TRISBbits.TRISB1 = 0;
     TRISBbits.TRISB2 = 0;
     TRISD = 0X00;
@@ -3009,6 +3007,17 @@ void main(void){
     while (1){
         _delay((unsigned long)((200)*(8000000/4000.0)));
         C_distancia(dist);
-# 163 "MainSlave.c"
+
+
+        if(dist <= 4){
+            PORTBbits.RB1 = 1;
+            PORTBbits.RB2 = 0;
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+        }
+        if(dist >= 5){
+            PORTBbits.RB1 = 0;
+            PORTBbits.RB2 = 1;
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+        }
     }
 }

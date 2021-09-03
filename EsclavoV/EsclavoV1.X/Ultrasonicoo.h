@@ -33,7 +33,7 @@
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 //Defino el prototipo de la función
-void Ultrasonicoo(dist);
+void Ultrasonicoo(unsigned char dist);
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 
