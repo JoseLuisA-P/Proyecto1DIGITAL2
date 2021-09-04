@@ -2912,65 +2912,25 @@ void Ultrasonicoo(unsigned char dist);
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
 # 54 "MainSlave.c"
-unsigned char FLAG = 0X00;
-unsigned char dist = 0x00;
-uint8_t temp;
-unsigned char VOL;
+uint8_t dist = 0x00;
 unsigned char z;
 
 
 
 void setup(void);
-
-
-
-
-void __attribute__((picinterrupt(("")))) isr(void){
-     if(PIR1bits.SSPIF == 1){
-        SSPCONbits.CKP = 0;
-
-        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
-            z = SSPBUF;
-            SSPCONbits.SSPOV = 0;
-            SSPCONbits.WCOL = 0;
-            SSPCONbits.CKP = 1;
-        }
-
-        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
-            z = SSPBUF;
-            PIR1bits.SSPIF = 0;
-            SSPCONbits.CKP = 1;
-            while(!SSPSTATbits.BF);
-            dist = SSPBUF;
-            _delay((unsigned long)((250)*(8000000/4000000.0)));
-            temp = SSPBUF;
-        }
-
-        else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
-            z = SSPBUF;
-            BF = 0;
-            SSPBUF = dist;
-            SSPCONbits.CKP = 1;
-            _delay((unsigned long)((250)*(8000000/4000000.0)));
-            while(SSPSTATbits.BF);
-        }
-        PIR1bits.SSPIF = 0;
-    }
-}
-
-
-
-
+# 100 "MainSlave.c"
 void setup(void){
 
 
     ANSEL = 0X00;
     ANSELH = 0x00;
 
-    TRISCbits.TRISC2 = 0;
-    TRISCbits.TRISC1 = 1;
     TRISBbits.TRISB1 = 0;
     TRISBbits.TRISB2 = 0;
+    TRISCbits.TRISC1 = 1;
+    TRISCbits.TRISC2 = 0;
+
+
     TRISD = 0X00;
 
     PORTA = 0X00;
@@ -2997,7 +2957,6 @@ void setup(void){
 
     I2C_Slave_Init(0x50);
     }
-
 
 
 

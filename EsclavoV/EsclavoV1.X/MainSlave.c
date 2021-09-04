@@ -51,10 +51,7 @@
 //******************************************************************************
 //                           V A R I A B L E S
 //******************************************************************************
-unsigned char FLAG = 0X00; 
-unsigned char dist = 0x00;
-uint8_t temp;                      // Variable para la temperatura
-unsigned char VOL;                 // Variable para el potenciómetro
+uint8_t dist = 0x00;               // Variable de la distancia
 unsigned char z;
 //******************************************************************************
 //                 P R O T O T I P O S  de  F U N C I O N E S
@@ -64,38 +61,38 @@ void setup(void);                  // Prototipo para la configuración
 //******************************************************************************
 //                     F U N C I Ó N   para   I S R
 //******************************************************************************
-void __interrupt() isr(void){
-     if(PIR1bits.SSPIF == 1){ 
-        SSPCONbits.CKP = 0;
-       
-        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
-            z = SSPBUF;             // Leer valor previo para limpiar buffer
-            SSPCONbits.SSPOV = 0;   // Limpiar bandera del overflow
-            SSPCONbits.WCOL = 0;    // Limpiar collision bit
-            SSPCONbits.CKP = 1;     // Utilizar el SCL (Clock)
-        }
-
-        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
-            z = SSPBUF;             // Lec. del SSBUF para limpiar buffer y flag BF
-            PIR1bits.SSPIF = 0;     // Limpiar FLAG de interr. recepción/transmisión SSP
-            SSPCONbits.CKP = 1;     // Habilitar entrada de pulsos de reloj SCL
-            while(!SSPSTATbits.BF); // Esperar a que la recepción se complete
-            dist = SSPBUF;          // Guardar val. buffer de recepción en PORTD
-            __delay_us(250);   
-            temp = SSPBUF;
-        }
-        
-        else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
-            z = SSPBUF;             // Variable temporal
-            BF = 0;
-            SSPBUF = dist;
-            SSPCONbits.CKP = 1;
-            __delay_us(250);
-            while(SSPSTATbits.BF);
-        }
-        PIR1bits.SSPIF = 0;         // Limpiar bandera
-    }
-}
+//void __interrupt() isr(void){
+//     if(PIR1bits.SSPIF == 1){ 
+//        SSPCONbits.CKP = 0;
+//       
+//        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+//            z = SSPBUF;             // Leer valor previo para limpiar buffer
+//            SSPCONbits.SSPOV = 0;   // Limpiar bandera del overflow
+//            SSPCONbits.WCOL = 0;    // Limpiar collision bit
+//            SSPCONbits.CKP = 1;     // Utilizar el SCL (Clock)
+//        }
+//
+//        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+//            z = SSPBUF;             // Lec. del SSBUF para limpiar buffer y flag BF
+//            PIR1bits.SSPIF = 0;     // Limpiar FLAG de interr. recepción/transmisión SSP
+//            SSPCONbits.CKP = 1;     // Habilitar entrada de pulsos de reloj SCL
+//            while(!SSPSTATbits.BF); // Esperar a que la recepción se complete
+//           // PORTA = SSPBUF;          // Guardar val. buffer de recepción en PORTD
+//            __delay_us(250);   
+//            temp = SSPBUF;
+//        }
+//        
+//        else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+//            z = SSPBUF;             // Variable temporal
+//            BF = 0;
+//            SSPBUF = dist;
+//            SSPCONbits.CKP = 1;
+//            __delay_us(250);
+//            while(SSPSTATbits.BF);
+//        }
+//        PIR1bits.SSPIF = 0;         // Limpiar bandera
+//    }
+//}
 
 //******************************************************************************
 //                      C O N F I G U R A C I Ó N
@@ -106,11 +103,13 @@ void setup(void){
     ANSEL = 0X00;                  // Pines digitales en el puerto A
     ANSELH = 0x00;                 // Puerto B digital
     
-    TRISCbits.TRISC2 = 0;          // Puertos como otputs
-    TRISCbits.TRISC1 = 1;
     TRISBbits.TRISB1 = 0;          // Puertos como otputs
-    TRISBbits.TRISB2 = 0;
-    TRISD = 0X00;
+    TRISBbits.TRISB2 = 0;          // Las del B son las leds
+    TRISCbits.TRISC1 = 1;          // ECHO
+    TRISCbits.TRISC2 = 0;          // TRIGGER        
+//    TRISCbits.TRISC3 = 0;          // Señal del clock SCL
+//    TRISCbits.TRISC4 = 0;          // Datos seriales SDA
+    TRISD = 0X00;                  // Desplegar valor del puerto
  
     PORTA = 0X00;                  // Inicializar los puertos
     PORTB = 0X00;
@@ -134,9 +133,8 @@ void setup(void){
     T1CONbits.TMR1GE = 0;          // Contador siempre cuenta
     T1CONbits.TMR1CS = 0;          // Internal clock (FOCSC/4)
     
-    I2C_Slave_Init(0x50); //se le asigna esta direccion al primer esclavo
+    I2C_Slave_Init(0x50);          // Asignar esta direccion al esclavo
     }
-
 
 //******************************************************************************
 //                         L O O P   P R I N C I P A L
@@ -146,7 +144,7 @@ void main(void){
     while (1){  
         __delay_ms(200);
         C_distancia(dist);
-        //PORTD = dist;
+       // PORTD = dist;              // Probar el valor en el puerto
         
         if(dist <= 4){             // Si el objeto se encuentra a menos de 4cm
             PORTBbits.RB1 = 1;     // Encender RB1 y apagar RB2
