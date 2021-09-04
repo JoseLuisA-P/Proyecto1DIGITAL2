@@ -7,7 +7,7 @@
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "MainSlave.c" 2
-# 15 "MainSlave.c"
+# 16 "MainSlave.c"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2488,7 +2488,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 15 "MainSlave.c" 2
+# 16 "MainSlave.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
@@ -2623,7 +2623,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 16 "MainSlave.c" 2
+# 17 "MainSlave.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2722,7 +2722,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 17 "MainSlave.c" 2
+# 18 "MainSlave.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -2807,7 +2807,7 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 18 "MainSlave.c" 2
+# 19 "MainSlave.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 1 3
 # 14 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 3
@@ -2840,7 +2840,7 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 19 "MainSlave.c" 2
+# 20 "MainSlave.c" 2
 
 # 1 "./I2C.h" 1
 # 20 "./I2C.h"
@@ -2883,12 +2883,12 @@ unsigned short I2C_Master_Read(unsigned short a);
 
 
 void I2C_Slave_Init(uint8_t address);
-# 20 "MainSlave.c" 2
+# 21 "MainSlave.c" 2
 
 # 1 "./Ultrasonicoo.h" 1
 # 36 "./Ultrasonicoo.h"
 void Ultrasonicoo(unsigned char dist);
-# 21 "MainSlave.c" 2
+# 22 "MainSlave.c" 2
 
 
 
@@ -2911,7 +2911,7 @@ void Ultrasonicoo(unsigned char dist);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 54 "MainSlave.c"
+# 55 "MainSlave.c"
 uint8_t dist = 0x00;
 
 unsigned char z;
@@ -2921,7 +2921,7 @@ uint8_t PWM2;
 
 
 void setup(void);
-# 123 "MainSlave.c"
+# 124 "MainSlave.c"
 void setup(void){
 
 
@@ -2958,7 +2958,7 @@ void setup(void){
     T1CONbits.T1CKPS = 0B01;
     T1CONbits.TMR1GE = 0;
     T1CONbits.TMR1CS = 0;
-# 183 "MainSlave.c"
+# 184 "MainSlave.c"
     I2C_Slave_Init(0x50);
     }
 

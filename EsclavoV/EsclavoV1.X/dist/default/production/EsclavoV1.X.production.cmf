@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+$C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\EsclavoV1.X.production.o
@@ -72,17 +72,17 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\EsclavoV1.X.production.o
-7F6 cinit CODE >798:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
-7F6 cinit CODE >801:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
-7F6 cinit CODE >821:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
-7F7 cinit CODE >822:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
-7F8 cinit CODE >823:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
-7F9 cinit CODE >824:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
-7FA cinit CODE >825:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
-7FB cinit CODE >826:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
-7FC cinit CODE >832:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
-7FC cinit CODE >834:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
-7FD cinit CODE >835:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
+7F6 cinit CODE >798:C:\Users\PERSON~1\AppData\Local\Temp\sm2o.s
+7F6 cinit CODE >801:C:\Users\PERSON~1\AppData\Local\Temp\sm2o.s
+7F6 cinit CODE >821:C:\Users\PERSON~1\AppData\Local\Temp\sm2o.s
+7F7 cinit CODE >822:C:\Users\PERSON~1\AppData\Local\Temp\sm2o.s
+7F8 cinit CODE >823:C:\Users\PERSON~1\AppData\Local\Temp\sm2o.s
+7F9 cinit CODE >824:C:\Users\PERSON~1\AppData\Local\Temp\sm2o.s
+7FA cinit CODE >825:C:\Users\PERSON~1\AppData\Local\Temp\sm2o.s
+7FB cinit CODE >826:C:\Users\PERSON~1\AppData\Local\Temp\sm2o.s
+7FC cinit CODE >832:C:\Users\PERSON~1\AppData\Local\Temp\sm2o.s
+7FC cinit CODE >834:C:\Users\PERSON~1\AppData\Local\Temp\sm2o.s
+7FD cinit CODE >835:C:\Users\PERSON~1\AppData\Local\Temp\sm2o.s
 619 text6 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
 619 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
 620 text6 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
@@ -241,46 +241,46 @@ $dist/default/production\EsclavoV1.X.production.o
 40C text2 CODE >103:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
 40F text2 CODE >104:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
 412 text2 CODE >105:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-413 text1 CODE >123:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-413 text1 CODE >126:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-416 text1 CODE >127:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-418 text1 CODE >129:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-41B text1 CODE >130:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-41C text1 CODE >131:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-41D text1 CODE >132:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-41E text1 CODE >133:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-41F text1 CODE >136:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-420 text1 CODE >138:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-423 text1 CODE >139:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-424 text1 CODE >140:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-425 text1 CODE >141:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-426 text1 CODE >142:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-427 text1 CODE >145:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-42A text1 CODE >146:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-42B text1 CODE >147:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-42C text1 CODE >148:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-42D text1 CODE >151:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-42E text1 CODE >152:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-42F text1 CODE >155:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-433 text1 CODE >156:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-437 text1 CODE >157:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-438 text1 CODE >158:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-439 text1 CODE >183:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-43F text1 CODE >184:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-440 maintext CODE >189:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+413 text1 CODE >124:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+413 text1 CODE >127:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+416 text1 CODE >128:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+418 text1 CODE >130:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+41B text1 CODE >131:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+41C text1 CODE >132:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+41D text1 CODE >133:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+41E text1 CODE >134:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+41F text1 CODE >137:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+420 text1 CODE >139:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+423 text1 CODE >140:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+424 text1 CODE >141:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+425 text1 CODE >142:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+426 text1 CODE >143:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+427 text1 CODE >146:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+42A text1 CODE >147:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+42B text1 CODE >148:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+42C text1 CODE >149:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+42D text1 CODE >152:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+42E text1 CODE >153:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+42F text1 CODE >156:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+433 text1 CODE >157:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+437 text1 CODE >158:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+438 text1 CODE >159:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+439 text1 CODE >184:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+43F text1 CODE >185:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
 440 maintext CODE >190:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-445 maintext CODE >193:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-454 maintext CODE >194:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-462 maintext CODE >196:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-466 maintext CODE >198:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-46C maintext CODE >199:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-46D maintext CODE >200:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-46E maintext CODE >201:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-478 maintext CODE >202:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+440 maintext CODE >191:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+445 maintext CODE >194:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+454 maintext CODE >195:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+462 maintext CODE >197:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+466 maintext CODE >199:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+46C maintext CODE >200:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+46D maintext CODE >201:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+46E maintext CODE >202:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
 478 maintext CODE >203:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-480 maintext CODE >204:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-481 maintext CODE >205:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-482 maintext CODE >206:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+478 maintext CODE >204:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+480 maintext CODE >205:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+481 maintext CODE >206:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+482 maintext CODE >207:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -304,21 +304,21 @@ _T1CONbits 10 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _TMR1 E 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+___sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
 _dist 4E 0 BANK0 1 bssBANK0 dist/default/production\EsclavoV1.X.production.o
 _main 880 0 CODE 0 maintext dist/default/production\EsclavoV1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
-start 0 0 CODE 0 init C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+start 0 0 CODE 0 init C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
 __size_of___fldiv 0 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __size_of___fltol 0 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\somg.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\somg.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\somg.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\somg.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\somg.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -330,8 +330,8 @@ ___fldiv@bexp 38 0 BANK0 1 cstackBANK0 dist/default/production\EsclavoV1.X.produ
 ___fldiv@sign 31 0 BANK0 1 cstackBANK0 dist/default/production\EsclavoV1.X.production.o
 __end_of___fldiv FEC 0 CODE 0 text6 dist/default/production\EsclavoV1.X.production.o
 __end_of___fltol ABE 0 CODE 0 text5 dist/default/production\EsclavoV1.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\somg.o
-___stacklo 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+___stackhi 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
+___stacklo 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
 _I2C_Slave_Init 7F2 0 CODE 0 text2 dist/default/production\EsclavoV1.X.production.o
 ___fldiv@a 20 0 BANK0 1 cstackBANK0 dist/default/production\EsclavoV1.X.production.o
 ___fldiv@b 24 0 BANK0 1 cstackBANK0 dist/default/production\EsclavoV1.X.production.o
@@ -346,7 +346,7 @@ _SSPCON 14 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __end_of_C_distancia 9C6 0 CODE 0 text3 dist/default/production\EsclavoV1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+___int_sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -395,7 +395,7 @@ __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 ___xxtofl ABE 0 CODE 0 text4 dist/default/production\EsclavoV1.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
 __end_of___xxtofl C32 0 CODE 0 text4 dist/default/production\EsclavoV1.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 ?_C_distancia 45 0 BANK0 1 cstackBANK0 dist/default/production\EsclavoV1.X.production.o

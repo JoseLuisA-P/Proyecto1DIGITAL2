@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\EsclavoV1.X.production.sym \
   --cmf=dist/default/production\EsclavoV1.X.production.cmf -z -Q16F887 \
-  -oC:\Users\PERSON~1\AppData\Local\Temp\somg.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\PERSON~1\AppData\Local\Temp\sm2o.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/EsclavoV1.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\PERSON~1\AppData\Local\Temp\somg.o \
+  -pfunctab=ENTRY -k C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o \
   dist/default/production\EsclavoV1.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+C:\Users\PERSON~1\AppData\Local\Temp\sm2o.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        2        0       4
 dist/default/production\EsclavoV1.X.production.o
@@ -325,7 +325,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 189 in file "MainSlave.c"
+		line 190 in file "MainSlave.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -355,7 +355,7 @@ Total ram usage:        3 bytes
 
  *************** function _setup *****************
  Defined at:
-		line 123 in file "MainSlave.c"
+		line 124 in file "MainSlave.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type

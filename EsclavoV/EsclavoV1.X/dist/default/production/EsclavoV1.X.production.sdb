@@ -23,9 +23,9 @@
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
 "93
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
-"123 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+"124 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
 [v _setup setup `(v  1 e 1 0 ]
-"189
+"190
 [v _main main `(v  1 e 1 0 ]
 "36 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
 [v _C_distancia C_distancia `(i  1 e 2 0 ]
@@ -182,17 +182,17 @@
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4460
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
-"54 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+"55 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
 [v _dist dist `uc  1 e 1 0 ]
-"189
+"190
 [v _main main `(v  1 e 1 0 ]
 {
-"209
+"210
 } 0
-"123
+"124
 [v _setup setup `(v  1 e 1 0 ]
 {
-"184
+"185
 } 0
 "93 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]

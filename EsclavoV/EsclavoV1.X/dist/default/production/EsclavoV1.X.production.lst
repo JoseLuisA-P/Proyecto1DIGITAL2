@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Sat Sep 04 16:23:50 2021
+                                                                                               Sat Sep 04 16:26:12 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -560,7 +560,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    546 ;;
    547 ;; *************** function _main *****************
    548 ;; Defined at:
-   549 ;;		line 189 in file "MainSlave.c"
+   549 ;;		line 190 in file "MainSlave.c"
    550 ;; Parameters:    Size  Location     Type
    551 ;;		None
    552 ;; Auto vars:     Size  Location     Type
@@ -596,11 +596,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    582                           ; Regs used in _main: [wreg+status,2+status,0+btemp+1+pclath+cstack]
    583                           
    584                           
-   585                           ;MainSlave.c: 190:     setup();
+   585                           ;MainSlave.c: 191:     setup();
    586  0440  120A  118A  2413  120A  118A  	fcall	_setup
    587  0445                     l1379:
    588                           
-   589                           ;MainSlave.c: 193:         _delay((unsigned long)((200)*(8000000/4000.0)));
+   589                           ;MainSlave.c: 194:         _delay((unsigned long)((200)*(8000000/4000.0)));
    590  0445  3003               	movlw	3
    591  0446  1283               	bcf	3,5	;RP0=0, select bank0
    592  0447  1303               	bcf	3,6	;RP1=0, select bank0
@@ -619,7 +619,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    605  0453  0000               	nop
    606  0454                     l1381:
    607                           
-   608                           ;MainSlave.c: 194:         C_distancia(dist);
+   608                           ;MainSlave.c: 195:         C_distancia(dist);
    609  0454  1283               	bcf	3,5	;RP0=0, select bank0
    610  0455  1303               	bcf	3,6	;RP1=0, select bank0
    611  0456  084E               	movf	_dist,w
@@ -632,14 +632,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    618  045D  120A  118A  2490  120A  118A  	fcall	_C_distancia
    619  0462                     l1383:
    620                           
-   621                           ;MainSlave.c: 196:         PORTD = dist;
+   621                           ;MainSlave.c: 197:         PORTD = dist;
    622  0462  1283               	bcf	3,5	;RP0=0, select bank0
    623  0463  1303               	bcf	3,6	;RP1=0, select bank0
    624  0464  084E               	movf	_dist,w
    625  0465  0088               	movwf	8	;volatile
    626  0466                     l1385:
    627                           
-   628                           ;MainSlave.c: 198:         if(dist <= 4){
+   628                           ;MainSlave.c: 199:         if(dist <= 4){
    629  0466  3005               	movlw	5
    630  0467  024E               	subwf	_dist,w
    631  0468  1803               	skipnc
@@ -650,14 +650,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    636  046C                     u1170:
    637  046C                     l1387:
    638                           
-   639                           ;MainSlave.c: 199:             PORTBbits.RB1 = 1;
+   639                           ;MainSlave.c: 200:             PORTBbits.RB1 = 1;
    640  046C  1486               	bsf	6,1	;volatile
    641                           
-   642                           ;MainSlave.c: 200:             PORTBbits.RB2 = 0;
+   642                           ;MainSlave.c: 201:             PORTBbits.RB2 = 0;
    643  046D  1106               	bcf	6,2	;volatile
    644  046E                     l1389:
    645                           
-   646                           ;MainSlave.c: 201:             _delay((unsigned long)((1)*(8000000/4000.0)));
+   646                           ;MainSlave.c: 202:             _delay((unsigned long)((1)*(8000000/4000.0)));
    647  046E  3003               	movlw	3
    648  046F  1283               	bcf	3,5	;RP0=0, select bank0
    649  0470  1303               	bcf	3,6	;RP1=0, select bank0
@@ -670,10 +670,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    656  0476  0BC9               	decfsz	??_main+1,f
    657  0477  2C74               	goto	u1207
    658  0478                     l72:	
-   659                           ;MainSlave.c: 202:         }
+   659                           ;MainSlave.c: 203:         }
    660                           
    661                           
-   662                           ;MainSlave.c: 203:         if(dist >= 5){
+   662                           ;MainSlave.c: 204:         if(dist >= 5){
    663  0478  3005               	movlw	5
    664  0479  1283               	bcf	3,5	;RP0=0, select bank0
    665  047A  1303               	bcf	3,6	;RP1=0, select bank0
@@ -686,14 +686,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    672  0480                     u1180:
    673  0480                     l1391:
    674                           
-   675                           ;MainSlave.c: 204:             PORTBbits.RB1 = 0;
+   675                           ;MainSlave.c: 205:             PORTBbits.RB1 = 0;
    676  0480  1086               	bcf	6,1	;volatile
    677                           
-   678                           ;MainSlave.c: 205:             PORTBbits.RB2 = 1;
+   678                           ;MainSlave.c: 206:             PORTBbits.RB2 = 1;
    679  0481  1506               	bsf	6,2	;volatile
    680  0482                     l1393:
    681                           
-   682                           ;MainSlave.c: 206:             _delay((unsigned long)((1)*(8000000/4000.0)));
+   682                           ;MainSlave.c: 207:             _delay((unsigned long)((1)*(8000000/4000.0)));
    683  0482  3003               	movlw	3
    684  0483  1283               	bcf	3,5	;RP0=0, select bank0
    685  0484  1303               	bcf	3,6	;RP1=0, select bank0
@@ -713,7 +713,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    699  0413                     __ptext1:	
    700 ;; *************** function _setup *****************
    701 ;; Defined at:
-   702 ;;		line 123 in file "MainSlave.c"
+   702 ;;		line 124 in file "MainSlave.c"
    703 ;; Parameters:    Size  Location     Type
    704 ;;		None
    705 ;; Auto vars:     Size  Location     Type
@@ -749,114 +749,114 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    735                           ; Regs used in _setup: [wreg+status,2+status,0+pclath+cstack]
    736                           
    737                           
-   738                           ;MainSlave.c: 126:     ANSEL = 0X00;
+   738                           ;MainSlave.c: 127:     ANSEL = 0X00;
    739  0413  1683               	bsf	3,5	;RP0=1, select bank3
    740  0414  1703               	bsf	3,6	;RP1=1, select bank3
    741  0415  0188               	clrf	8	;volatile
    742  0416                     l1331:
    743                           
-   744                           ;MainSlave.c: 127:     ANSELH = 0x00000001;
+   744                           ;MainSlave.c: 128:     ANSELH = 0x00000001;
    745  0416  3001               	movlw	1
    746  0417  0089               	movwf	9	;volatile
    747  0418                     l1333:
    748                           
-   749                           ;MainSlave.c: 129:     TRISBbits.TRISB0 = 1;
+   749                           ;MainSlave.c: 130:     TRISBbits.TRISB0 = 1;
    750  0418  1683               	bsf	3,5	;RP0=1, select bank1
    751  0419  1303               	bcf	3,6	;RP1=0, select bank1
    752  041A  1406               	bsf	6,0	;volatile
    753  041B                     l1335:
    754                           
-   755                           ;MainSlave.c: 130:     TRISBbits.TRISB1 = 0;
+   755                           ;MainSlave.c: 131:     TRISBbits.TRISB1 = 0;
    756  041B  1086               	bcf	6,1	;volatile
    757  041C                     l1337:
    758                           
-   759                           ;MainSlave.c: 131:     TRISBbits.TRISB2 = 0;
+   759                           ;MainSlave.c: 132:     TRISBbits.TRISB2 = 0;
    760  041C  1106               	bcf	6,2	;volatile
    761  041D                     l1339:
    762                           
-   763                           ;MainSlave.c: 132:     TRISCbits.TRISC1 = 1;
+   763                           ;MainSlave.c: 133:     TRISCbits.TRISC1 = 1;
    764  041D  1487               	bsf	7,1	;volatile
    765  041E                     l1341:
    766                           
-   767                           ;MainSlave.c: 133:     TRISCbits.TRISC2 = 0;
+   767                           ;MainSlave.c: 134:     TRISCbits.TRISC2 = 0;
    768  041E  1107               	bcf	7,2	;volatile
    769  041F                     l1343:
    770                           
-   771                           ;MainSlave.c: 136:     TRISD = 0X00;
+   771                           ;MainSlave.c: 137:     TRISD = 0X00;
    772  041F  0188               	clrf	8	;volatile
    773  0420                     l1345:
    774                           
-   775                           ;MainSlave.c: 138:     PORTA = 0X00;
+   775                           ;MainSlave.c: 139:     PORTA = 0X00;
    776  0420  1283               	bcf	3,5	;RP0=0, select bank0
    777  0421  1303               	bcf	3,6	;RP1=0, select bank0
    778  0422  0185               	clrf	5	;volatile
    779  0423                     l1347:
    780                           
-   781                           ;MainSlave.c: 139:     PORTB = 0X00;
+   781                           ;MainSlave.c: 140:     PORTB = 0X00;
    782  0423  0186               	clrf	6	;volatile
    783  0424                     l1349:
    784                           
-   785                           ;MainSlave.c: 140:     PORTC = 0X00;
+   785                           ;MainSlave.c: 141:     PORTC = 0X00;
    786  0424  0187               	clrf	7	;volatile
    787  0425                     l1351:
    788                           
-   789                           ;MainSlave.c: 141:     PORTD = 0X00;
+   789                           ;MainSlave.c: 142:     PORTD = 0X00;
    790  0425  0188               	clrf	8	;volatile
    791  0426                     l1353:
    792                           
-   793                           ;MainSlave.c: 142:     PORTE = 0X00;
+   793                           ;MainSlave.c: 143:     PORTE = 0X00;
    794  0426  0189               	clrf	9	;volatile
    795  0427                     l1355:
    796                           
-   797                           ;MainSlave.c: 145:     OSCCONbits.SCS = 1;
+   797                           ;MainSlave.c: 146:     OSCCONbits.SCS = 1;
    798  0427  1683               	bsf	3,5	;RP0=1, select bank1
    799  0428  1303               	bcf	3,6	;RP1=0, select bank1
    800  0429  140F               	bsf	15,0	;volatile
    801  042A                     l1357:
    802                           
-   803                           ;MainSlave.c: 146:     OSCCONbits.IRCF2 = 1;
+   803                           ;MainSlave.c: 147:     OSCCONbits.IRCF2 = 1;
    804  042A  170F               	bsf	15,6	;volatile
    805  042B                     l1359:
    806                           
-   807                           ;MainSlave.c: 147:     OSCCONbits.IRCF1 = 1;
+   807                           ;MainSlave.c: 148:     OSCCONbits.IRCF1 = 1;
    808  042B  168F               	bsf	15,5	;volatile
    809  042C                     l1361:
    810                           
-   811                           ;MainSlave.c: 148:     OSCCONbits.IRCF0 = 1;
+   811                           ;MainSlave.c: 149:     OSCCONbits.IRCF0 = 1;
    812  042C  160F               	bsf	15,4	;volatile
    813  042D                     l1363:
    814                           
-   815                           ;MainSlave.c: 151:     INTCONbits.GIE = 1;
+   815                           ;MainSlave.c: 152:     INTCONbits.GIE = 1;
    816  042D  178B               	bsf	11,7	;volatile
    817  042E                     l1365:
    818                           
-   819                           ;MainSlave.c: 152:     INTCONbits.PEIE = 1;
+   819                           ;MainSlave.c: 153:     INTCONbits.PEIE = 1;
    820  042E  170B               	bsf	11,6	;volatile
    821  042F                     l1367:
    822                           
-   823                           ;MainSlave.c: 155:     TMR1 = 0X00;
+   823                           ;MainSlave.c: 156:     TMR1 = 0X00;
    824  042F  1283               	bcf	3,5	;RP0=0, select bank0
    825  0430  1303               	bcf	3,6	;RP1=0, select bank0
    826  0431  018E               	clrf	14	;volatile
    827  0432  018F               	clrf	15	;volatile
    828  0433                     l1369:
    829                           
-   830                           ;MainSlave.c: 156:     T1CONbits.T1CKPS = 0B01;
+   830                           ;MainSlave.c: 157:     T1CONbits.T1CKPS = 0B01;
    831  0433  0810               	movf	16,w	;volatile
    832  0434  39CF               	andlw	-49
    833  0435  3810               	iorlw	16
    834  0436  0090               	movwf	16	;volatile
    835  0437                     l1371:
    836                           
-   837                           ;MainSlave.c: 157:     T1CONbits.TMR1GE = 0;
+   837                           ;MainSlave.c: 158:     T1CONbits.TMR1GE = 0;
    838  0437  1310               	bcf	16,6	;volatile
    839  0438                     l1373:
    840                           
-   841                           ;MainSlave.c: 158:     T1CONbits.TMR1CS = 0;
+   841                           ;MainSlave.c: 159:     T1CONbits.TMR1CS = 0;
    842  0438  1090               	bcf	16,1	;volatile
    843  0439                     l1375:
    844                           
-   845                           ;MainSlave.c: 183:     I2C_Slave_Init(0x50);
+   845                           ;MainSlave.c: 184:     I2C_Slave_Init(0x50);
    846  0439  3050               	movlw	80
    847  043A  120A  118A  23F9  120A  118A  	fcall	_I2C_Slave_Init
    848  043F                     l66:
@@ -2396,7 +2396,7 @@ DATA                 0      0      3D      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Sat Sep 04 16:23:50 2021
+Symbol Table                                                                                   Sat Sep 04 16:26:12 2021
 
            ___fldiv@aexp 0039             ___fldiv@bexp 0038                        _z 004D  
            ___fldiv@sign 0031                       l13 04A0                       l15 04A4  
