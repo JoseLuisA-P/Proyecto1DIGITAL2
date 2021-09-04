@@ -1,4 +1,4 @@
- /*
+/*
  * File            : I2C.h
  * Author          : Ligo George
  * Company         : electroSome

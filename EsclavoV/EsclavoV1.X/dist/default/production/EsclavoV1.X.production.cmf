@@ -11,21 +11,21 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
+$C:\Users\PERSON~1\AppData\Local\Temp\somg.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\EsclavoV1.X.production.o
-cinit CODE 0 7F8 7F8 8 2
-text1 CODE 0 419 419 2B 2
-text2 CODE 0 3FF 3FF 1A 2
-text3 CODE 0 492 492 53 2
-text4 CODE 0 561 561 BA 2
-text5 CODE 0 4E5 4E5 7C 2
-text6 CODE 0 61B 61B 1DD 2
-maintext CODE 0 444 444 4E 2
+cinit CODE 0 7F6 7F6 A 2
+text1 CODE 0 413 413 2D 2
+text2 CODE 0 3F9 3F9 1A 2
+text3 CODE 0 490 490 53 2
+text4 CODE 0 55F 55F BA 2
+text5 CODE 0 4E3 4E3 7C 2
+text6 CODE 0 619 619 1DD 2
+maintext CODE 0 440 440 50 2
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK0 BANK0 1 20 20 2B 1
-bssBANK0 BANK0 1 4B 4B 2 1
+bssBANK0 BANK0 1 4B 4B 4 1
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -33,30 +33,30 @@ config CONFIG 4 2007 2007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 4D-6F 1
+RAM 4F-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 4D-6F 1
+BANK0 4F-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 3-3FE 2
+CONST 3-3F8 2
 CONST 800-1FFF 2
-ENTRY 3-3FE 2
+ENTRY 3-3F8 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 3-3FE 2
+CODE 3-3F8 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
 EEDATA 2100-21FF 2
-STRCODE 3-3FE 2
+STRCODE 3-3F8 2
 STRCODE 800-1FFF 2
-STRING 3-3FE 2
+STRING 3-3F8 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -72,211 +72,215 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\EsclavoV1.X.production.o
-7F8 cinit CODE >798:C:\Users\PERSON~1\AppData\Local\Temp\s6gc.s
-7F8 cinit CODE >801:C:\Users\PERSON~1\AppData\Local\Temp\s6gc.s
-7F8 cinit CODE >815:C:\Users\PERSON~1\AppData\Local\Temp\s6gc.s
-7F9 cinit CODE >816:C:\Users\PERSON~1\AppData\Local\Temp\s6gc.s
-7FA cinit CODE >817:C:\Users\PERSON~1\AppData\Local\Temp\s6gc.s
-7FB cinit CODE >818:C:\Users\PERSON~1\AppData\Local\Temp\s6gc.s
-7FC cinit CODE >824:C:\Users\PERSON~1\AppData\Local\Temp\s6gc.s
-7FC cinit CODE >826:C:\Users\PERSON~1\AppData\Local\Temp\s6gc.s
-7FD cinit CODE >827:C:\Users\PERSON~1\AppData\Local\Temp\s6gc.s
-61B text6 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-61B text6 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-622 text6 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-628 text6 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-62C text6 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-62D text6 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-632 text6 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-637 text6 CODE >37:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-63F text6 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-640 text6 CODE >42:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-641 text6 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-642 text6 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-64A text6 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-64F text6 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-655 text6 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-659 text6 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-65A text6 CODE >56:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-65F text6 CODE >58:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-664 text6 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-66C text6 CODE >63:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-66D text6 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-66E text6 CODE >66:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-66F text6 CODE >69:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-677 text6 CODE >70:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-677 text6 CODE >75:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-67F text6 CODE >76:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-687 text6 CODE >77:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-68B text6 CODE >78:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-68F text6 CODE >79:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-698 text6 CODE >83:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-69D text6 CODE >84:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-69D text6 CODE >85:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6A6 text6 CODE >89:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6B8 text6 CODE >92:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6C0 text6 CODE >93:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6C8 text6 CODE >94:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6D0 text6 CODE >96:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6D1 text6 CODE >97:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6D2 text6 CODE >100:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6D7 text6 CODE >101:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6E0 text6 CODE >102:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6E9 text6 CODE >103:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6ED text6 CODE >104:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6EE text6 CODE >106:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-6F7 text6 CODE >112:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-709 text6 CODE >115:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-70A text6 CODE >116:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-718 text6 CODE >118:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-71C text6 CODE >97:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-722 text6 CODE >122:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-72A text6 CODE >123:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-72C text6 CODE >128:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-735 text6 CODE >129:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-739 text6 CODE >130:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-73A text6 CODE >132:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-743 text6 CODE >133:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-749 text6 CODE >127:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-74D text6 CODE >139:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-74E text6 CODE >140:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-752 text6 CODE >141:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-766 text6 CODE >142:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-768 text6 CODE >143:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-769 text6 CODE >144:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-769 text6 CODE >145:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-76E text6 CODE >150:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-773 text6 CODE >151:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-781 text6 CODE >152:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-785 text6 CODE >153:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-79E text6 CODE >154:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7A4 text6 CODE >159:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7B1 text6 CODE >160:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7B7 text6 CODE >161:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7BF text6 CODE >165:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7CE text6 CODE >166:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7D2 text6 CODE >167:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7DA text6 CODE >169:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7DB text6 CODE >170:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7DB text6 CODE >173:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7E1 text6 CODE >175:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7E5 text6 CODE >176:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7E6 text6 CODE >177:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7E7 text6 CODE >180:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7EB text6 CODE >181:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7EB text6 CODE >182:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7F2 text6 CODE >183:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-7F7 text6 CODE >185:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
-4E5 text5 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-4E5 text5 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-4F2 text5 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-4FB text5 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-510 text5 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-511 text5 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-519 text5 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-51B text5 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-51F text5 CODE >54:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-527 text5 CODE >57:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-530 text5 CODE >58:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-539 text5 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-540 text5 CODE >63:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-549 text5 CODE >64:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-54B text5 CODE >62:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-54B text5 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-550 text5 CODE >67:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-555 text5 CODE >68:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-560 text5 CODE >70:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
-561 text4 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-562 text4 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-56B text4 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-57A text4 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-57B text4 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-583 text4 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-583 text4 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-58B text4 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-594 text4 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-598 text4 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-599 text4 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-59D text4 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5A6 text4 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5AD text4 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5B1 text4 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5BF text4 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5C8 text4 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5C8 text4 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5CF text4 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5D1 text4 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5DA text4 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5E4 text4 CODE >37:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5E8 text4 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5F0 text4 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-5F2 text4 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-608 text4 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-611 text4 CODE >42:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-612 text4 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-61A text4 CODE >44:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
-492 text3 CODE >36:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
-492 text3 CODE >37:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
-495 text3 CODE >38:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
-497 text3 CODE >39:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
-498 text3 CODE >40:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
-49F text3 CODE >41:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
-4A2 text3 CODE >42:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
-4A6 text3 CODE >43:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
-4A7 text3 CODE >44:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
-4AB text3 CODE >45:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
-4AC text3 CODE >46:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
-4E4 text3 CODE >48:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
-3FF text2 CODE >92:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-400 text2 CODE >94:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-404 text2 CODE >95:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-408 text2 CODE >96:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-40C text2 CODE >97:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-40E text2 CODE >98:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-40F text2 CODE >99:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-410 text2 CODE >100:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-411 text2 CODE >101:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-412 text2 CODE >102:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-415 text2 CODE >103:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-418 text2 CODE >104:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
-419 text1 CODE >100:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-419 text1 CODE >103:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-41C text1 CODE >104:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-41D text1 CODE >106:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-420 text1 CODE >107:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-421 text1 CODE >108:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-422 text1 CODE >109:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-423 text1 CODE >112:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-424 text1 CODE >114:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-427 text1 CODE >115:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-428 text1 CODE >116:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-429 text1 CODE >117:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-42A text1 CODE >118:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-42B text1 CODE >121:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-42E text1 CODE >122:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-42F text1 CODE >123:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-430 text1 CODE >124:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-431 text1 CODE >127:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-432 text1 CODE >128:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-433 text1 CODE >131:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-437 text1 CODE >132:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-43B text1 CODE >133:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-43C text1 CODE >134:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-43D text1 CODE >136:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-443 text1 CODE >137:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-444 maintext CODE >142:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-444 maintext CODE >143:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-449 maintext CODE >145:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-458 maintext CODE >146:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-466 maintext CODE >149:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-46E maintext CODE >150:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-46F maintext CODE >151:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-470 maintext CODE >152:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-47A maintext CODE >153:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-47A maintext CODE >154:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-482 maintext CODE >155:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-483 maintext CODE >156:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-484 maintext CODE >157:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+7F6 cinit CODE >798:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
+7F6 cinit CODE >801:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
+7F6 cinit CODE >821:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
+7F7 cinit CODE >822:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
+7F8 cinit CODE >823:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
+7F9 cinit CODE >824:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
+7FA cinit CODE >825:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
+7FB cinit CODE >826:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
+7FC cinit CODE >832:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
+7FC cinit CODE >834:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
+7FD cinit CODE >835:C:\Users\PERSON~1\AppData\Local\Temp\somg.s
+619 text6 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+619 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+620 text6 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+626 text6 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+62A text6 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+62B text6 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+630 text6 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+635 text6 CODE >37:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+63D text6 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+63E text6 CODE >42:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+63F text6 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+640 text6 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+648 text6 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+64D text6 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+653 text6 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+657 text6 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+658 text6 CODE >56:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+65D text6 CODE >58:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+662 text6 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+66A text6 CODE >63:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+66B text6 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+66C text6 CODE >66:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+66D text6 CODE >69:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+675 text6 CODE >70:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+675 text6 CODE >75:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+67D text6 CODE >76:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+685 text6 CODE >77:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+689 text6 CODE >78:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+68D text6 CODE >79:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+696 text6 CODE >83:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+69B text6 CODE >84:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+69B text6 CODE >85:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6A4 text6 CODE >89:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6B6 text6 CODE >92:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6BE text6 CODE >93:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6C6 text6 CODE >94:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6CE text6 CODE >96:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6CF text6 CODE >97:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6D0 text6 CODE >100:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6D5 text6 CODE >101:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6DE text6 CODE >102:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6E7 text6 CODE >103:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6EB text6 CODE >104:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6EC text6 CODE >106:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+6F5 text6 CODE >112:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+707 text6 CODE >115:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+708 text6 CODE >116:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+716 text6 CODE >118:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+71A text6 CODE >97:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+720 text6 CODE >122:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+728 text6 CODE >123:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+72A text6 CODE >128:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+733 text6 CODE >129:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+737 text6 CODE >130:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+738 text6 CODE >132:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+741 text6 CODE >133:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+747 text6 CODE >127:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+74B text6 CODE >139:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+74C text6 CODE >140:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+750 text6 CODE >141:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+764 text6 CODE >142:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+766 text6 CODE >143:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+767 text6 CODE >144:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+767 text6 CODE >145:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+76C text6 CODE >150:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+771 text6 CODE >151:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+77F text6 CODE >152:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+783 text6 CODE >153:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+79C text6 CODE >154:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7A2 text6 CODE >159:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7AF text6 CODE >160:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7B5 text6 CODE >161:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7BD text6 CODE >165:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7CC text6 CODE >166:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7D0 text6 CODE >167:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7D8 text6 CODE >169:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7D9 text6 CODE >170:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7D9 text6 CODE >173:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7DF text6 CODE >175:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7E3 text6 CODE >176:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7E4 text6 CODE >177:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7E5 text6 CODE >180:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7E9 text6 CODE >181:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7E9 text6 CODE >182:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7F0 text6 CODE >183:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+7F5 text6 CODE >185:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+4E3 text5 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+4E3 text5 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+4F0 text5 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+4F9 text5 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+50E text5 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+50F text5 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+517 text5 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+519 text5 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+51D text5 CODE >54:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+525 text5 CODE >57:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+52E text5 CODE >58:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+537 text5 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+53E text5 CODE >63:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+547 text5 CODE >64:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+549 text5 CODE >62:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+549 text5 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+54E text5 CODE >67:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+553 text5 CODE >68:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+55E text5 CODE >70:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+55F text4 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+560 text4 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+569 text4 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+578 text4 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+579 text4 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+581 text4 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+581 text4 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+589 text4 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+592 text4 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+596 text4 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+597 text4 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+59B text4 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5A4 text4 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5AB text4 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5AF text4 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5BD text4 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5C6 text4 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5C6 text4 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5CD text4 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5CF text4 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5D8 text4 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5E2 text4 CODE >37:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5E6 text4 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5EE text4 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+5F0 text4 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+606 text4 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+60F text4 CODE >42:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+610 text4 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+618 text4 CODE >44:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
+490 text3 CODE >36:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+490 text3 CODE >37:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+493 text3 CODE >38:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+495 text3 CODE >39:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+496 text3 CODE >40:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+49D text3 CODE >41:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+4A0 text3 CODE >42:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+4A4 text3 CODE >43:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+4A5 text3 CODE >44:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+4A9 text3 CODE >45:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+4AA text3 CODE >46:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+4E2 text3 CODE >48:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+3F9 text2 CODE >93:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
+3FA text2 CODE >95:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
+3FE text2 CODE >96:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
+402 text2 CODE >97:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
+406 text2 CODE >98:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
+408 text2 CODE >99:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
+409 text2 CODE >100:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
+40A text2 CODE >101:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
+40B text2 CODE >102:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
+40C text2 CODE >103:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
+40F text2 CODE >104:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
+412 text2 CODE >105:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
+413 text1 CODE >123:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+413 text1 CODE >126:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+416 text1 CODE >127:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+418 text1 CODE >129:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+41B text1 CODE >130:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+41C text1 CODE >131:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+41D text1 CODE >132:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+41E text1 CODE >133:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+41F text1 CODE >136:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+420 text1 CODE >138:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+423 text1 CODE >139:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+424 text1 CODE >140:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+425 text1 CODE >141:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+426 text1 CODE >142:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+427 text1 CODE >145:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+42A text1 CODE >146:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+42B text1 CODE >147:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+42C text1 CODE >148:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+42D text1 CODE >151:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+42E text1 CODE >152:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+42F text1 CODE >155:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+433 text1 CODE >156:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+437 text1 CODE >157:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+438 text1 CODE >158:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+439 text1 CODE >183:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+43F text1 CODE >184:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+440 maintext CODE >189:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+440 maintext CODE >190:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+445 maintext CODE >193:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+454 maintext CODE >194:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+462 maintext CODE >196:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+466 maintext CODE >198:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+46C maintext CODE >199:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+46D maintext CODE >200:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+46E maintext CODE >201:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+478 maintext CODE >202:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+478 maintext CODE >203:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+480 maintext CODE >204:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+481 maintext CODE >205:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+482 maintext CODE >206:C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -300,21 +304,21 @@ _T1CONbits 10 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _TMR1 E 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
-_dist 4C 0 BANK0 1 bssBANK0 dist/default/production\EsclavoV1.X.production.o
-_main 888 0 CODE 0 maintext dist/default/production\EsclavoV1.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+_dist 4E 0 BANK0 1 bssBANK0 dist/default/production\EsclavoV1.X.production.o
+_main 880 0 CODE 0 maintext dist/default/production\EsclavoV1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
-start 0 0 CODE 0 init C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
+start 0 0 CODE 0 init C:\Users\PERSON~1\AppData\Local\Temp\somg.o
 __size_of___fldiv 0 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __size_of___fltol 0 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\PERSON~1\AppData\Local\Temp\somg.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -324,15 +328,15 @@ __Lmaintext 0 0 ABS 0 maintext -
 ___fldiv@aexp 39 0 BANK0 1 cstackBANK0 dist/default/production\EsclavoV1.X.production.o
 ___fldiv@bexp 38 0 BANK0 1 cstackBANK0 dist/default/production\EsclavoV1.X.production.o
 ___fldiv@sign 31 0 BANK0 1 cstackBANK0 dist/default/production\EsclavoV1.X.production.o
-__end_of___fldiv FF0 0 CODE 0 text6 dist/default/production\EsclavoV1.X.production.o
-__end_of___fltol AC2 0 CODE 0 text5 dist/default/production\EsclavoV1.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
-___stacklo 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
-_I2C_Slave_Init 7FE 0 CODE 0 text2 dist/default/production\EsclavoV1.X.production.o
+__end_of___fldiv FEC 0 CODE 0 text6 dist/default/production\EsclavoV1.X.production.o
+__end_of___fltol ABE 0 CODE 0 text5 dist/default/production\EsclavoV1.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+___stacklo 0 0 ABS 0 - C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+_I2C_Slave_Init 7F2 0 CODE 0 text2 dist/default/production\EsclavoV1.X.production.o
 ___fldiv@a 20 0 BANK0 1 cstackBANK0 dist/default/production\EsclavoV1.X.production.o
 ___fldiv@b 24 0 BANK0 1 cstackBANK0 dist/default/production\EsclavoV1.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
-start_initialization FF0 0 CODE 0 cinit dist/default/production\EsclavoV1.X.production.o
+start_initialization FEC 0 CODE 0 cinit dist/default/production\EsclavoV1.X.production.o
 _TRISBbits 86 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\EsclavoV1.X.production.o
@@ -341,14 +345,14 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
-__end_of_C_distancia 9CA 0 CODE 0 text3 dist/default/production\EsclavoV1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
+__end_of_C_distancia 9C6 0 CODE 0 text3 dist/default/production\EsclavoV1.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\PERSON~1\AppData\Local\Temp\somg.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 1000 0 CODE 0 cinit -
-__end_of_I2C_Slave_Init 832 0 CODE 0 text2 dist/default/production\EsclavoV1.X.production.o
+__end_of_I2C_Slave_Init 826 0 CODE 0 text2 dist/default/production\EsclavoV1.X.production.o
 __Hstack 0 0 STACK 2 stack -
 __size_of___xxtofl 0 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
@@ -361,7 +365,7 @@ __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
-__Lcinit FF0 0 CODE 0 cinit -
+__Lcinit FEC 0 CODE 0 cinit -
 __Lstack 0 0 STACK 2 stack -
 _PORTBbits 6 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _PORTCbits 7 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
@@ -389,15 +393,15 @@ __S0 800 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-___xxtofl AC2 0 CODE 0 text4 dist/default/production\EsclavoV1.X.production.o
+___xxtofl ABE 0 CODE 0 text4 dist/default/production\EsclavoV1.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\PERSON~1\AppData\Local\Temp\s6gc.o
-__end_of___xxtofl C36 0 CODE 0 text4 dist/default/production\EsclavoV1.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\PERSON~1\AppData\Local\Temp\somg.o
+__end_of___xxtofl C32 0 CODE 0 text4 dist/default/production\EsclavoV1.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 ?_C_distancia 45 0 BANK0 1 cstackBANK0 dist/default/production\EsclavoV1.X.production.o
-___fldiv C36 0 CODE 0 text6 dist/default/production\EsclavoV1.X.production.o
-___fltol 9CA 0 CODE 0 text5 dist/default/production\EsclavoV1.X.production.o
-__pmaintext 888 0 CODE 0 maintext dist/default/production\EsclavoV1.X.production.o
+___fldiv C32 0 CODE 0 text6 dist/default/production\EsclavoV1.X.production.o
+___fltol 9C6 0 CODE 0 text5 dist/default/production\EsclavoV1.X.production.o
+__pmaintext 880 0 CODE 0 maintext dist/default/production\EsclavoV1.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 I2C_Slave_Init@address 70 0 COMMON 1 cstackCOMMON dist/default/production\EsclavoV1.X.production.o
@@ -422,12 +426,12 @@ __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 0 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
-__ptext1 832 0 CODE 0 text1 dist/default/production\EsclavoV1.X.production.o
-__ptext2 7FE 0 CODE 0 text2 dist/default/production\EsclavoV1.X.production.o
-__ptext3 924 0 CODE 0 text3 dist/default/production\EsclavoV1.X.production.o
-__ptext4 AC2 0 CODE 0 text4 dist/default/production\EsclavoV1.X.production.o
-__ptext5 9CA 0 CODE 0 text5 dist/default/production\EsclavoV1.X.production.o
-__ptext6 C36 0 CODE 0 text6 dist/default/production\EsclavoV1.X.production.o
+__ptext1 826 0 CODE 0 text1 dist/default/production\EsclavoV1.X.production.o
+__ptext2 7F2 0 CODE 0 text2 dist/default/production\EsclavoV1.X.production.o
+__ptext3 920 0 CODE 0 text3 dist/default/production\EsclavoV1.X.production.o
+__ptext4 ABE 0 CODE 0 text4 dist/default/production\EsclavoV1.X.production.o
+__ptext5 9C6 0 CODE 0 text5 dist/default/production\EsclavoV1.X.production.o
+__ptext6 C32 0 CODE 0 text6 dist/default/production\EsclavoV1.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 ?___xxtofl 70 0 COMMON 1 cstackCOMMON dist/default/production\EsclavoV1.X.production.o
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
@@ -442,7 +446,7 @@ __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\EsclavoV1.X.p
 _SSPCON2 91 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 __Hend_init 6 0 CODE 0 end_init -
-__end_of_main 924 0 CODE 0 maintext dist/default/production\EsclavoV1.X.production.o
+__end_of_main 920 0 CODE 0 maintext dist/default/production\EsclavoV1.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
@@ -452,14 +456,14 @@ _PORTE 9 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _SSPIE 463 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _SSPIF 63 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\EsclavoV1.X.production.o
-__end_of_setup 888 0 CODE 0 text1 dist/default/production\EsclavoV1.X.production.o
+__end_of_setup 880 0 CODE 0 text1 dist/default/production\EsclavoV1.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_setup 832 0 CODE 0 text1 dist/default/production\EsclavoV1.X.production.o
-__initialization FF0 0 CODE 0 cinit dist/default/production\EsclavoV1.X.production.o
+_setup 826 0 CODE 0 text1 dist/default/production\EsclavoV1.X.production.o
+__initialization FEC 0 CODE 0 cinit dist/default/production\EsclavoV1.X.production.o
 ___xxtofl@sign 78 0 COMMON 1 cstackCOMMON dist/default/production\EsclavoV1.X.production.o
 __pbssBANK0 4B 0 BANK0 1 bssBANK0 dist/default/production\EsclavoV1.X.production.o
-_C_distancia 924 0 CODE 0 text3 dist/default/production\EsclavoV1.X.production.o
+_C_distancia 920 0 CODE 0 text3 dist/default/production\EsclavoV1.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -485,16 +489,16 @@ _C_distancia 924 0 CODE 0 text3 dist/default/production\EsclavoV1.X.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7F8 FF0 8 2
-text1 0 419 832 2B 2
-text2 0 3FF 7FE 1A 2
-text3 0 492 924 53 2
-text4 0 561 AC2 BA 2
-text5 0 4E5 9CA 7C 2
-text6 0 61B C36 1DD 2
-maintext 0 444 888 4E 2
+cinit 0 7F6 FEC A 2
+text1 0 413 826 2D 2
+text2 0 3F9 7F2 1A 2
+text3 0 490 920 53 2
+text4 0 55F ABE BA 2
+text5 0 4E3 9C6 7C 2
+text6 0 619 C32 1DD 2
+maintext 0 440 880 50 2
 cstackCOMMON 1 70 70 E 1
-cstackBANK0 1 20 20 2D 1
+cstackBANK0 1 20 20 2F 1
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

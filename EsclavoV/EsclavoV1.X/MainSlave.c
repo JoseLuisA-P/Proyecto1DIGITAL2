@@ -1,13 +1,13 @@
- /* File: Libreria C Ultasónico 
- * Author: Valerie Lorraine Sofia Valdez Trujillo
- * Compilador: pic-as (v2.30), MPLABX V5.45
- * 
- * Descripción del programa: Comunicaión I2C
- * 
- * Hardware: 3 PIC16F887, potenciómetros, 8 LEDS
- * 
- * Created on 28 de julio de 2021
- */
+// /* File: Libreria C Ultasónico 
+// * Author: Valerie Lorraine Sofia Valdez Trujillo
+// * Compilador: pic-as (v2.30), MPLABX V5.45
+// * 
+// * Descripción del programa: Comunicaión I2C
+// * 
+// * Hardware: 3 PIC16F887, potenciómetros, 8 LEDS
+// * 
+// * Created on 28 de julio de 2021
+// */
 
 //******************************************************************************
 //                           L I B R E R Í A S
@@ -52,16 +52,39 @@
 //                           V A R I A B L E S
 //******************************************************************************
 uint8_t dist = 0x00;               // Variable de la distancia
+//uint8_t cont = 0x00;               // Variable para probar la comunicación serial
 unsigned char z;
+uint8_t PWM1;                      // Variable para el 1er PWM creado
+uint8_t PWM2;                      // Variable para el 2do PWM creado
 //******************************************************************************
 //                 P R O T O T I P O S  de  F U N C I O N E S
 //******************************************************************************
 void setup(void);                  // Prototipo para la configuración
-    
+//void canales(void);                 // Switcheo de pots con servos
+
 //******************************************************************************
 //                     F U N C I Ó N   para   I S R
 //******************************************************************************
 //void __interrupt() isr(void){
+    //if(PIR1bits.ADIF == 1){         //INTERRUPCIÓN DEL ADC
+//        switch(ADCON0bits.CHS){     // Asignación del ADRESH a las variables
+//            case 0:                 // También es un switcheo con casos
+//                VAL = ADRESH;       
+//                break;
+//            case 1: 
+//                VAL1 = ADRESH; 
+//                break;
+//            case 2:
+//                VAL2 = ADRESH; 
+//                break;
+//            case 3:
+//                VAL3 = ADRESH; 
+//                break;
+//            }        
+//        PIR1bits.ADIF = 0;          // Limpiar bandera   
+//       }
+    
+    
 //     if(PIR1bits.SSPIF == 1){ 
 //        SSPCONbits.CKP = 0;
 //       
@@ -77,15 +100,15 @@ void setup(void);                  // Prototipo para la configuración
 //            PIR1bits.SSPIF = 0;     // Limpiar FLAG de interr. recepción/transmisión SSP
 //            SSPCONbits.CKP = 1;     // Habilitar entrada de pulsos de reloj SCL
 //            while(!SSPSTATbits.BF); // Esperar a que la recepción se complete
-//           // PORTA = SSPBUF;          // Guardar val. buffer de recepción en PORTD
+//     //       0B00001111 = SSPBUF;          // Guardar val. buffer de recepción en PORTD
 //            __delay_us(250);   
-//            temp = SSPBUF;
+//           // temp = SSPBUF;
 //        }
 //        
 //        else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
 //            z = SSPBUF;             // Variable temporal
 //            BF = 0;
-//            SSPBUF = dist;
+//            SSPBUF = cont;
 //            SSPCONbits.CKP = 1;
 //            __delay_us(250);
 //            while(SSPSTATbits.BF);
@@ -101,8 +124,9 @@ void setup(void){
     
     // CONFIGURACIÓN DE LOS PUERTOS
     ANSEL = 0X00;                  // Pines digitales en el puerto A
-    ANSELH = 0x00;                 // Puerto B digital
+    ANSELH = 0x00000001;                 // Puerto B digital
     
+    TRISBbits.TRISB0 = 1;
     TRISBbits.TRISB1 = 0;          // Puertos como otputs
     TRISBbits.TRISB2 = 0;          // Las del B son las leds
     TRISCbits.TRISC1 = 1;          // ECHO
@@ -133,7 +157,30 @@ void setup(void){
     T1CONbits.TMR1GE = 0;          // Contador siempre cuenta
     T1CONbits.TMR1CS = 0;          // Internal clock (FOCSC/4)
     
-    I2C_Slave_Init(0x50);          // Asignar esta direccion al esclavo
+//    // Configuración del TMR2
+//    PIR1bits.TMR2IF = 0;        // Limpiar la bandera del TMR2
+//    T2CON = 0X4D;               // Encender TMR2ON, Pre 1:16 y Post 1:5
+//    
+//        // Configuración del PWM
+//    PR2 = 250;                  // Período del pwm 4ms
+//    CCP1CON = 0B00001100;       // El CCP1 se encuentra en Modo PWM 
+//    CCP2CON = 0B00001111;       // El CCP2 se encuentra en modoo PWM
+//    
+//        // Configuraciones del módulo ADC
+//    ADCON0bits.CHS = 0;         // Usar canal 0
+//    ADCON0bits.CHS = 2;         // Usar canal 2
+//    __delay_us(100);            // Delay de 100
+//    
+//    PIE1bits.ADIE = 1;          // ADIE Habilitar para comprobar FLAG -GF
+//    PIR1bits.ADIF = 0;          // Limpiar bandera de interrupción del ADC
+//    ADCON0bits.ADON = 1;        // Encender el módulo
+//    ADCON0bits.ADCS = 1;        // FOSC/8 
+//    ADCON1bits.ADFM = 0;        // Justificado a la izquierda
+//    ADCON1bits.VCFG0 = 0;       // Voltaje de referencia en VSS y VDD
+//    ADCON1bits.VCFG1 = 0;
+    
+    // Asignar esta direccion al esclavo
+    I2C_Slave_Init(0x50);
     }
 
 //******************************************************************************
@@ -142,9 +189,11 @@ void setup(void){
 void main(void){  
     setup();                       // Llamar al set up       
     while (1){  
+        //cont++;
         __delay_ms(200);
         C_distancia(dist);
-       // PORTD = dist;              // Probar el valor en el puerto
+        //canales();                  // Swicheo de los canales
+        PORTD = dist;              // Probar el valor en el puerto
         
         if(dist <= 4){             // Si el objeto se encuentra a menos de 4cm
             PORTBbits.RB1 = 1;     // Encender RB1 y apagar RB2
@@ -162,7 +211,46 @@ void main(void){
 //******************************************************************************
 //                           F U N C I O N E S 
 //******************************************************************************
-    
+
+// Bit banging se refiere a manejar el PWM por tiempos manuales
+//void canales(){                // Switcheo de los canales
+//    if(ADCON0bits.GO == 0){
+//        switch(ADCON0bits.CHS){           
+//            case 0: 
+//                CCPR1L = ((0.247*VAL)+62);  // Función para el servo
+//                VALOR1 = CCPR1L;
+//                ADCON0bits.CHS = 1;         // Canal 2
+//                __delay_us(100);            // Delay para activar una medición
+//                ADCON0bits.GO = 1;          // Comienza el ciclo del ADC
+//                break; 
+//                
+//            case 1:                         // PWM codificado
+//                POT4 = ((0.049*VAL1)+7);
+//                ADCON0bits.CHS = 2;         // Canal 0
+//                __delay_us(250);            // Delay para activar una medición
+//                ADCON0bits.GO = 1;          // Comienza el ciclo del ADC
+//                break; 
+//                              
+//            case 2: 
+//                CCPR2L = ((0.247*VAL2)+62); // Función para el servo
+//                VALOR2 = CCPR2L;
+//                ADCON0bits.CHS = 3;         // Canal 3
+//                __delay_us(100);            // Delay para activar una medición
+//                ADCON0bits.GO = 1;          // Comienza el ciclo del ADC
+//                break; 
+//                
+//            case 3:                         // PWM codificado
+//                POT3 = ((0.049*VAL3)+7); 
+//                ADCON0bits.CHS = 0;         // Canal 1
+//                __delay_us(250);            // Delay para activar una medición
+//                ADCON0bits.GO = 1;          // Comienza el ciclo del ADC
+//                break; 
+//                
+//            default:
+//                break;
+//         }
+//    }
+//}   
 //int C_distancia(void){ 
 //    dist = 0x00;                  // Inicializar distancia
 //    TMR1 = 0X00;                  // Inicializar timer
@@ -176,4 +264,3 @@ void main(void){
 //    dist = TMR1/58.82;            // Función para obtener dist. en cm
 //    return dist;
 //}  
-

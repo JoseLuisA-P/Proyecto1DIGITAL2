@@ -2913,18 +2913,22 @@ void Ultrasonicoo(unsigned char dist);
 #pragma config WRT = OFF
 # 54 "MainSlave.c"
 uint8_t dist = 0x00;
+
 unsigned char z;
+uint8_t PWM1;
+uint8_t PWM2;
 
 
 
 void setup(void);
-# 100 "MainSlave.c"
+# 123 "MainSlave.c"
 void setup(void){
 
 
     ANSEL = 0X00;
-    ANSELH = 0x00;
+    ANSELH = 0x00000001;
 
+    TRISBbits.TRISB0 = 1;
     TRISBbits.TRISB1 = 0;
     TRISBbits.TRISB2 = 0;
     TRISCbits.TRISC1 = 1;
@@ -2954,7 +2958,7 @@ void setup(void){
     T1CONbits.T1CKPS = 0B01;
     T1CONbits.TMR1GE = 0;
     T1CONbits.TMR1CS = 0;
-
+# 183 "MainSlave.c"
     I2C_Slave_Init(0x50);
     }
 
@@ -2964,9 +2968,11 @@ void setup(void){
 void main(void){
     setup();
     while (1){
+
         _delay((unsigned long)((200)*(8000000/4000.0)));
         C_distancia(dist);
 
+        PORTD = dist;
 
         if(dist <= 4){
             PORTBbits.RB1 = 1;
