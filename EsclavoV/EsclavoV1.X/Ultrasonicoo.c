@@ -21,8 +21,8 @@
 //             D I R E C T I V A S  del  C O M P I L A D O R
 //******************************************************************************
 #define _XTAL_FREQ 8000000         // Frecuencia del oscilador
-#define pinTrig RC2;               // Definir las variables como nombres de los 
-#define pinEcho RC1;               // pines 
+#define pinTrig RB5;               // Definir las variables como nombres de los 
+#define pinEcho RB4;               // pines 
 
 //******************************************************************************
 //                           V A R I A B L E S
@@ -36,12 +36,12 @@ unsigned char dist = 0x00;
 int C_distancia(void){ 
     dist = 0x00;                  // Inicializar distancia
     TMR1 = 0X00;                  // Inicializar timer
-    PORTCbits.RC2 = 1;            // Enviar señal al sensor (TRIGGER)
+    PORTBbits.RB5 = 1;            // Enviar señal al sensor (TRIGGER)
     __delay_us(10);               // Esperar los 10us que debe el sensor
-    PORTCbits.RC2 = 0;            // Apagar la señal (TRIGGER)
-    while(PORTCbits.RC1 == 0){};  // Esperar el pulso del sensor (ECHO)
+    PORTBbits.RB5 = 0;            // Apagar la señal (TRIGGER)
+    while(PORTBbits.RB4 == 0){};  // Esperar el pulso del sensor (ECHO)
     T1CONbits.TMR1ON = 1;         // Encender el modulo del timer
-    while(PORTCbits.RC1 == 1){};  // Esperar a que el pulso termine (ECHO)
+    while(PORTBbits.RB4 == 1){};  // Esperar a que el pulso termine (ECHO)
     T1CONbits.TMR1ON = 0;         // Apagar el timer
     dist = TMR1/58.82;            // Función para obtener dist. en cm
     return dist;

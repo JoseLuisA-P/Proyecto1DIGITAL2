@@ -2856,12 +2856,12 @@ unsigned char dist = 0x00;
 int C_distancia(void){
     dist = 0x00;
     TMR1 = 0X00;
-    PORTCbits.RC2 = 1;
+    PORTBbits.RB5 = 1;
     _delay((unsigned long)((10)*(8000000/4000000.0)));
-    PORTCbits.RC2 = 0;
-    while(PORTCbits.RC1 == 0){};
+    PORTBbits.RB5 = 0;
+    while(PORTBbits.RB4 == 0){};
     T1CONbits.TMR1ON = 1;
-    while(PORTCbits.RC1 == 1){};
+    while(PORTBbits.RB4 == 1){};
     T1CONbits.TMR1ON = 0;
     dist = TMR1/58.82;
     return dist;
