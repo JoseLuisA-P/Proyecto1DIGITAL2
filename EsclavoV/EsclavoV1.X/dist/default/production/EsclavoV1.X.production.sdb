@@ -11,8 +11,6 @@
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
-"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcmul.c
-[v ___flmul __flmul `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
@@ -25,14 +23,14 @@
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
 "93
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
-"347 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+"71 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
 [v _isr isr `II(v  1 e 1 0 ]
-"398
+"126
 [v _setup setup `(v  1 e 1 0 ]
-"475
+"192
 [v _main main `(v  1 e 1 0 ]
-"500
-[v _canales canales `(v  1 e 1 0 ]
+"36 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+[v _C_distancia C_distancia `(i  1 e 2 0 ]
 "166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "228
@@ -55,7 +53,7 @@
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "414
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
-[s S226 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S324 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -65,13 +63,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "482
-[s S235 . 1 `uc 1 . 1 0 :2:0 
+[s S333 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S240 . 1 `S226 1 . 1 0 `S235 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES240  1 e 1 @11 ]
+[u S338 . 1 `S324 1 . 1 0 `S333 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES338  1 e 1 @11 ]
 [s S110 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -107,48 +105,25 @@
 ]
 [u S69 . 1 `S50 1 . 1 0 `S58 1 . 1 0 `S66 1 . 1 0 ]
 [v _T1CONbits T1CONbits `VES69  1 e 1 @16 ]
-"772
-[v _T2CON T2CON `VEuc  1 e 1 @18 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-"927
-[v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
-"941
-[v _CCP1CON CCP1CON `VEuc  1 e 1 @23 ]
-"1154
-[v _CCPR2L CCPR2L `VEuc  1 e 1 @27 ]
-"1168
-[v _CCP2CON CCP2CON `VEuc  1 e 1 @29 ]
-"1238
-[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
-[s S130 . 1 `uc 1 ADON 1 0 :1:0 
-`uc 1 GO_nDONE 1 0 :1:1 
-`uc 1 CHS 1 0 :4:2 
-`uc 1 ADCS 1 0 :2:6 
+[s S129 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
 ]
-"1276
-[s S135 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO 1 0 :1:1 
-`uc 1 CHS0 1 0 :1:2 
-`uc 1 CHS1 1 0 :1:3 
-`uc 1 CHS2 1 0 :1:4 
-`uc 1 CHS3 1 0 :1:5 
-`uc 1 ADCS0 1 0 :1:6 
-`uc 1 ADCS1 1 0 :1:7 
+"870
+[s S135 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
 ]
-[s S144 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 nDONE 1 0 :1:1 
-]
-[s S147 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO_DONE 1 0 :1:1 
-]
-[u S150 . 1 `S130 1 . 1 0 `S135 1 . 1 0 `S144 1 . 1 0 `S147 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES150  1 e 1 @31 ]
-"1416
-[v _TRISA TRISA `VEuc  1 e 1 @133 ]
-[s S179 . 1 `uc 1 TRISB0 1 0 :1:0 
+[u S140 . 1 `S129 1 . 1 0 `S135 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES140  1 e 1 @20 ]
+[s S250 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -158,9 +133,9 @@
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "1495
-[u S188 . 1 `S179 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES188  1 e 1 @134 ]
-[s S200 . 1 `uc 1 TRISC0 1 0 :1:0 
+[u S259 . 1 `S250 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES259  1 e 1 @134 ]
+[s S271 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -170,36 +145,27 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S209 . 1 `S200 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES209  1 e 1 @135 ]
-[s S309 . 1 `uc 1 TMR1IE 1 0 :1:0 
-`uc 1 TMR2IE 1 0 :1:1 
-`uc 1 CCP1IE 1 0 :1:2 
-`uc 1 SSPIE 1 0 :1:3 
-`uc 1 TXIE 1 0 :1:4 
-`uc 1 RCIE 1 0 :1:5 
-`uc 1 ADIE 1 0 :1:6 
-]
-"1718
-[u S317 . 1 `S309 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES317  1 e 1 @140 ]
-[s S258 . 1 `uc 1 SCS 1 0 :1:0 
+[u S280 . 1 `S271 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES280  1 e 1 @135 ]
+"1602
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+[s S298 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1882
-[s S264 . 1 `uc 1 . 1 0 :4:0 
+[s S304 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S269 . 1 `S258 1 . 1 0 `S264 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES269  1 e 1 @143 ]
+[u S309 . 1 `S298 1 . 1 0 `S304 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES309  1 e 1 @143 ]
 "1979
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S470 . 1 `uc 1 SEN 1 0 :1:0 
+[s S485 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -209,27 +175,61 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1996
-[u S479 . 1 `S470 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES479  1 e 1 @145 ]
-"2041
-[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+[u S494 . 1 `S485 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES494  1 e 1 @145 ]
 "2048
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
-[s S331 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 VCFG0 1 0 :1:4 
-`uc 1 VCFG1 1 0 :1:5 
-`uc 1 . 1 0 :1:6 
-`uc 1 ADFM 1 0 :1:7 
+[s S156 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
 ]
-"2991
-[u S337 . 1 `S331 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES337  1 e 1 @159 ]
+"2231
+[s S165 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S170 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S176 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S181 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S186 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S191 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S196 . 1 `S156 1 . 1 0 `S165 1 . 1 0 `S170 1 . 1 0 `S176 1 . 1 0 `S181 1 . 1 0 `S186 1 . 1 0 `S191 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES196  1 e 1 @148 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"3641
+[v _BF BF `VEb  1 e 0 @1184 ]
 "3896
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "4040
@@ -242,21 +242,19 @@
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4460
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
-"332 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+"57 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
 [v _dist dist `uc  1 e 1 0 ]
-"335
-[v _VAL VAL `uc  1 e 1 0 ]
-"336
-[v _VAL2 VAL2 `uc  1 e 1 0 ]
-"475
+"59
+[v _z z `uc  1 e 1 0 ]
+"192
 [v _main main `(v  1 e 1 0 ]
 {
-"494
+"212
 } 0
-"398
+"126
 [v _setup setup `(v  1 e 1 0 ]
 {
-"470
+"187
 } 0
 "93 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\I2C.c
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
@@ -264,96 +262,61 @@
 [v I2C_Slave_Init@address address `uc  1 a 1 wreg ]
 [v I2C_Slave_Init@address address `uc  1 a 1 wreg ]
 "95
-[v I2C_Slave_Init@address address `uc  1 a 1 0 ]
+[v I2C_Slave_Init@address address `uc  1 a 1 3 ]
 "105
 } 0
-"500 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
-[v _canales canales `(v  1 e 1 0 ]
+"36 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\Ultrasonicoo.c
+[v _C_distancia C_distancia `(i  1 e 2 0 ]
 {
-"523
+"48
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 {
 [v ___xxtofl@sign sign `uc  1 a 1 wreg ]
 "13
-[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+[v ___xxtofl@arg arg `ul  1 a 4 6 ]
 "12
-[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+[v ___xxtofl@exp exp `uc  1 a 1 5 ]
 "10
 [v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 0 ]
+[v ___xxtofl@val val `l  1 p 4 3 ]
 "15
-[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+[v ___xxtofl@sign sign `uc  1 a 1 4 ]
 "44
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
 "45
-[v ___fltol@exp1 exp1 `uc  1 a 1 70 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 69 ]
+[v ___fltol@exp1 exp1 `uc  1 a 1 46 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 45 ]
 "43
-[v ___fltol@f1 f1 `d  1 p 4 60 ]
+[v ___fltol@f1 f1 `d  1 p 4 36 ]
 "70
 } 0
-"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcmul.c
-[v ___flmul __flmul `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
 {
-[s S792 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-"13
-[s S797 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S800 . 4 `l 1 i 4 0 `d 1 f 4 0 `S792 1 fAsBytes 4 0 `S797 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S800  1 a 4 34 ]
-"12
-[v ___flmul@grs grs `ul  1 a 4 29 ]
-[s S869 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-"14
-[u S872 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S869 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S872  1 a 2 38 ]
-"10
-[v ___flmul@bexp bexp `uc  1 a 1 33 ]
-"11
-[v ___flmul@aexp aexp `uc  1 a 1 28 ]
-"9
-[v ___flmul@sign sign `uc  1 a 1 27 ]
-"8
-[v ___flmul@b b `d  1 p 4 14 ]
-[v ___flmul@a a `d  1 p 4 18 ]
-"205
-} 0
-"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
-[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-{
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
-"6
-[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
-"5
-[v __Umul8_16@product product `ui  1 a 2 4 ]
-"4
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
-[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
-"60
-} 0
-"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
-[v ___fladd __fladd `(d  1 e 4 0 ]
-{
-"17
-[v ___fladd@grs grs `uc  1 a 1 59 ]
-"15
-[v ___fladd@bexp bexp `uc  1 a 1 58 ]
+"21
+[v ___fldiv@grs grs `ul  1 a 4 30 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 23 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 28 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 35 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 34 ]
 "16
-[v ___fladd@aexp aexp `uc  1 a 1 57 ]
-"13
-[v ___fladd@signs signs `uc  1 a 1 56 ]
-"10
-[v ___fladd@b b `d  1 p 4 40 ]
-[v ___fladd@a a `d  1 p 4 44 ]
-"237
+[v ___fldiv@sign sign `uc  1 a 1 27 ]
+"8
+[v ___fldiv@a a `d  1 p 4 10 ]
+[v ___fldiv@b b `d  1 p 4 14 ]
+"185
 } 0
-"347 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
+"71 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\EsclavoV1.X\MainSlave.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"395
+"121
 } 0

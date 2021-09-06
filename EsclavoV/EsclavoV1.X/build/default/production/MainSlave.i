@@ -7,7 +7,7 @@
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "MainSlave.c" 2
-# 293 "MainSlave.c"
+# 18 "MainSlave.c"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2488,7 +2488,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 293 "MainSlave.c" 2
+# 18 "MainSlave.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
@@ -2623,7 +2623,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 294 "MainSlave.c" 2
+# 19 "MainSlave.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2722,7 +2722,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 295 "MainSlave.c" 2
+# 20 "MainSlave.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -2807,7 +2807,7 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 296 "MainSlave.c" 2
+# 21 "MainSlave.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 1 3
 # 14 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 3
@@ -2840,7 +2840,7 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 297 "MainSlave.c" 2
+# 22 "MainSlave.c" 2
 
 # 1 "./I2C.h" 1
 # 20 "./I2C.h"
@@ -2883,12 +2883,12 @@ unsigned short I2C_Master_Read(unsigned short a);
 
 
 void I2C_Slave_Init(uint8_t address);
-# 298 "MainSlave.c" 2
+# 23 "MainSlave.c" 2
 
 # 1 "./Ultrasonicoo.h" 1
 # 36 "./Ultrasonicoo.h"
 void Ultrasonicoo(unsigned char dist);
-# 299 "MainSlave.c" 2
+# 24 "MainSlave.c" 2
 
 
 
@@ -2911,57 +2911,72 @@ void Ultrasonicoo(unsigned char dist);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 332 "MainSlave.c"
+# 57 "MainSlave.c"
 uint8_t dist = 0x00;
-uint8_t cont = 0x00;
-unsigned char z;
-uint8_t VAL;
-uint8_t VAL2;
 
+unsigned char z;
+uint8_t PWM1;
+uint8_t PWM2;
 
 
 
 void setup(void);
-void canales(void);
+
 
 
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
-    if(PIR1bits.ADIF == 1){
-        switch(ADCON0bits.CHS){
-            case 0:
-                VAL = ADRESH;
-                break;
+# 91 "MainSlave.c"
+     if(PIR1bits.SSPIF == 1){
+        SSPCONbits.CKP = 0;
 
-            case 1:
-                VAL2 = ADRESH;
-                break;
-            }
-        PIR1bits.ADIF = 0;
-       }
+        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+            z = SSPBUF;
+            SSPCONbits.SSPOV = 0;
+            SSPCONbits.WCOL = 0;
+            SSPCONbits.CKP = 1;
+        }
 
-    PIR1bits.TMR2IF = 0;
-# 395 "MainSlave.c"
+        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+            z = SSPBUF;
+            PIR1bits.SSPIF = 0;
+            SSPCONbits.CKP = 1;
+            while(!SSPSTATbits.BF);
+            dist = SSPBUF;
+            _delay((unsigned long)((250)*(8000000/4000000.0)));
+
+        }
+
+        else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+            z = SSPBUF;
+            BF = 0;
+            SSPBUF = dist;
+            SSPCONbits.CKP = 1;
+            _delay((unsigned long)((250)*(8000000/4000000.0)));
+            while(SSPSTATbits.BF);
+        }
+        PIR1bits.SSPIF = 0;
+    }
 }
+
+
 
 
 void setup(void){
 
-    ANSEL = 0B00000011;
-    ANSELH = 0x00;
 
-    TRISA = 0B00000011;
-    TRISBbits.TRISB2 = 0;
+    ANSEL = 0X00;
+    ANSELH = 0x00000001;
+
+    TRISBbits.TRISB0 = 1;
     TRISBbits.TRISB3 = 0;
+    TRISBbits.TRISB2 = 0;
     TRISBbits.TRISB4 = 1;
     TRISBbits.TRISB5 = 0;
-
-    TRISCbits.TRISC1 = 0;
-    TRISCbits.TRISC2 = 0;
-
-
-
+    TRISCbits.TRISC3 = 0;
+    TRISCbits.TRISC4 = 0;
+    TRISD = 0X00;
 
     PORTA = 0X00;
     PORTB = 0X00;
@@ -2970,45 +2985,21 @@ void setup(void){
     PORTE = 0X00;
 
 
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-# 433 "MainSlave.c"
     OSCCONbits.SCS = 1;
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.IRCF1 = 1;
-    OSCCONbits.IRCF0 = 0;
+    OSCCONbits.IRCF0 = 1;
+
+
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
 
 
     TMR1 = 0X00;
     T1CONbits.T1CKPS = 0B01;
     T1CONbits.TMR1GE = 0;
     T1CONbits.TMR1CS = 0;
-
-
-    PIE1bits.TMR2IE = 1;
-    PIR1bits.TMR2IF = 0;
-
-    T2CON = 0X26;
-
-
-    ADCON0bits.CHS = 0;
-    ADCON0bits.CHS = 1;
-    _delay((unsigned long)((100)*(8000000/4000000.0)));
-
-    PIE1bits.ADIE = 1;
-    PIR1bits.ADIF = 0;
-    ADCON0bits.ADON = 1;
-    ADCON0bits.ADCS = 1;
-    ADCON1bits.ADFM = 0;
-    ADCON1bits.VCFG0 = 0;
-    ADCON1bits.VCFG1 = 0;
-
-
-    PR2 = 250;
-    CCP1CON = 0B00001100;
-    CCP2CON = 0B00001111;
-
-
+# 186 "MainSlave.c"
     I2C_Slave_Init(0x50);
     }
 
@@ -3018,12 +3009,13 @@ void setup(void){
 void main(void){
     setup();
     while (1){
-        canales();
 
         _delay((unsigned long)((200)*(8000000/4000.0)));
+        C_distancia(dist);
 
+        PORTD = dist;
 
-         if(dist <= 4){
+        if(dist <= 4){
             PORTBbits.RB3 = 1;
             PORTBbits.RB2 = 0;
             _delay((unsigned long)((1)*(8000000/4000.0)));
@@ -3033,34 +3025,5 @@ void main(void){
             PORTBbits.RB2 = 1;
             _delay((unsigned long)((1)*(8000000/4000.0)));
         }
-    }
-}
-
-
-
-
-
-void canales(){
-    if(ADCON0bits.GO == 0){
-        switch(ADCON0bits.CHS){
-            case 0:
-                CCPR1L = ((0.247*VAL)+62);
-
-                ADCON0bits.CHS = 1;
-                _delay((unsigned long)((100)*(8000000/4000000.0)));
-                ADCON0bits.GO = 1;
-                break;
-
-            case 1:
-                CCPR2L = ((0.247*VAL2)+62);
-
-                ADCON0bits.CHS = 0;
-                _delay((unsigned long)((100)*(8000000/4000000.0)));
-                ADCON0bits.GO = 1;
-                break;
-
-            default:
-                break;
-         }
     }
 }
