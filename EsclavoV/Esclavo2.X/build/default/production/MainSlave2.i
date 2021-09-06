@@ -2841,7 +2841,13 @@ extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 # 19 "MainSlave2.c" 2
-# 28 "MainSlave2.c"
+
+
+
+
+
+
+
 #pragma config FOSC=INTRC_NOCLKOUT
 #pragma config WDTE=OFF
 #pragma config PWRTE=OFF
@@ -2857,7 +2863,7 @@ extern char * strrichr(const char *, int);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 54 "MainSlave2.c"
+# 52 "MainSlave2.c"
 uint8_t dist = 0x00;
 uint8_t cont = 0x00;
 unsigned char z;
@@ -2888,7 +2894,6 @@ void __attribute__((picinterrupt(("")))) isr(void){
        }
 
     PIR1bits.TMR2IF = 0;
-# 117 "MainSlave2.c"
 }
 
 
@@ -2898,15 +2903,8 @@ void setup(void){
     ANSELH = 0x00;
 
     TRISA = 0B00000011;
-
-
-
-
-
     TRISCbits.TRISC1 = 0;
     TRISCbits.TRISC2 = 0;
-
-
 
 
     PORTA = 0X00;
@@ -2918,16 +2916,17 @@ void setup(void){
 
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
-# 155 "MainSlave2.c"
+
+
     OSCCONbits.SCS = 1;
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF0 = 1;
-# 167 "MainSlave2.c"
+
+
     PIE1bits.TMR2IE = 1;
     PIR1bits.TMR2IF = 0;
     T2CON = 0X4E;
-
 
 
     ADCON0bits.CHS = 0;
@@ -2946,9 +2945,6 @@ void setup(void){
     PR2 = 250;
     CCP1CON = 0B00001100;
     CCP2CON = 0B00001111;
-
-
-
     }
 
 
@@ -2958,7 +2954,6 @@ void main(void){
     setup();
     while (1){
         canales();
-# 215 "MainSlave2.c"
     }
 }
 

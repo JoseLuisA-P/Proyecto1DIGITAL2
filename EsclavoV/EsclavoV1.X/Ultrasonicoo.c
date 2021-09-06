@@ -44,18 +44,5 @@ int C_distancia(void){
     while(PORTBbits.RB4 == 1){};  // Esperar a que el pulso termine (ECHO)
     T1CONbits.TMR1ON = 0;         // Apagar el timer
     dist = TMR1/58.82;            // Función para obtener dist. en cm
-    return dist;
-}  
-
-//int casos(void){
-//    if(dist <= 4){ 
-//        PORTBbits.RB1 = 1; 
-//        PORTBbits.RB2 = 0;
-//        __delay_ms(1);
-//        }
-//    if(dist >= 5){ 
-//        PORTBbits.RB1 = 0;  
-//        PORTBbits.RB2 = 1;
-//        __delay_ms(1);
-//        }
-//}
+    return dist
+}  ;

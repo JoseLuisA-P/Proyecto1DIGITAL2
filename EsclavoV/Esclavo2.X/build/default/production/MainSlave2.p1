@@ -142,8 +142,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1168: extern volatile unsigned char CCP2CON __attribute__((address(0x01D)));
 [v _CCP2CON `Vuc ~T0 @X0 0 e@29 ]
 [p mainexit ]
-"64 MainSlave2.c
-[; ;MainSlave2.c: 64: void canales(void);
+"62 MainSlave2.c
+[; ;MainSlave2.c: 62: void canales(void);
 [v _canales `(v ~T0 @X0 0 ef ]
 "927 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 927: extern volatile unsigned char CCPR1L __attribute__((address(0x015)));
@@ -385,86 +385,86 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"28 MainSlave2.c
+"26 MainSlave2.c
 [p x FOSC=INTRC_NOCLKOUT  ]
-"29
+"27
 [p x WDTE=OFF             ]
-"30
+"28
 [p x PWRTE=OFF            ]
-"31
+"29
 [p x MCLRE=OFF            ]
-"32
+"30
 [p x CP=OFF               ]
-"33
+"31
 [p x CPD=OFF              ]
-"35
+"33
 [p x BOREN=OFF            ]
-"36
+"34
 [p x IESO=OFF             ]
-"37
+"35
 [p x FCMEN=OFF            ]
-"38
+"36
 [p x LVP=OFF              ]
-"41
+"39
 [p x BOR4V  =  BOR40V       ]
-"42
+"40
 [p x WRT  =  OFF            ]
-"54
-[; ;MainSlave2.c: 54: uint8_t dist = 0x00;
+"52
+[; ;MainSlave2.c: 52: uint8_t dist = 0x00;
 [v _dist `uc ~T0 @X0 1 e ]
 [i _dist
 -> -> 0 `i `uc
 ]
-"55
-[; ;MainSlave2.c: 55: uint8_t cont = 0x00;
+"53
+[; ;MainSlave2.c: 53: uint8_t cont = 0x00;
 [v _cont `uc ~T0 @X0 1 e ]
 [i _cont
 -> -> 0 `i `uc
 ]
-"56
-[; ;MainSlave2.c: 56: unsigned char z;
+"54
+[; ;MainSlave2.c: 54: unsigned char z;
 [v _z `uc ~T0 @X0 1 e ]
-"57
-[; ;MainSlave2.c: 57: uint8_t VAL;
+"55
+[; ;MainSlave2.c: 55: uint8_t VAL;
 [v _VAL `uc ~T0 @X0 1 e ]
-"58
-[; ;MainSlave2.c: 58: uint8_t VAL2;
+"56
+[; ;MainSlave2.c: 56: uint8_t VAL2;
 [v _VAL2 `uc ~T0 @X0 1 e ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
-"69
-[; ;MainSlave2.c: 69: void __attribute__((picinterrupt(("")))) isr(void){
+"67
+[; ;MainSlave2.c: 67: void __attribute__((picinterrupt(("")))) isr(void){
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
-"70
-[; ;MainSlave2.c: 70:     if(PIR1bits.ADIF == 1){
+"68
+[; ;MainSlave2.c: 68:     if(PIR1bits.ADIF == 1){
 [e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 144  ]
 {
-"71
-[; ;MainSlave2.c: 71:         switch(ADCON0bits.CHS){
+"69
+[; ;MainSlave2.c: 69:         switch(ADCON0bits.CHS){
 [e $U 146  ]
 {
-"72
-[; ;MainSlave2.c: 72:             case 0:
+"70
+[; ;MainSlave2.c: 70:             case 0:
 [e :U 147 ]
-"73
-[; ;MainSlave2.c: 73:                 VAL = ADRESH;
+"71
+[; ;MainSlave2.c: 71:                 VAL = ADRESH;
 [e = _VAL _ADRESH ]
+"72
+[; ;MainSlave2.c: 72:                 break;
+[e $U 145  ]
 "74
-[; ;MainSlave2.c: 74:                 break;
-[e $U 145  ]
-"76
-[; ;MainSlave2.c: 76:             case 1:
+[; ;MainSlave2.c: 74:             case 1:
 [e :U 148 ]
-"77
-[; ;MainSlave2.c: 77:                 VAL2 = ADRESH;
+"75
+[; ;MainSlave2.c: 75:                 VAL2 = ADRESH;
 [e = _VAL2 _ADRESH ]
-"78
-[; ;MainSlave2.c: 78:                 break;
+"76
+[; ;MainSlave2.c: 76:                 break;
 [e $U 145  ]
-"79
-[; ;MainSlave2.c: 79:             }
+"77
+[; ;MainSlave2.c: 77:             }
 }
 [e $U 145  ]
 [e :U 146 ]
@@ -472,211 +472,211 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 1 `i 148
  145 ]
 [e :U 145 ]
-"80
-[; ;MainSlave2.c: 80:         PIR1bits.ADIF = 0;
+"78
+[; ;MainSlave2.c: 78:         PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"81
-[; ;MainSlave2.c: 81:        }
+"79
+[; ;MainSlave2.c: 79:        }
 }
 [e :U 144 ]
-"83
-[; ;MainSlave2.c: 83:     PIR1bits.TMR2IF = 0;
+"81
+[; ;MainSlave2.c: 81:     PIR1bits.TMR2IF = 0;
 [e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-"117
-[; ;MainSlave2.c: 117: }
+"82
+[; ;MainSlave2.c: 82: }
 [e :UE 143 ]
 }
-"120
-[; ;MainSlave2.c: 120: void setup(void){
+"85
+[; ;MainSlave2.c: 85: void setup(void){
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"122
-[; ;MainSlave2.c: 122:     ANSEL = 0B00000011;
+"87
+[; ;MainSlave2.c: 87:     ANSEL = 0B00000011;
 [e = _ANSEL -> -> 3 `i `uc ]
-"123
-[; ;MainSlave2.c: 123:     ANSELH = 0x00;
+"88
+[; ;MainSlave2.c: 88:     ANSELH = 0x00;
 [e = _ANSELH -> -> 0 `i `uc ]
-"125
-[; ;MainSlave2.c: 125:     TRISA = 0B00000011;
+"90
+[; ;MainSlave2.c: 90:     TRISA = 0B00000011;
 [e = _TRISA -> -> 3 `i `uc ]
-"131
-[; ;MainSlave2.c: 131:     TRISCbits.TRISC1 = 0;
+"91
+[; ;MainSlave2.c: 91:     TRISCbits.TRISC1 = 0;
 [e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
-"132
-[; ;MainSlave2.c: 132:     TRISCbits.TRISC2 = 0;
+"92
+[; ;MainSlave2.c: 92:     TRISCbits.TRISC2 = 0;
 [e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
-"137
-[; ;MainSlave2.c: 137:     PORTA = 0X00;
+"95
+[; ;MainSlave2.c: 95:     PORTA = 0X00;
 [e = _PORTA -> -> 0 `i `uc ]
-"138
-[; ;MainSlave2.c: 138:     PORTB = 0X00;
+"96
+[; ;MainSlave2.c: 96:     PORTB = 0X00;
 [e = _PORTB -> -> 0 `i `uc ]
-"139
-[; ;MainSlave2.c: 139:     PORTC = 0X00;
+"97
+[; ;MainSlave2.c: 97:     PORTC = 0X00;
 [e = _PORTC -> -> 0 `i `uc ]
-"140
-[; ;MainSlave2.c: 140:     PORTD = 0X00;
+"98
+[; ;MainSlave2.c: 98:     PORTD = 0X00;
 [e = _PORTD -> -> 0 `i `uc ]
-"141
-[; ;MainSlave2.c: 141:     PORTE = 0X00;
+"99
+[; ;MainSlave2.c: 99:     PORTE = 0X00;
 [e = _PORTE -> -> 0 `i `uc ]
-"144
-[; ;MainSlave2.c: 144:     INTCONbits.GIE = 1;
+"102
+[; ;MainSlave2.c: 102:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"145
-[; ;MainSlave2.c: 145:     INTCONbits.PEIE = 1;
+"103
+[; ;MainSlave2.c: 103:     INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"155
-[; ;MainSlave2.c: 155:     OSCCONbits.SCS = 1;
+"106
+[; ;MainSlave2.c: 106:     OSCCONbits.SCS = 1;
 [e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
-"156
-[; ;MainSlave2.c: 156:     OSCCONbits.IRCF2 = 1;
+"107
+[; ;MainSlave2.c: 107:     OSCCONbits.IRCF2 = 1;
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-"157
-[; ;MainSlave2.c: 157:     OSCCONbits.IRCF1 = 1;
+"108
+[; ;MainSlave2.c: 108:     OSCCONbits.IRCF1 = 1;
 [e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"158
-[; ;MainSlave2.c: 158:     OSCCONbits.IRCF0 = 1;
+"109
+[; ;MainSlave2.c: 109:     OSCCONbits.IRCF0 = 1;
 [e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
-"167
-[; ;MainSlave2.c: 167:     PIE1bits.TMR2IE = 1;
+"112
+[; ;MainSlave2.c: 112:     PIE1bits.TMR2IE = 1;
 [e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
-"168
-[; ;MainSlave2.c: 168:     PIR1bits.TMR2IF = 0;
+"113
+[; ;MainSlave2.c: 113:     PIR1bits.TMR2IF = 0;
 [e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-"169
-[; ;MainSlave2.c: 169:     T2CON = 0X4E;
+"114
+[; ;MainSlave2.c: 114:     T2CON = 0X4E;
 [e = _T2CON -> -> 78 `i `uc ]
-"173
-[; ;MainSlave2.c: 173:     ADCON0bits.CHS = 0;
+"117
+[; ;MainSlave2.c: 117:     ADCON0bits.CHS = 0;
 [e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
-"174
-[; ;MainSlave2.c: 174:     ADCON0bits.CHS = 1;
+"118
+[; ;MainSlave2.c: 118:     ADCON0bits.CHS = 1;
 [e = . . _ADCON0bits 0 2 -> -> 1 `i `uc ]
-"175
-[; ;MainSlave2.c: 175:     _delay((unsigned long)((100)*(8000000/4000000.0)));
+"119
+[; ;MainSlave2.c: 119:     _delay((unsigned long)((100)*(8000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"177
-[; ;MainSlave2.c: 177:     PIE1bits.ADIE = 1;
+"121
+[; ;MainSlave2.c: 121:     PIE1bits.ADIE = 1;
 [e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
-"178
-[; ;MainSlave2.c: 178:     PIR1bits.ADIF = 0;
+"122
+[; ;MainSlave2.c: 122:     PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"179
-[; ;MainSlave2.c: 179:     ADCON0bits.ADON = 1;
+"123
+[; ;MainSlave2.c: 123:     ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
-"180
-[; ;MainSlave2.c: 180:     ADCON0bits.ADCS = 1;
+"124
+[; ;MainSlave2.c: 124:     ADCON0bits.ADCS = 1;
 [e = . . _ADCON0bits 0 3 -> -> 1 `i `uc ]
-"181
-[; ;MainSlave2.c: 181:     ADCON1bits.ADFM = 0;
+"125
+[; ;MainSlave2.c: 125:     ADCON1bits.ADFM = 0;
 [e = . . _ADCON1bits 0 4 -> -> 0 `i `uc ]
-"182
-[; ;MainSlave2.c: 182:     ADCON1bits.VCFG0 = 0;
+"126
+[; ;MainSlave2.c: 126:     ADCON1bits.VCFG0 = 0;
 [e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
-"183
-[; ;MainSlave2.c: 183:     ADCON1bits.VCFG1 = 0;
+"127
+[; ;MainSlave2.c: 127:     ADCON1bits.VCFG1 = 0;
 [e = . . _ADCON1bits 0 2 -> -> 0 `i `uc ]
-"186
-[; ;MainSlave2.c: 186:     PR2 = 250;
+"130
+[; ;MainSlave2.c: 130:     PR2 = 250;
 [e = _PR2 -> -> 250 `i `uc ]
-"187
-[; ;MainSlave2.c: 187:     CCP1CON = 0B00001100;
+"131
+[; ;MainSlave2.c: 131:     CCP1CON = 0B00001100;
 [e = _CCP1CON -> -> 12 `i `uc ]
-"188
-[; ;MainSlave2.c: 188:     CCP2CON = 0B00001111;
+"132
+[; ;MainSlave2.c: 132:     CCP2CON = 0B00001111;
 [e = _CCP2CON -> -> 15 `i `uc ]
-"192
-[; ;MainSlave2.c: 192:     }
+"133
+[; ;MainSlave2.c: 133:     }
 [e :UE 149 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"197
-[; ;MainSlave2.c: 197: void main(void){
+"138
+[; ;MainSlave2.c: 138: void main(void){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"198
-[; ;MainSlave2.c: 198:     setup();
+"139
+[; ;MainSlave2.c: 139:     setup();
 [e ( _setup ..  ]
-"199
-[; ;MainSlave2.c: 199:     while (1){
+"140
+[; ;MainSlave2.c: 140:     while (1){
 [e :U 152 ]
 {
-"200
-[; ;MainSlave2.c: 200:         canales();
+"141
+[; ;MainSlave2.c: 141:         canales();
 [e ( _canales ..  ]
-"215
-[; ;MainSlave2.c: 215:     }
+"142
+[; ;MainSlave2.c: 142:     }
 }
 [e :U 151 ]
 [e $U 152  ]
 [e :U 153 ]
-"216
-[; ;MainSlave2.c: 216: }
+"143
+[; ;MainSlave2.c: 143: }
 [e :UE 150 ]
 }
-"222
-[; ;MainSlave2.c: 222: void canales(){
+"149
+[; ;MainSlave2.c: 149: void canales(){
 [v _canales `(v ~T0 @X0 1 ef ]
 {
 [e :U _canales ]
 [f ]
-"223
-[; ;MainSlave2.c: 223:     if(ADCON0bits.GO == 0){
+"150
+[; ;MainSlave2.c: 150:     if(ADCON0bits.GO == 0){
 [e $ ! == -> . . _ADCON0bits 1 1 `i -> 0 `i 155  ]
 {
-"224
-[; ;MainSlave2.c: 224:         switch(ADCON0bits.CHS){
+"151
+[; ;MainSlave2.c: 151:         switch(ADCON0bits.CHS){
 [e $U 157  ]
 {
-"225
-[; ;MainSlave2.c: 225:             case 0:
+"152
+[; ;MainSlave2.c: 152:             case 0:
 [e :U 158 ]
-"226
-[; ;MainSlave2.c: 226:                 CCPR1L = 2*((0.247*VAL)+62);
+"153
+[; ;MainSlave2.c: 153:                 CCPR1L = 2*((0.247*VAL)+62);
 [e = _CCPR1L -> * -> -> 2 `i `d + * .0.247 -> -> _VAL `i `d -> -> 62 `i `d `uc ]
-"227
-[; ;MainSlave2.c: 227:                 ADCON0bits.CHS = 1;
+"154
+[; ;MainSlave2.c: 154:                 ADCON0bits.CHS = 1;
 [e = . . _ADCON0bits 0 2 -> -> 1 `i `uc ]
-"228
-[; ;MainSlave2.c: 228:                 _delay((unsigned long)((100)*(8000000/4000000.0)));
+"155
+[; ;MainSlave2.c: 155:                 _delay((unsigned long)((100)*(8000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"229
-[; ;MainSlave2.c: 229:                 ADCON0bits.GO = 1;
+"156
+[; ;MainSlave2.c: 156:                 ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"230
-[; ;MainSlave2.c: 230:                 break;
+"157
+[; ;MainSlave2.c: 157:                 break;
 [e $U 156  ]
-"232
-[; ;MainSlave2.c: 232:             case 1:
+"159
+[; ;MainSlave2.c: 159:             case 1:
 [e :U 159 ]
-"233
-[; ;MainSlave2.c: 233:                 CCPR2L = 2*((0.247*VAL2)+62);
+"160
+[; ;MainSlave2.c: 160:                 CCPR2L = 2*((0.247*VAL2)+62);
 [e = _CCPR2L -> * -> -> 2 `i `d + * .0.247 -> -> _VAL2 `i `d -> -> 62 `i `d `uc ]
-"234
-[; ;MainSlave2.c: 234:                 ADCON0bits.CHS = 0;
+"161
+[; ;MainSlave2.c: 161:                 ADCON0bits.CHS = 0;
 [e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
-"235
-[; ;MainSlave2.c: 235:                 _delay((unsigned long)((100)*(8000000/4000000.0)));
+"162
+[; ;MainSlave2.c: 162:                 _delay((unsigned long)((100)*(8000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"236
-[; ;MainSlave2.c: 236:                 ADCON0bits.GO = 1;
+"163
+[; ;MainSlave2.c: 163:                 ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"237
-[; ;MainSlave2.c: 237:                 break;
+"164
+[; ;MainSlave2.c: 164:                 break;
 [e $U 156  ]
-"239
-[; ;MainSlave2.c: 239:             default:
+"166
+[; ;MainSlave2.c: 166:             default:
 [e :U 160 ]
-"240
-[; ;MainSlave2.c: 240:                 break;
+"167
+[; ;MainSlave2.c: 167:                 break;
 [e $U 156  ]
-"241
-[; ;MainSlave2.c: 241:          }
+"168
+[; ;MainSlave2.c: 168:          }
 }
 [e $U 156  ]
 [e :U 157 ]
@@ -684,11 +684,11 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 1 `i 159
  160 ]
 [e :U 156 ]
-"242
-[; ;MainSlave2.c: 242:     }
+"169
+[; ;MainSlave2.c: 169:     }
 }
 [e :U 155 ]
-"243
-[; ;MainSlave2.c: 243: }
+"170
+[; ;MainSlave2.c: 170: }
 [e :UE 154 ]
 }

@@ -17,13 +17,13 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"69 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\Esclavo2.X\MainSlave2.c
+"67 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\Esclavo2.X\MainSlave2.c
 [v _isr isr `II(v  1 e 1 0 ]
-"120
+"85
 [v _setup setup `(v  1 e 1 0 ]
-"197
+"138
 [v _main main `(v  1 e 1 0 ]
-"222
+"149
 [v _canales canales `(v  1 e 1 0 ]
 "166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -152,24 +152,24 @@
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"57 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\Esclavo2.X\MainSlave2.c
+"55 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\Esclavo2.X\MainSlave2.c
 [v _VAL VAL `uc  1 e 1 0 ]
-"58
+"56
 [v _VAL2 VAL2 `uc  1 e 1 0 ]
-"197
+"138
 [v _main main `(v  1 e 1 0 ]
 {
-"216
+"143
 } 0
-"120
+"85
 [v _setup setup `(v  1 e 1 0 ]
 {
-"192
+"133
 } 0
-"222
+"149
 [v _canales canales `(v  1 e 1 0 ]
 {
-"243
+"170
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -251,8 +251,8 @@
 [v ___fladd@a a `d  1 p 4 44 ]
 "237
 } 0
-"69 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\Esclavo2.X\MainSlave2.c
+"67 C:\Users\personal01\Documents\Valerie\U\Sexto semestre\Electronica digital\LabDigital2\Proyecto1DIGITAL2\EsclavoV\Esclavo2.X\MainSlave2.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"117
+"82
 } 0
